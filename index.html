@@ -32,7 +32,7 @@
 					$.mobile.changePage.defaults.changeHash = false;
     	});
 
-			$(document).on('pagecontainerbeforeshow', function(e, ui) {
+			$(document).on('pagecontainershow', function(e, ui) {
 				if (readCookie("town") && ($.mobile.pageContainer.pagecontainer("getActivePage")[0].id == "filter")) {
 								console.log("change dropdown et al")
 								$("#town").val(readCookie("town")).attr('selected', true);
