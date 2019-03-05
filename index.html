@@ -95,6 +95,13 @@
 				console.log(region_val)
 				load_first();
 			}
+			function remove_cookies() {
+				createCookie('region',"",-1);
+				createCookie('region_name',"",-1);
+				createCookie("age","",-1);
+				createCookie("town","",-1);
+				createCookie("list_map","",-1);
+			}
 	</script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
@@ -228,7 +235,7 @@
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<h1>Resource Finder</h1>
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<a href="#region" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
+		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
 	</div>
 
 	<div data-role="content" class="content">
