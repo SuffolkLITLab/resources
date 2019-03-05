@@ -31,6 +31,15 @@
         	$.mobile.pushStateEnabled = false;
 					$.mobile.changePage.defaults.changeHash = false;
     	});
+
+			$(document).on('pagecontainershow', function(e, ui) {
+				if (readCookie("town") && ($.mobile.pageContainer.pagecontainer("getActivePage")[0].id == "filter")) {
+								console.log("change dropdown et al")
+								$("#town").val(readCookie("town")).attr('selected', true);
+								$("#town").selectmenu("refresh", true);
+				}
+			});
+
 			function page_load() {
 			        setTimeout(function(){
 			            if (readCookie("region")) {
@@ -468,11 +477,6 @@
 																			work = 0;
 																			//console.log(response)
 																			console.log(self.items)
-																			if (readCookie("town") && (mode == 0)) {
-																							$("#town").val(readCookie("town")).attr('selected', true);
-																							$("#town").selectmenu("refresh", true);
-																			}
-
 						                      }).catch(function(error){
 						                          console.log(error)
 						                      })
