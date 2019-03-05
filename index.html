@@ -239,7 +239,7 @@
 		</div>
 
 		<p> Enter age of the person seeking services. Leave age blank to view all services.</p>
-		<input name="age" id="age" data-type="number" placeholder="Input Age" onChange="list_page();">
+		<div  id="age_container"><input name="age" id="age" data-type="number" placeholder="Input Age" onChange="list_page();"></div>
 
 		<fieldset id="categories" data-role="controlgroup">
 			<p style="margin-top:15px;">Check the type(s) of service(s) you are looking for:</p>
@@ -467,8 +467,9 @@
 
 	function load_first() {
 			console.log("LOAD FIRST")
+			$('#town-button').empty()
 			$("#categories").html("")
-			$("#age").html("")
+			$("#age_container").html("<input name=\"age\" id=\"age\" data-type=\"number\" placeholder=\"Input Age\" onChange=\"list_page();\">")
 			cat_names.forEach((cat, index) => {
 					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" checked=\"checked\">");
 					$("#categories").html( $("#categories").html() + "<label for=\"checkbox-v-"+cat[0]+"\">"+cat[1]+"</label>");
