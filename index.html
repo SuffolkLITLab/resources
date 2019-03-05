@@ -39,8 +39,8 @@
 											region_name = readCookie("region_name");
 											load_regions(0)
 											load_first();
-											loadCookies();
 											$.mobile.changePage($('#filter'), { transition: 'slide'});
+											loadCookies();
 			            } else {
 											console.log("there is NOT a region cookie")
 			             	  //   call function to get list of regions
@@ -80,13 +80,12 @@
 				return null;
 			}
 		function loadCookies() {
-						if (readCookie("age")) {
-										$("#age").val(readCookie("age"));
-						}
 						if (readCookie("town")) {
-										//$("#town").val(readCookie("town"));
 										$("#town").val(readCookie("town")).attr('selected', true);
 										$("#town").selectmenu("refresh", true);
+						}
+						if (readCookie("age")) {
+										$("#age").val(readCookie("age"));
 						}
 		}
 		function saveCookies() {
