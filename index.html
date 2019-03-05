@@ -84,7 +84,9 @@
 										$("#age").val(readCookie("age"));
 						}
 						if (readCookie("town")) {
-										$("#town").val(readCookie("town"));
+										//$("#town").val(readCookie("town"));
+										$("#town").val(readCookie("town")).attr('selected', true);
+										$("#town").selectmenu("refresh", true);
 						}
 		}
 		function saveCookies() {
