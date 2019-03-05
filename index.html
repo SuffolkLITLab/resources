@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-capable" content="no" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>Geo Finder</title>
+  <title>Resource Finder</title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
@@ -39,6 +39,7 @@
 											region_name = readCookie("region_name");
 											load_regions(0)
 											load_first();
+											loadCookies();
 											$.mobile.changePage($('#filter'), { transition: 'slide'});
 			            } else {
 											console.log("there is NOT a region cookie")
@@ -50,7 +51,7 @@
 			}
 			function region_to_filter(region_val,rname){
 				createCookie('region',region_val,365*100);
-				createCookie('region_name',region_name,365*100)
+				createCookie('region_name',rname,365*100)
 				app_id = region_val;
 				region_name = rname;
 				console.log(region_val)
@@ -164,17 +165,15 @@
 </style>
 
 </head>
-<body onLoad="page_load();loadCookies();">
+<body onLoad="page_load();">
 
 <div data-role="page" id="loading">
 	<div data-role="header" data-position="fixed">
-		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<h1>Resource Finder</h1>
+		<h1>Loading...</h1>
 	</div>
 
 	<div data-role="content" class="content">
 	<p style="text-align:center" target="_blank"><img src="images/LIT_logo.png" width="200px"/ border="0"></p>
-	<a href="#region" data-transition="slide" data-role="button">Region</a>
 	</div>
 
 </div>
@@ -224,8 +223,6 @@
 		</fieldset>
 
 		<a href="javascript:results_page();" onClick="saveCookies();i=0;" data-role="button">Find Resources</a>
-		<a href="#map-page" data-transition="slide" data-role="button">map</a>
-		<a href="#details" data-transition="slide" data-role="button">Details</a>
 
 	</div>
 </div>
@@ -375,7 +372,7 @@
 	          ).then(function(response){
 								data =  response.data.records;
 								data.forEach(function (arrayItem) {
-								    if ((arrayItem.fields.State) &&  (x.indexOf(arrayItem.fields.State)==-1)) {
+								    if ((arrayItem.fields.State) && (x.indexOf(arrayItem.fields.State)==-1)) {
 								            x.push(arrayItem.fields.State)
 														//console.log(x);
 								        }
