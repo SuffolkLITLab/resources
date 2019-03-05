@@ -80,10 +80,6 @@
 				return null;
 			}
 		function loadCookies() {
-						if (readCookie("town")) {
-										$("#town").val(readCookie("town")).attr('selected', true);
-										$("#town").selectmenu("refresh", true);
-						}
 						if (readCookie("age")) {
 										$("#age").val(readCookie("age"));
 						}
@@ -202,7 +198,7 @@
 
 	<div data-role="content" class="content">
 		<div class="ui-field-contain">Use the following selections to find social, community based programs & services.
-			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="list_page();saveCookies();get_lat_log();
+			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="list_page();get_lat_log();
 ">
         		<option value="0" class="town_entry">Choose a Location</option>
 						<option v-for="item in items" v-bind:value="item['fields']['Latitude, Longitude, Zoom']"  class="town_entry">{{ item['fields']['Name'] }}</option>
@@ -210,16 +206,16 @@
 		</div>
 
 		<p> Enter age of the person seeking services. Leave age blank to view all services.</p>
-		<input name="age" id="age" data-type="number" placeholder="Input Age" onChange="list_page();saveCookies();">
+		<input name="age" id="age" data-type="number" placeholder="Input Age" onChange="list_page();">
 
 		<fieldset id="categories" data-role="controlgroup">
 			<p style="margin-top:15px;">Check the type(s) of service(s) you are looking for:</p>
 		</fieldset>
 
 		<fieldset data-role="controlgroup" data-type="horizontal">
-    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="list" checked="checked" onChange="saveCookies();">
+    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="list" checked="checked">
     		<label for="radio-choice-h-2a">List View</label>
-    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="map" onChange="saveCookies();">
+    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="map">
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
@@ -478,6 +474,12 @@
 	                  }
 	              }
 	          });
+
+			if (readCookie("town") && (mode == 0)) {
+							$("#town").val(readCookie("town")).attr('selected', true);
+							$("#town").selectmenu("refresh", true);
+			}
+
 	}
 
 	function results_page() {
