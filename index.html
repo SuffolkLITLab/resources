@@ -468,6 +468,11 @@
 																			work = 0;
 																			//console.log(response)
 																			console.log(self.items)
+																			if (readCookie("town") && (mode == 0)) {
+																							$("#town").val(readCookie("town")).attr('selected', true);
+																							$("#town").selectmenu("refresh", true);
+																			}
+
 						                      }).catch(function(error){
 						                          console.log(error)
 						                      })
@@ -475,10 +480,6 @@
 	              }
 	          });
 
-			if (readCookie("town") && (mode == 0)) {
-							$("#town").val(readCookie("town")).attr('selected', true);
-							$("#town").selectmenu("refresh", true);
-			}
 
 	}
 
