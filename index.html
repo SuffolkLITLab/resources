@@ -32,11 +32,13 @@
 					$.mobile.changePage.defaults.changeHash = false;
     	});
 
-			$(document).on('pagecontainershow', function(e, ui) {
+			$(document).on('pagecontainerbeforeshow', function(e, ui) {
 				if (readCookie("town") && ($.mobile.pageContainer.pagecontainer("getActivePage")[0].id == "filter")) {
 								console.log("change dropdown et al")
 								$("#town").val(readCookie("town")).attr('selected', true);
 								$("#town").selectmenu("refresh", true);
+
+								$("#age").val(readCookie("age"));
 
 								if (readCookie("list_map") == "list") {
 									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
@@ -47,9 +49,21 @@
 									$('#radio-choice-h-2a').attr('checked',false).checkboxradio('refresh');
 									$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
 								}
-
 				}
 			});
+
+      function load_filter () {
+				if (work == 0) {
+					$.mobile.changePage($('#filter'), { transition: 'slide'});
+				} else {
+					if ($.mobile.loading().is(':hidden')) {
+						$.mobile.loading("show");
+					}
+					setTimeout(function () {
+						load_filter()
+					}, 100);
+				}
+			}
 
 			function page_load() {
 			        setTimeout(function(){
@@ -62,10 +76,8 @@
 											app_id = readCookie("region");
 											region_name = readCookie("region_name");
 											load_regions(0)
-											load_first(function() {
-												$.mobile.changePage($('#filter'), { transition: 'slide'});
-												loadCookies();
-							        });
+											load_first();
+											load_filter();
 			            } else {
 											console.log("there is NOT a region cookie")
 			             	  //   call function to get list of regions
@@ -104,11 +116,6 @@
 				}
 				return null;
 			}
-		function loadCookies() {
-						if (readCookie("age")) {
-										$("#age").val(readCookie("age"));
-						}
-		}
 		function saveCookies() {
 						age = $("#age").val();
 						town = $("#town").val();
