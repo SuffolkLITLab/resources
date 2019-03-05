@@ -38,11 +38,12 @@
 								$("#town").val(readCookie("town")).attr('selected', true);
 								$("#town").selectmenu("refresh", true);
 
-								if (readCookie("list_map") == "map"){
-									$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
-                } else {
+								if (readCookie("list_map") == "list") {
 									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
+                } else if (readCookie("list_map") == "map") {
+									$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
 								}
+								
 								$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
 								$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
 				}
