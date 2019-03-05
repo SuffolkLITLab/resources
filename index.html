@@ -37,6 +37,14 @@
 								console.log("change dropdown et al")
 								$("#town").val(readCookie("town")).attr('selected', true);
 								$("#town").selectmenu("refresh", true);
+
+								if (readCookie("list_map") == "map"){
+									$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
+                } else {
+									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
+								}
+								$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
+								$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
 				}
 			});
 
@@ -96,8 +104,10 @@
 		function saveCookies() {
 						age = $("#age").val();
 						town = $("#town").val();
+						list_map = $('input[name="radio-choice-h-2"]:checked', '#filter').val()
 						createCookie("age",age,365*100);
 						createCookie("town",town,365*100);
+						createCookie("list_map",list_map,365*100);
 		}
 	</script>
 
