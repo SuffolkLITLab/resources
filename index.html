@@ -40,12 +40,14 @@
 
 								if (readCookie("list_map") == "list") {
 									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
+									$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
+									$('#radio-choice-h-2b').attr('checked',false).checkboxradio('refresh');
                 } else if (readCookie("list_map") == "map") {
 									$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
+									$('#radio-choice-h-2a').attr('checked',false).checkboxradio('refresh');
+									$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
 								}
-								
-								$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
-								$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
+
 				}
 			});
 
@@ -218,8 +220,7 @@
 
 	<div data-role="content" class="content">
 		<div class="ui-field-contain">Use the following selections to find social, community based programs & services.
-			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="list_page();get_lat_log();
-">
+			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="list_page();">
         		<option value="0" class="town_entry">Choose a Location</option>
 						<option v-for="item in items" v-bind:value="item['fields']['Latitude, Longitude, Zoom']"  class="town_entry">{{ item['fields']['Name'] }}</option>
     	</select>
@@ -239,7 +240,7 @@
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
-		<a href="javascript:results_page();" onClick="saveCookies();i=0;" data-role="button">Find Resources</a>
+		<a href="javascript:results_page();" onClick="get_lat_log();saveCookies();i=0;" data-role="button">Find Resources</a>
 
 	</div>
 </div>
