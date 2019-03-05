@@ -26,6 +26,7 @@
 			var lat = ""
 			var lon = ""
 			var zoomin = ""
+			var zoomfactor = 0.01;
     	$(document).on("mobileinit", function () {
         	$.mobile.hashListeningEnabled = false;
         	$.mobile.pushStateEnabled = false;
@@ -232,7 +233,7 @@
 
 	<div data-role="content" class="content">
 		<div class="ui-field-contain">Use the following selections to find social, community based programs & services.
-			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="list_page();">
+			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="">
         		<option value="0" class="town_entry">Choose a Location</option>
 						<option v-for="item in items" v-bind:value="item['fields']['Latitude, Longitude, Zoom']"  class="town_entry">{{ item['fields']['Name'] }}</option>
     	</select>
@@ -252,7 +253,7 @@
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
-		<a href="javascript:results_page();" onClick="get_lat_log();saveCookies();i=0;" data-role="button">Find Resources</a>
+		<a href="javascript:results_page();" onClick="get_lat_log();list_page();saveCookies();i=0;" data-role="button">Find Resources</a>
 
 	</div>
 </div>
@@ -490,10 +491,10 @@
 			} else if (mode == 1) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/Categories/?sort[0][field]=Name&sort[0][direction]=asc";
 			} else if (mode == 2) {
-				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-1)+"<={Latitude},"+(lat+1)+">={Latitude},"+(lon-1)+"<={Longitude},"+(lon+1)+">={Longitude})&sort[0][field]=Name&sort[0][direction]=asc";
+				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor/zoomin)+"<={Latitude},"+(lat+zoomfactor/zoomin)+">={Latitude},"+(lon-1)+"<={Longitude},"+(lon+1)+">={Longitude})&sort[0][field]=Name&sort[0][direction]=asc";
 				//console.log(lat,lon,apicall)
 			} else if (mode == 3) {
-				apicall = "https://api.airtable.com/v0/"+app_id+"/" + $('#town').find(":selected").text() + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";
+				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";
 			}
 
 			console.log(apicall)
@@ -585,12 +586,12 @@ function get_lat_log() {
 				cat_names.forEach((cat, index) => {
 					if ($('#checkbox-v-'+cat[0]).is(":checked")){
 						$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['Name'] == '"+cat[1]+"'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }}; Gender(s): {{ item['fields']['Gender'] }}</p></a></li>")
+						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }}; Gender(s): {{ item['fields']['Gender'] }}</p></a></li>")
 						if (categories != "") {
 							categories = categories+",";
 						}
 						categories = categories+"FIND(\""+cat[1]+"\",{Category})";
-					}
+				}
 				});
 
 				if ($('#age').val()=="") {
