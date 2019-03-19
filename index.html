@@ -53,8 +53,24 @@
 				}
 			});
 
-
-
+			function load_cat_names() {
+					axios.get(
+										 'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
+										{
+											headers: { Authorization: "Bearer "+app_key }
+										}
+									).then(function(response){
+											dcat =  response.dcat.records;
+											dcat.forEach(function (arrayItem) {
+													if ((arrayItem.fields.State) && (y.indexOf(arrayItem.fields.State)==-1)) {
+																	y.push(arrayItem.fields.State)
+															}
+											});
+									}).catch(function(error){
+											console.log(error)
+									})
+				return x;
+				}
 
       function load_filter () {
 				if (work == 0) {
@@ -424,7 +440,7 @@
 
 	var dcat;
 
-	function load_cat_names() {
+ function load_cat_names() {
 			axios.get(
 								 'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
 								{
