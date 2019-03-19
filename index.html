@@ -54,7 +54,7 @@
 			});
 
 
-
+			
 
       function load_filter () {
 				if (work == 0) {
@@ -68,6 +68,7 @@
 					}, 100);
 				}
 			}
+<<<<<<< HEAD
 	//		function load_cat_names() {
 				axios.get(
 									 'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
@@ -88,11 +89,18 @@
 	//		return x;
 			}
 
+=======
+>>>>>>> parent of 60831d6... load_cat_names added
 
 			function page_load() {
 			        setTimeout(function(){
 									cat_names = [["Outreach","Community Outreach"],["Counseling","Counseling"],["Training","Job Opportunities/Training"],["Health","Health Services"],["Academic","Academic Support"],["Case","Case Management"],["Mentor","Mentoring"],["Shelter","Shelter"],["LGBTQ","LGBTQ"],["Housing","Housing"]];
+<<<<<<< HEAD
 									cat_names = load_cat_names();
+=======
+
+									// cat_names = load_cat_names();
+>>>>>>> parent of 60831d6... load_cat_names added
 
 			            if (readCookie("region")) {
 											console.log(readCookie("region"),"there is a region cookie")
