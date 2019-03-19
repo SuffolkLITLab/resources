@@ -68,7 +68,7 @@
 					}, 100);
 				}
 			}
-			function load_cat_names() {
+	//		function load_cat_names() {
 				axios.get(
 									 'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
 									{
@@ -85,7 +85,7 @@
 								}).catch(function(error){
 										console.log(error)
 								})
-			return x;
+	//		return x;
 			}
 
 
