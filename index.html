@@ -55,21 +55,19 @@
 
 			function load_cat_names() {
 					axios.get(
-										 'https://api.airtable.com/v0/'+app_id+'/Eastern/?sort[0][field]=Categories',
+										 'https://api.airtable.com/v0/app1coUtTecDQTZuF/Eastern/?limit=1',
 										{
 											headers: { Authorization: "Bearer "+app_key }
 										}
 									).then(function(response){
-											dcat =  response.dcat.records;
-											dcat.forEach(function (arrayItem) {
-													if ((arrayItem.fields.Categories) && (y.indexOf(arrayItem.fields.Categories)==-1)) {
-																	y.push(arrayItem.fields.State)
-															}
-											});
-									}).catch(function(error){
-											console.log(error)
-									})
-				return x;
+											dcat =  response.data.records[0].fields;
+											var keys = [];
+											for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
+                                    console.log(keys)
+                            }).catch(function(error){
+                                    console.log(error)
+                            })
+				return dcat;
 				}
 
       function load_filter () {
