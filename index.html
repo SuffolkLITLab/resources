@@ -62,7 +62,7 @@
 									).then(function(response){
 											dcat =  response.dcat.records[0].fields;
 											var keys = [];
-											for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
+											for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
                                     console.log(keys)
                             }).catch(function(error){
                                     console.log(error)
