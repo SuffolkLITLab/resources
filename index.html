@@ -293,7 +293,7 @@
 		<p> Nicole Siino is American Bar Association NextGen 2018/2019 Fellow and a recent graduate of Suffolk University Law School. During her time in law school, she was a Student Attorney in the Juvenile Defender Clinic. Nicole was also the Legal Innovation & Technology Fellow in her clinic in addition to representing juveniles in their delinquency matters. As a law student, Nicole created a website app that contains a comprehensive list of youth programs & resources in and around the Boston area which allows users to filter through to find the perfect program. It was through this fellowship that Nicole discovered she wanted to be part of the legal tech field. </p>
 		<p> This web app contains a comprehensive list of criminal justice programs & services to help to provide access to justice. The use of the app allows people to find and successfully participate in these programs which can have long-lasting impacts on their sentences - and their futures. The app enables its users to quickly search and find resources while in court, on the go, or sitting in an office.</p>
 		<p> You can check out the <a href="https://www.suffolklitlab.org">Suffolk Lit Lab's</a> website to see other LIT projects!</p>
-		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invNi18Brb4LgHUTU&inviteToken=d74b5b443352026378882c4ed93f1c90ec1f748b61f1829d8519d0a167d9d7b1">Airtable</a>. If you find any errors, please <a href="mailto:litlab@suffolk\.edu">Email</a> the Suffolk LIT Lab.</p>
+		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2">Airtable</a>. If you find any errors, please <a href="mailto:litlab@suffolk\.edu">Email</a> the Suffolk LIT Lab.</p>
 		<p style="text-align:center"><a href="https://suffolklitlab.org/" target="_blank"><img src="images/LIT_logo.png" width="200px"/ border="0"></a></p>
 
 	</div>
@@ -329,7 +329,10 @@
 	</div>
 		<div data-role="content" class="content">
 				<h1 id="town_name"></h1>
-				<ul id="org_list" data-role="listview" data-inset="true">
+				<form class="ui-filterable">
+					<input id="filterBasic-input" data-type="search">
+				</form>
+				<ul id="org_list" data-role="listview" data-inset="true" data-filter="true" data-input="#filterBasic-input">
 				</ul>
 		</div>
 
@@ -349,6 +352,7 @@
 				<li><a href="#map-page">Map</a></li>
 			</ul>
 		</div>
+		
 	</div>
 
 	<div>
@@ -655,6 +659,7 @@ function get_lat_log() {
 		$("#detail").html($("#detail").html() + "<p><b>Email:</b> <a v-bind:href=\"'mailto:'+item['fields']['Email']\" target=\"_blank\">{{ item['fields']['Email'] }}</a></p>");
       	$("#detail").html($("#detail").html() + "<p><b>Website:</b> <a v-bind:href=\"item['fields']['Website']\" target=\"_blank\">{{ item['fields']['Website'] }}</a></p>");
       	$("#detail").html($("#detail").html() + "<p><b>Address:</b> <a v-bind:href=\"'https://www.google.com/maps/place/'+item['fields']['Address']\" target=\"_blank\">{{ item['fields']['Address'] }}</a></p>");
+      	$("#detail").html($("#detail").html() + "<p><b>Application Requirements/Restrictions (if any):</b> {{ item['fields']['Application Requirements/Restrictions (if any)'] }}</p>");
       	$("#detail").html($("#detail").html() + "<p><b>Description:</b> {{ item['fields']['Description'] }}</p>");
 		$("#detail").html($("#detail").html() + "<p><b>Valid As Of:</b> {{ item['fields']['Valid As Of'] }}</p>");
 
