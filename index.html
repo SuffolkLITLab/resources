@@ -54,23 +54,23 @@
 				}
 			});
 
-			function load_cat_names() {
-					axios.get(
-										 'https://api.airtable.com/v0/'+app_id+'/Eastern/?sort[0][field]=Categories',
-										{
-											headers: { Authorization: "Bearer "+app_key }
-										}
-									).then(function(response){
-											dcat =  response.dcat.records;
-											dcat.forEach(function (arrayItem) {
-													if ((arrayItem.fields.Categories) && (y.indexOf(arrayItem.fields.Categories)==-1)) {
-																	y.push(arrayItem.fields.State)
-															}
-											});
-									}).catch(function(error){
-											console.log(error)
-									})
-				return x;
+			var dcat;
+			var keys = [];
+		 function load_cat_names() {
+			 axios.get(
+			                                  'https://api.airtable.com/v0/app1coUtTecDQTZuF/Eastern/?limit=1',
+			                                 {
+			                                     headers: { Authorization: "Bearer "+app_key }
+			                                 }
+			                             ).then(function(response){
+			                                     dcat =  response.data.records[0].fields;
+			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
+			                                     console.log(keys)
+			                             }).catch(function(error){
+			                                     console.log(error)
+			                             })
+				return keys;
+				//return [["Outreach","Community Outreach"],["Counseling","Counseling"],["Training","Job Opportunities/Training"],["Health","Health Services"],["Academic","Academic Support"],["Case","Case Management"],["Mentor","Mentoring"],["Shelter","Shelter"],["LGBTQ","LGBTQ"],["Housing","Housing"]];
 				}
 
       function load_filter () {
@@ -88,7 +88,6 @@
 
 			function page_load() {
 			        setTimeout(function(){
-									cat_names = [["Outreach","Community Outreach"],["Counseling","Counseling"],["Training","Job Opportunities/Training"],["Health","Health Services"],["Academic","Academic Support"],["Case","Case Management"],["Mentor","Mentoring"],["Shelter","Shelter"],["LGBTQ","LGBTQ"],["Housing","Housing"]];
 			            if (readCookie("region")) {
 											console.log(readCookie("region"),"there is a region cookie")
 											app_id = readCookie("region");
@@ -218,6 +217,13 @@
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
+.logos {
+	width:100%;
+	text-align:center;
+	padding-top: 15px;
+}
+
 </style>
 
 </head>
@@ -229,9 +235,11 @@
 	</div>
 
 	<div data-role="content" class="content">
-	<p style="text-align:center" target="_blank"><img src="images/LIT_logo.png" width="200px"/ border="0"></p>
-	<p style="text-align:right" target="_blank"><img src="images/NU.png" width="250px"/ border="0"></p>
-	<p style="text-align:left" target="_blank"><img src="images/ABA.png" width="300px"/ border="0"></p>
+	<div class="logos">
+		<p><img src="images/LIT_logo.png" width="150px"/ border="0" ></p>
+		<p><img src="images/NU.png" width="200px"/ border="0" ></p>
+		<p><img src="images/ABA.png" width="200px"/ border="0" ></p>
+	</div>
 	</div>
 
 </div>
@@ -330,7 +338,7 @@
 	</div>
 		<div data-role="content" class="content">
 				<h1 id="town_name"></h1>
-				<form class="ui-filterable">
+				<form id="searchfilter"class="ui-filterable">
 					<input id="filterBasic-input" data-type="search">
 				</form>
 				<ul id="org_list" data-role="listview" data-inset="true" data-filter="true" data-input="#filterBasic-input">
@@ -353,7 +361,7 @@
 				<li><a href="#map-page">Map</a></li>
 			</ul>
 		</div>
-		
+
 	</div>
 
 	<div>
@@ -446,32 +454,13 @@
 	}
 
 
-	var dcat;
 
- function load_cat_names() {
-			axios.get(
-								 'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
-								{
-									headers: { Authorization: "Bearer "+app_key }
-								}
-							).then(function(response){
-									dcat =  response.dcat.records;
-									dcat.forEach(function (arrayItem) {
-											if ((arrayItem.fields.State) && (y.indexOf(arrayItem.fields.State)==-1)) {
-															y.push(arrayItem.fields.State)
-													}
-									});
-							}).catch(function(error){
-									console.log(error)
-							})
-		return x;
-		}
 
 	var y = [];
 
-	var region_names = load_region_list();
+	var cat_names = load_cat_names();
 
-	var cat_names = [];
+	var region_names = load_region_list();
 
 	var categories = "";
 	var ages = "";
@@ -504,7 +493,7 @@
 			$("#categories").html("")
 			$("#age_container").html("<input name=\"age\" id=\"age\" data-type=\"number\" placeholder=\"Input Age\" onChange=\"list_page();\">")
 			cat_names.forEach((cat, index) => {
-					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" checked=\"checked\">");
+					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" class=\"boxcheck\">");
 					$("#categories").html( $("#categories").html() + "<label for=\"checkbox-v-"+cat[0]+"\">"+cat[1]+"</label>");
 			});
 			$( '#categories' ).enhanceWithin();
@@ -566,11 +555,14 @@
 
 	function results_page() {
 
+		$('#searchfilter').empty()
+		$('#searchfilter').html("<input id=\"filterBasic-input\" data-type=\"search\">")
+
 		if ($('#town').find(":selected").val() == 0) {
 			alert('You must choose a location.');
 		} else if ( isNaN(Number($('#age').val())) ) {
 			alert('You must enter a numeric age (in years) or leave blank.')
-		} else if ($('#checkbox-v-Outreach').is(":checked") || $('#checkbox-v-Counseling').is(":checked") || $('#checkbox-v-Risk').is(":checked") || $('#checkbox-v-Training').is(":checked") || $('#checkbox-v-Health').is(":checked") || $('#checkbox-v-Multi').is(":checked")) {
+		} else if ($('.boxcheck:checkbox:checked').length > 0) {
 			next_page_1()
     } else {
 			alert('You must choose at least one type of service.')
@@ -746,7 +738,11 @@ function get_lat_log() {
 
 		function size_map() {
 			initMap(lat,lon,zoomin);
-			$('#map').height( window.innerHeight - 81 +  'px');
+			var map_pad = 81;
+			if (undisc==1) {
+				map_pad = 200;
+			}
+			$('#map').height( window.innerHeight - map_pad +  'px');
 
 		}
 
