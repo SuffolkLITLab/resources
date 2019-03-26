@@ -83,11 +83,10 @@
 				}
 			}
 
-
+cat_names = load_cat_names
 
 			function page_load() {
 			        setTimeout(function(){
-								cat_names = load_cat_names;
 			            if (readCookie("region")) {
 											console.log(readCookie("region"),"there is a region cookie")
 											app_id = readCookie("region");
