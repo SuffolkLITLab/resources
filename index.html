@@ -83,10 +83,9 @@
 				}
 			}
 
-cat_names = load_cat_names
-
 			function page_load() {
 			        setTimeout(function(){
+									cat_names = [["Outreach","Community Outreach"],["Counseling","Counseling"],["Training","Job Opportunities/Training"],["Health","Health Services"],["Academic","Academic Support"],["Case","Case Management"],["Mentor","Mentoring"],["Shelter","Shelter"],["LGBTQ","LGBTQ"],["Housing","Housing"]];
 			            if (readCookie("region")) {
 											console.log(readCookie("region"),"there is a region cookie")
 											app_id = readCookie("region");
