@@ -64,7 +64,7 @@
 			                                 }
 			                             ).then(function(response){
 			                                     dcat =  response.data.records[0].fields;
-			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
+			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
 			                                     console.log(keys)
 			                             }).catch(function(error){
 			                                     console.log(error)
@@ -396,9 +396,6 @@
 			<label for=number><b>Number of Beds Available:</b></label>
 			<input type="number" name="quantity" min="0" max="50">
 
-			<label for="text-2"><b>Phone Number:</b></label>
-			<input type=text id=phone">
-
 			<label for="email-1"><b>Email Address:</b></label>
 			<input type="email" data-clear-btn="false" name="email-1" id="email-1" value="">
 
@@ -407,9 +404,6 @@
 
 			<label for="text-3"><b>Address:</b></label>
 			<input type=text id=address">
-
-			<label for="textarea-1"><b>Description:</b></label>
-			<textarea name="textarea-1" id="textarea-1"></textarea>
 
 			<input type="submit" value="Submit">
 		</form>
