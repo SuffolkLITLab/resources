@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-capable" content="no" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>Resource Finder</title>
+  <title>Resource Finder (Beta)</title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
@@ -247,7 +247,7 @@
 <div data-role="page" id="region">
 	<div data-role="header" data-position="fixed">
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<h1>Resource Finder</h1>
+		<h1>Resource Finder (Beta)</h1>
 	</div>
 
 	<div data-role="content" id="regions" class="content">
@@ -260,7 +260,7 @@
 <div data-role="page" id="filter">
 	<div data-role="header" data-position="fixed">
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<h1>Resource Finder</h1>
+		<h1>Resource Finder (Beta)</h1>
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
 	</div>
@@ -316,9 +316,6 @@
 	<div data-role="content" class="content">
 		<div id="detail" v-for="" v-if="">
 		</div>
-		<div>
-			<a href="#edit" data-transition="slide" data-role="button">Claim This Program</a>
-		</div>
 	</div>
 </div>
 
@@ -367,48 +364,6 @@
 		<div id="map" style="width:100%;height:100px;"></div>
 	</div>
 
-	<div data-role="footer">
-		<body style="text-align:center">
-		<div class="popup" onclick="myFunction()"><h4>Undisclosed Locations</h4>
-  			<span class="popuptext" id="myPopup">List of undisclosed locations</span>
-		</div>
-
-	<script>
-	// When the user clicks on div, open the popup
-	function myFunction() {
-  		var popup = document.getElementById("myPopup");
-  		popup.classList.toggle("show");
-	}
-	</script>
-	</div>
-</div>
-
-<div data-role="page" id="edit">
-	<div data-role="header" data-position="fixed">
-		<h1>Edit Entry</h1>
-		<a href="details" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
-	</div>
-	<div data-role="content" class="content">
-		<form>
-			<label for="text-1"><b>Name of Program:</b></label>
-			<input type=text id=name">
-
-			<label for=number><b>Number of Beds Available:</b></label>
-			<input type="number" name="quantity" min="0" max="50">
-
-			<label for="email-1"><b>Email Address:</b></label>
-			<input type="email" data-clear-btn="false" name="email-1" id="email-1" value="">
-
-			<label for="url-1"><b>Website:</b></label>
-			<input type="url" data-clear-btn="false" name="url-1" id="url-1" value="">
-
-			<label for="text-3"><b>Address:</b></label>
-			<input type=text id=address">
-
-			<input type="submit" value="Submit">
-		</form>
-			<a href="pass.html" target="_blank" data-transition="slide" data-role="button">Reset Password</a>
-	</div>
 </div>
 
 
