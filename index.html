@@ -469,6 +469,15 @@
 			load_api_data('#filter',0);
 	}
 
+function checked_cats() {
+	var selected = [];
+	$('.boxcheck:checkbox:checked').each(function() {
+	    selected.push($(this).attr('id'));
+	});
+	return selected;
+}
+
+
 	function cats_filter() {
 		// put your cat loop here and make a string to filter
 		// the form should be "{category2}=1,{category2}=1"
