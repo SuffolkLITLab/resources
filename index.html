@@ -507,6 +507,7 @@ function checked_cats() {
 	}
 
 	function load_api_data(target,mode=3,id='') {
+			target = target.replace(/ /g,"\\ ")
 			work = 1;
 			console.log("LOAD API DATA:",target,mode,id)
 			//https://api.airtable.com/v0/appHUknSmoIogemD5/Boston/?filterByFormula=AND(20<={Maximum Age},20>={Minimum Age},OR((FIND("Community Outreach",{Category})),(FIND("Counseling",{Category}))))
@@ -547,7 +548,7 @@ function checked_cats() {
 						                      ).then(function(response){
 						                          self.items = response.data.records;
 																			work = 0;
-																			console.log(response)
+																			//console.log(response)
 																			console.log(self.items)
 						                      }).catch(function(error){
 						                          console.log(error)
