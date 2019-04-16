@@ -453,7 +453,7 @@
 
 	$("#region").on("pageshow" , function() {
 			region_names.forEach((cat, index) => {
-	  		$('#list_'+cat).listview('refresh');
+	  		$('#list_'+cat.replace(/ /g,"\\ ")).listview('refresh');
 			});
 	});
 
