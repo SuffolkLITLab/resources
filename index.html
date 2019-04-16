@@ -27,22 +27,33 @@
 			var lon = ""
 			var zoomin = ""
 
-			function zoomfactor(zoomin,latorlon) {
+			function zoomfactor(zoomin,lat,lon,latorlon) {
+
+				var earth_radius = 3960.0
+				var degrees_to_radians = Math.PI/180.0
+				var radians_to_degrees = 180.0/Math.PI
+				var miles = 1
+
 				if (latorlon == "lat") {
 
 					if (zoomin==14) {
-						return 0.9
+						miles = 1
 					} else if (zoomin==13) {
-						return 0.9
+						miles = 2
 					}
+
+					return (miles/earth_radius)*radians_to_degrees
 
 				} else {
 
 					if (zoomin==14) {
-						return 0.9
+						miles = 1
 					} else if (zoomin==13) {
-						return 0.9
+						miles = 2
 					}
+
+					var r = earth_radius*Math.cos(lat*degrees_to_radians)
+					return (miles/r)*radians_to_degrees
 
 				}
 			}
@@ -453,7 +464,7 @@
 					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"#filter\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());\">{{ item['fields']['Region'] }}</a></li></ul></div>");
 			});
 			region_names.forEach((cat, index) => {
-				load_api_data('#reg_'+cat,-1,cat);
+				load_api_data('#reg_'+cat+" ",-1,cat);
 			});
 			if (go!=0) {
 				$.mobile.changePage($('#region'), { transition: 'fade', });
@@ -483,13 +494,16 @@ function checked_cats() {
 }
 
 	function cats_filter() {
-		//checked_cats.forEach(cat, index) => {
-		//checked_cats = checked_cats+"FIND({category2}=1,{category2}=1)";
-				//};
-
-		 // put your cat loop here and make a string to filter
-		// the form should be "{category2}=1,{category2}=1"
-		return ""
+		filter_string = ",OR("
+		for (var i = 0; i < checked_cats().length; i++) {
+        console.log(checked_cats()[i]);
+				filter_string= filter_string+"{"+ checked_cats()[i] +"}=1"
+				if (i<checked_cats().length-1) {
+					filter_string= filter_string+","
+				}
+    }
+		filter_string = filter_string+")"
+		return filter_string
 	}
 
 	function load_api_data(target,mode=3,id='') {
@@ -504,7 +518,7 @@ function checked_cats() {
 			} else if (mode == 1) {
 				//apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?limit=1";
 			} else if (mode == 2) {
-				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor(zoomin,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,"lon"))+">={Longitude}"+cats_filter()+")&sort[0][field]=Name&sort[0][direction]=asc";
+				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor(zoomin,lat,lon,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,lat,lon,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,lat,lon,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,lat,lon,"lon"))+">={Longitude}"+cats_filter()+")&sort[0][field]=Name&sort[0][direction]=asc";
 				//console.log(lat,lon,apicall)
 			} else if (mode == 3) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";
