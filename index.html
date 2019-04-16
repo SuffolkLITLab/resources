@@ -137,6 +137,7 @@
 				createCookie("age","",-1);
 				createCookie("town","",-1);
 				createCookie("list_map","",-1);
+				createCookie("cats","",-1);
 			}
 	</script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -167,6 +168,10 @@
 						createCookie("age",age,365*100);
 						createCookie("town",town,365*100);
 						createCookie("list_map",list_map,365*100);
+		}
+
+		function save_cats() {
+						createCookie("cats",checked_cats(),365*100)
 		}
 	</script>
 
@@ -307,7 +312,7 @@
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
-		<a href="javascript:results_page();" onClick="get_lat_log();list_page();saveCookies();i=0;" data-role="button">Find Resources</a>
+		<a href="javascript:results_page();" onClick="get_lat_log();list_page();saveCookies();save_cats();i=0;" data-role="button">Find Resources</a>
 
 	</div>
 </div>
@@ -476,7 +481,6 @@ function checked_cats() {
 	});
 	return selected;
 }
-
 
 	function cats_filter() {
 		//var cats_filter = checked_cats();
