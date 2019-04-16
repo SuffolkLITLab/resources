@@ -464,7 +464,7 @@
 					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"#filter\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());\">{{ item['fields']['Region'] }}</a></li></ul></div>");
 			});
 			region_names.forEach((cat, index) => {
-				load_api_data('#reg_'+cat,-1,cat);
+				load_api_data('#reg_'+cat.replace(/ /g,"\\ "),-1,cat);
 			});
 			if (go!=0) {
 				$.mobile.changePage($('#region'), { transition: 'fade', });
@@ -507,7 +507,6 @@ function checked_cats() {
 	}
 
 	function load_api_data(target,mode=3,id='') {
-			target = target.replace(/ /g,"\\ ")
 			work = 1;
 			console.log("LOAD API DATA:",target,mode,id)
 			//https://api.airtable.com/v0/appHUknSmoIogemD5/Boston/?filterByFormula=AND(20<={Maximum Age},20>={Minimum Age},OR((FIND("Community Outreach",{Category})),(FIND("Counseling",{Category}))))
