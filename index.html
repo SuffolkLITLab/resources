@@ -75,6 +75,8 @@
 
 								$("#age").val(readCookie("age"));
 
+								load_cats();
+
 								if (readCookie("list_map") == "list") {
 									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
 									$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
@@ -128,7 +130,6 @@
 											load_regions(0)
 											load_first();
 											load_filter();
-											load_cats();
 			            } else {
 											console.log("there is NOT a region cookie")
 			             	  //   call function to get list of regions
@@ -155,7 +156,7 @@
 				createCookie("cats","",-1);
 			}
 	</script>
-	
+
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 		function createCookie(name,value,days) {
