@@ -127,6 +127,7 @@
 											region_name = readCookie("region_name");
 											load_regions(0)
 											load_first();
+											load_cats();
 											load_filter();
 			            } else {
 											console.log("there is NOT a region cookie")
@@ -471,7 +472,7 @@
 			console.log("LOAD REGIONS")
 			console.log(region_names)
 			region_names.forEach((cat, index) => {
-					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"#filter\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());load_cats();\">{{ item['fields']['Region'] }}</a></li></ul></div>");
+					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"#filter\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());\">{{ item['fields']['Region'] }}</a></li></ul></div>");
 			});
 			region_names.forEach((cat, index) => {
 				load_api_data('#reg_'+cat.replace(/ /g,"\\ "),-1,cat);
