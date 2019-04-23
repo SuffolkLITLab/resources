@@ -128,6 +128,7 @@
 											load_regions(0)
 											load_first();
 											load_filter();
+											load_cats();
 			            } else {
 											console.log("there is NOT a region cookie")
 			             	  //   call function to get list of regions
@@ -181,6 +182,14 @@
 						createCookie("age",age,365*100);
 						createCookie("town",town,365*100);
 						createCookie("list_map",list_map,365*100);
+		}
+
+		function load_cats() {
+			for (var i = 0; i < readCookie("cats").split(",").length; i++) {
+        console.log(readCookie("cats").split(",")[i]);
+        //Do something
+        $('#'+readCookie("cats").split(",")[i]).prop('checked', true).checkboxradio('refresh');
+    }
 		}
 
 		function save_cats() {
