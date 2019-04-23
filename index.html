@@ -144,6 +144,7 @@
 				region_name = rname;
 				console.log(region_val)
 				load_first();
+				//$("#title").html('state'“>”'region');
 			}
 			function remove_cookies() {
 				createCookie('region',"",-1);
@@ -154,6 +155,7 @@
 				createCookie("cats","",-1);
 			}
 	</script>
+	
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 		function createCookie(name,value,days) {
@@ -306,8 +308,7 @@
 
 <div data-role="page" id="filter">
 	<div data-role="header" data-position="fixed">
-		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<h1>Resource Finder (Beta)</h1>
+		<h1 id="title"></h>
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
 	</div>
