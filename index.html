@@ -154,6 +154,7 @@
 				createCookie("town","",-1);
 				createCookie("list_map","",-1);
 				createCookie("cats","",-1);
+				$('#town').html("<option value=\"0\" class=\"town_entry\">Choose a Location</option>\n<option v-for=\"item in items\" v-bind:value=\"item['fields']['Latitude, Longitude, Zoom']\"  class=\"town_entry\">{{ item['fields']['Name'] }}</option>");
 			}
 	</script>
 
