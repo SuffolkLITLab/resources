@@ -38,10 +38,16 @@
 
 				if (latorlon == "lat") {
 
-					if (zoomin==14) {
-						miles = 1
+					if (zoomin==15) {
+						miles = 4
+					} else if (zoomin==14) {
+						miles = 8
 					} else if (zoomin==13) {
-						miles = 2
+						miles = 10
+					} else if (zoomin==12) {
+						miles = 22
+					} else if (zoomin==11) {
+						miles = 30
 					}
 
 					return (miles/earth_radius)*radians_to_degrees
