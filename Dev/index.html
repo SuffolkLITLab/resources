@@ -513,19 +513,24 @@ function checked_cats() {
 	return selected;
 }
 
-	function cats_filter() {
-		filter_string = ",OR("
-		for (var i = 0; i < checked_cats().length; i++) {
+function cutoff(longname){
+    output = longname.replace(/^checkbox-v-/g,'');
+    // some code to take output and search cat names to find the proper name and output that
+    return output
+}
+    
+    function cats_filter() {
+        filter_string = ",OR("
+        for (var i = 0; i < checked_cats().length; i++) {
         console.log(checked_cats()[i]);
-				filter_string= filter_string+"{"+ checked_cats()[i] +"}=1"
-				if (i<checked_cats().length-1) {
-					filter_string= filter_string+","
-				}
+                filter_string= filter_string+"{"+ cutoff(checked_cats()[i]) +"}=1"
+                if (i<checked_cats().length-1) {
+                    filter_string= filter_string+","
+                }
     }
-		filter_string = filter_string+")"
-		//return filter_string
-		return ""
-	}
+        filter_string = filter_string+")"
+        return filter_string
+    }
 
 	function load_api_data(target,mode=3,id='') {
 			work = 1;
