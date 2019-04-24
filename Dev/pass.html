@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="no" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Geo Finder</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-108858221-1');
+	</script>
+	<meta property="og:image" content="images/icon_300.png"/>
+	<link rel="apple-touch-icon" href="images/icon_300.png"/>
+
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>
+    	$(document).on("mobileinit", function () {
+        	$.mobile.hashListeningEnabled = false;
+        	$.mobile.pushStateEnabled = false;
+    	});
+	</script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		.content {
+			text-align:left;
+			max-width:700px;
+			margin:0 auto 0 auto;
+			padding:0 15px 25px 15px
+		}
+	</style>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+</style>
+</head>
+<body>
+<div data-role="page" id="password">
+	<div data-role="header" data-position="fixed">
+		<h1>Reset Password</h1>
+	</div>
+
+	<div data-role="content" class="content">
+	<p> Please enter the following information to reset your user password.</p>
+		<form action="" method="post">
+		
+			<label for="name"><b>Name:</b></label>
+			<input name="name" required><br</input>
+ 
+ 			<label for="email"><b>Email:</b></label>
+      		<input name="email" type="email" required><br</input>
+
+			<div class="g-recaptcha" data-sitekey="6Lei-ZAUAAAAAJKwv6v9d7M_DqBff2QYjE-9gRk_"></div>
+			
+			<p> Contact the <a href="mailto:nasiino@su.suffolk.edu">System Administrator</a> for questions.</p>
+			<input type="submit" value="Submit"</input>
+		
+		</form>
+	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	</div>
+
+</body>
+</html>
