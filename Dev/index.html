@@ -105,7 +105,7 @@
 			                                 }
 			                             ).then(function(response){
 			                                     dcat =  response.data.records[0].fields;
-			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
+			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Hotline", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
 																						cat_names = keys;
 																						load_first();
 			                             }).catch(function(error){
