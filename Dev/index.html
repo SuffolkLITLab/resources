@@ -94,12 +94,12 @@
 								}
 				}
 			});
-
 			var dcat;
 			var keys = [];
 		 function load_cat_names() {
+		 	console.log("catnames")
 			 axios.get(
-			                                  'https://api.airtable.com/v0/app1coUtTecDQTZuF/Eastern/?limit=1',
+			                                  'https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?limit=1',
 			                                 {
 			                                     headers: { Authorization: "Bearer "+app_key }
 			                                 }
@@ -144,6 +144,7 @@
 			            }
 			        }, 1000);
 			}
+			
 			function region_to_filter(region_val,rname){
 				createCookie('region',region_val,365*100);
 				createCookie('region_name',rname,365*100)
@@ -470,7 +471,8 @@
 
 
 	var y = [];
-
+	
+	var cat_names = [];
 	var cat_names = load_cat_names();
 
 	var region_names = load_region_list();
@@ -484,7 +486,7 @@
 	  		$('#list_'+cat.replace(/ /g,"\\ ")).listview('refresh');
 			});
 	});
-
+	
 	function load_regions(go) {
 			console.log("LOAD REGIONS")
 			console.log(region_names)
@@ -498,7 +500,6 @@
 				$.mobile.changePage($('#region'), { transition: 'fade', });
 			}
 	}
-
 
 	function load_first() {
 			console.log("LOAD FIRST")
@@ -526,11 +527,13 @@ function cutoff(longname){
     return output
 }
 
-function indexis(cutoff) {
-        if(checked_cats[i][0] == cutoff) {
-        return checked_cats[i][1];
+function indexis(variablename) {
+        for(var i = 0; i < cat_names.length; i++) {
+            if(cat_names[i][0] == variablename) {
+                return cat_names[i][1];
+            }
         }
-}
+    }
     
     function cats_filter() {
         filter_string = ",OR("
@@ -654,8 +657,8 @@ function get_lat_log() {
 
 				cat_names.forEach((cat, index) => {
 					if ($('#checkbox-v-'+cat[0]).is(":checked")){
-						$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }}</p></a></li>")
+						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
+						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields'][(checked_cats)]}}</p></a></li>")
 						if (categories != "") {
 							categories = categories+",";
 						}
