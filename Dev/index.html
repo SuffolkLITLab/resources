@@ -97,7 +97,7 @@
 			var dcat;
 			var keys = [];
 		 function load_cat_names() {
-		 	console.log("catnames")
+		 	 console.log("catnames: "+ app_id + '/' + region_name)
 			 axios.get(
 			                                  'https://api.airtable.com/v0/' + app_id + '/' + region_name + '/?limit=1',
 			                                 {
@@ -106,11 +106,12 @@
 			                             ).then(function(response){
 			                                     dcat =  response.data.records[0].fields;
 			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
-			                                     console.log(keys)
+																						cat_names = keys;
+																						load_first();
 			                             }).catch(function(error){
 			                                     console.log(error)
 			                             })
-				return keys;
+				return true;
 				//return [["Outreach","Community Outreach"],["Counseling","Counseling"],["Training","Job Opportunities/Training"],["Health","Health Services"],["Academic","Academic Support"],["Case","Case Management"],["Mentor","Mentoring"],["Shelter","Shelter"],["LGBTQ","LGBTQ"],["Housing","Housing"]];
 				}
 
@@ -133,8 +134,9 @@
 											console.log(readCookie("region"),"there is a region cookie")
 											app_id = readCookie("region");
 											region_name = readCookie("region_name");
+											cat_names = load_cat_names();
 											load_regions(0)
-											load_first();
+											//load_first();
 											load_filter();
 			            } else {
 											console.log("there is NOT a region cookie")
@@ -150,8 +152,9 @@
 				createCookie('region_name',rname,365*100)
 				app_id = region_val;
 				region_name = rname;
+				cat_names = load_cat_names();
 				console.log(region_val)
-				load_first();
+				//load_first();
 				//$("#title").html('state'“>”'region');
 			}
 			function remove_cookies() {
@@ -473,7 +476,6 @@
 	var y = [];
 
 	var cat_names = [];
-	var cat_names = load_cat_names();
 
 	var region_names = load_region_list();
 
@@ -491,7 +493,7 @@
 			console.log("LOAD REGIONS")
 			console.log(region_names)
 			region_names.forEach((cat, index) => {
-					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"#filter\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());\">{{ item['fields']['Region'] }}</a></li></ul></div>");
+					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"javascript:void('');\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());\">{{ item['fields']['Region'] }}</a></li></ul></div>");
 			});
 			region_names.forEach((cat, index) => {
 				load_api_data('#reg_'+cat.replace(/ /g,"\\ "),-1,cat);
@@ -506,12 +508,14 @@
 			$('#town-button').empty()
 			$("#categories").html("")
 			$("#age_container").html("<input name=\"age\" id=\"age\" data-type=\"number\" placeholder=\"Input Age\" onChange=\"list_page();\">")
+			console.log("LOAD CAT NAMES HERE"+cat_names)
 			cat_names.forEach((cat, index) => {
 					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" class=\"boxcheck\">");
 					$("#categories").html( $("#categories").html() + "<label for=\"checkbox-v-"+cat[0]+"\">"+cat[1]+"</label>");
 			});
 			$( '#categories' ).enhanceWithin();
 			load_api_data('#filter',0);
+			$.mobile.changePage($('#filter'), { transition: 'slide', });
 	}
 
 function checked_cats() {
@@ -539,7 +543,7 @@ function indexis(variablename) {
         filter_string = ",OR("
         for (var i = 0; i < checked_cats().length; i++) {
         console.log(checked_cats()[i]);
-                filter_string= filter_string+"{"+ cutoff(checked_cats()[i]) +"}=1"
+                filter_string= filter_string+"{"+ indexis(cutoff(checked_cats()[i])) +"}=1"
                 if (i<checked_cats().length-1) {
                     filter_string= filter_string+","
                 }
