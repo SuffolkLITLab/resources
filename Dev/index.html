@@ -99,7 +99,7 @@
 		 function load_cat_names() {
 		 	console.log("catnames")
 			 axios.get(
-			                                  'https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?limit=1',
+			                                  'https://api.airtable.com/v0/' + app_id + '/' + region_name + '/?limit=1',
 			                                 {
 			                                     headers: { Authorization: "Bearer "+app_key }
 			                                 }
@@ -144,7 +144,7 @@
 			            }
 			        }, 1000);
 			}
-			
+
 			function region_to_filter(region_val,rname){
 				createCookie('region',region_val,365*100);
 				createCookie('region_name',rname,365*100)
@@ -471,7 +471,7 @@
 
 
 	var y = [];
-	
+
 	var cat_names = [];
 	var cat_names = load_cat_names();
 
@@ -486,7 +486,7 @@
 	  		$('#list_'+cat.replace(/ /g,"\\ ")).listview('refresh');
 			});
 	});
-	
+
 	function load_regions(go) {
 			console.log("LOAD REGIONS")
 			console.log(region_names)
@@ -534,7 +534,7 @@ function indexis(variablename) {
             }
         }
     }
-    
+
     function cats_filter() {
         filter_string = ",OR("
         for (var i = 0; i < checked_cats().length; i++) {
