@@ -508,15 +508,12 @@
 	function load_first() {
 			console.log("LOAD FIRST")
 			$('#town-button').empty()
-			console.log($("#categories").html())
 			$("#categories").html("<p style=\"margin-top:15px;\">Check the type(s) of service(s) you are looking for:</p>")
 			$("#age_container").html("<input name=\"age\" id=\"age\" data-type=\"number\" placeholder=\"Input Age\" onChange=\"list_page();\">")
 			cat_names.forEach((cat, index) => {
-					console.log(cat[1])
 					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" class=\"boxcheck\">");
 					$("#categories").html( $("#categories").html() + "<label for=\"checkbox-v-"+cat[0]+"\">"+cat[1]+"</label>");
 			});
-			console.log($("#categories").html())
 			$( '#categories' ).enhanceWithin();
 			load_api_data('#filter',0);
 			$.mobile.changePage($('#filter'), { transition: 'slide', });
