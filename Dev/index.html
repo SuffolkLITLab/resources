@@ -165,6 +165,8 @@
 				createCookie("list_map","",-1);
 				createCookie("cats","",-1);
 				$('#town').html("<option value=\"0\" class=\"town_entry\">Choose a Location</option>\n<option v-for=\"item in items\" v-bind:value=\"item['fields']['Latitude, Longitude, Zoom']\"  class=\"town_entry\">{{ item['fields']['Name'] }}</option>");
+				cat_names = [];
+				keys = [];
 			}
 	</script>
 
@@ -506,13 +508,15 @@
 	function load_first() {
 			console.log("LOAD FIRST")
 			$('#town-button').empty()
-			$("#categories").html("")
+			console.log($("#categories").html())
+			$("#categories").html("<p style=\"margin-top:15px;\">Check the type(s) of service(s) you are looking for:</p>")
 			$("#age_container").html("<input name=\"age\" id=\"age\" data-type=\"number\" placeholder=\"Input Age\" onChange=\"list_page();\">")
-			console.log("LOAD CAT NAMES HERE"+cat_names)
 			cat_names.forEach((cat, index) => {
+					console.log(cat[1])
 					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" class=\"boxcheck\">");
 					$("#categories").html( $("#categories").html() + "<label for=\"checkbox-v-"+cat[0]+"\">"+cat[1]+"</label>");
 			});
+			console.log($("#categories").html())
 			$( '#categories' ).enhanceWithin();
 			load_api_data('#filter',0);
 			$.mobile.changePage($('#filter'), { transition: 'slide', });
