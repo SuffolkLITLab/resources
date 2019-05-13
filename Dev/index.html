@@ -43,7 +43,7 @@
 					} else if (zoomin==14) {
 						miles = 8
 					} else if (zoomin==13) {
-						miles = 10
+						miles = 20
 					} else if (zoomin==12) {
 						miles = 50
 					} else if (zoomin==11) {
@@ -57,7 +57,11 @@
 					if (zoomin==14) {
 						miles = 1
 					} else if (zoomin==13) {
-						miles = 2
+						miles = 20
+					} else if (zoomin==12) {
+						miles = 50
+					} else if (zoomin==11) {
+						miles = 100
 					}
 
 					var r = earth_radius*Math.cos(lat*degrees_to_radians)
@@ -105,7 +109,7 @@
 			                                 }
 			                             ).then(function(response){
 			                                     dcat =  response.data.records[0].fields;
-			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Hotline", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
+			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
 																						cat_names = keys;
 																						load_first();
 			                             }).catch(function(error){
@@ -141,7 +145,6 @@
 			            } else {
 											console.log("there is NOT a region cookie")
 			             	  //   call function to get list of regions
-											//app_id = "app1coUtTecDQTZuF";
 											load_regions();
 			            }
 			        }, 1000);
@@ -663,7 +666,7 @@ function get_lat_log() {
 				cat_names.forEach((cat, index) => {
 					if ($('#checkbox-v-'+cat[0]).is(":checked")){
 						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields'][(checked_cats)]}}</p></a></li>")
+						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
 						if (categories != "") {
 							categories = categories+",";
 						}
