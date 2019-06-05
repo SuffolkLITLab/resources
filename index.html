@@ -48,6 +48,8 @@
 						miles = 50
 					} else if (zoomin==11) {
 						miles = 100
+					} else if (zoomin==10) {
+						miles = 150
 					}
 
 					return (miles/earth_radius)*radians_to_degrees
@@ -62,6 +64,8 @@
 						miles = 50
 					} else if (zoomin==11) {
 						miles = 100
+					} else if (zoomin==10) {
+						miles = 150
 					}
 
 					var r = earth_radius*Math.cos(lat*degrees_to_radians)

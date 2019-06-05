@@ -48,6 +48,8 @@
 						miles = 50
 					} else if (zoomin==11) {
 						miles = 100
+					} else if (zoomin==10) {
+						miles = 150
 					}
 
 					return (miles/earth_radius)*radians_to_degrees
@@ -57,11 +59,13 @@
 					if (zoomin==14) {
 						miles = 1
 					} else if (zoomin==13) {
-						miles = 20
+						miles = 10
 					} else if (zoomin==12) {
-						miles = 50
+						miles = 30
 					} else if (zoomin==11) {
 						miles = 100
+					} else if (zoomin==10) {
+						miles = 150
 					}
 
 					var r = earth_radius*Math.cos(lat*degrees_to_radians)
@@ -155,10 +159,11 @@
 				createCookie('region_name',rname,365*100)
 				app_id = region_val;
 				region_name = rname;
+				$('#title').html(rname);
 				cat_names = load_cat_names();
 				console.log(region_val)
 				//load_first();
-				//$("#title").html('state'“>”'region');
+
 			}
 			function remove_cookies() {
 				createCookie('region',"",-1);
@@ -325,7 +330,7 @@
 
 <div data-role="page" id="filter">
 	<div data-role="header" data-position="fixed">
-		<h1 id="title"></h>
+		<h id="title"></h>
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
 	</div>
@@ -449,7 +454,7 @@
 
 <script type="text/javascript">
 
-	var meta_app_id = "app91Hf1BF6Zx11lT";
+	var meta_app_id = "appvDg82vGxAzasWm";
 	var app_key = "keyMCwJmZpyayqYhY";
 
 
@@ -457,7 +462,7 @@
 	var x = [];
 	function load_region_list() {
 		axios.get(
-	             'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
+	             'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data 2/?sort[0][field]=State',
 	            {
 	              headers: { Authorization: "Bearer "+app_key }
 	            }
@@ -555,14 +560,14 @@ function indexis(variablename) {
         filter_string = filter_string+")"
         return filter_string
     }
-
+    
 	function load_api_data(target,mode=3,id='') {
 			work = 1;
 			console.log("LOAD API DATA:",target,mode,id)
 			//https://api.airtable.com/v0/appHUknSmoIogemD5/Boston/?filterByFormula=AND(20<={Maximum Age},20>={Minimum Age},OR((FIND("Community Outreach",{Category})),(FIND("Counseling",{Category}))))
 
 			if (mode == -1) {
-				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data/?filterByFormula=(State=\""+id+"\")";
+				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data 2/?filterByFormula=(State=\""+id+"\")";
 			} else if (mode == 0) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/Locations/?sort[0][field]=Name&sort[0][direction]=asc";
 			} else if (mode == 1) {
@@ -666,7 +671,7 @@ function get_lat_log() {
 				cat_names.forEach((cat, index) => {
 					if ($('#checkbox-v-'+cat[0]).is(":checked")){
 						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
+						$("#org_list").html($("#org_list").html() + "<li  v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
 						if (categories != "") {
 							categories = categories+",";
 						}
@@ -695,6 +700,11 @@ function get_lat_log() {
 			}
 
 		}
+		
+		function print_page(){
+
+		}
+
 
 		function details_page(id) {
 
