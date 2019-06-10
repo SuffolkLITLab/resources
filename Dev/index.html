@@ -716,12 +716,19 @@ function get_lat_log() {
 
 
 		function details_page(id) {
+		
+		var cats_local = ""
+				i = 0;
+				cat_names.forEach((cat, index) => {
+						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
+						i = i + 1;
+				});
 
       	$("#detail").attr("v-for", "item in items");
       	//$("#detail").attr("v-if", "item['id'] == '"+id+"'");
       	$("#detail").html("");
       	$("#detail").html($("#detail").html() + "<h3>{{ item['fields']['Name'] }}</h3>")
-      	$("#detail").html($("#detail").html() + "<h4>{{ item['fields']['Category'] }}</h4>");
+      	$("#detail").html($("#detail").html() + "<p><b>Category(s):</b> "+ cats_local + "</p>");
       	$("#detail").html($("#detail").html() + "<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }} &nbsp;&nbsp; <b>Gender(s):</b> {{ item['fields']['Gender'] }}</p>");
 		$("#detail").html($("#detail").html() + "<p><b>Phone:</b> <a v-bind:href=\"'tel:'+item['fields']['Phone']\" target=\"_blank\">{{ item['fields']['Phone'] }}</p>");
 		$("#detail").html($("#detail").html() + "<p><b>Email:</b> <a v-bind:href=\"'mailto:'+item['fields']['Email']\" target=\"_blank\">{{ item['fields']['Email'] }}</a></p>");
