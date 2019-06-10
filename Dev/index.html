@@ -330,7 +330,7 @@
 
 <div data-role="page" id="filter">
 	<div data-role="header" data-position="fixed">
-		<h id="title"></h>
+		<h1 id="title"></h1>
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
 	</div>
@@ -560,7 +560,7 @@ function indexis(variablename) {
         filter_string = filter_string+")"
         return filter_string
     }
-    
+
 	function load_api_data(target,mode=3,id='') {
 			work = 1;
 			console.log("LOAD API DATA:",target,mode,id)
@@ -668,16 +668,25 @@ function get_lat_log() {
 
 				categories = "";
 
+				var cats_local = ""
+				i = 0;
 				cat_names.forEach((cat, index) => {
-					if ($('#checkbox-v-'+cat[0]).is(":checked")){
-						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-						$("#org_list").html($("#org_list").html() + "<li  v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
-						if (categories != "") {
-							categories = categories+",";
-						}
-						categories = categories+"FIND(\""+cat[1]+"\",{Category})";
-				}
+						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
+						i = i + 1;
 				});
+
+				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p> Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s):"+ cats_local + "</p></a></li>");
+
+				//cat_names.forEach((cat, index) => {
+				//	if ($('#checkbox-v-'+cat[0]).is(":checked")){
+						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
+				//		$("#org_list").html($("#org_list").html() + "<li  v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
+				//		if (categories != "") {
+				//			categories = categories+",";
+				//		}
+				//		categories = categories+"FIND(\""+cat[1]+"\",{Category})";
+				//}
+				//});
 
 				//if ($('#age').val()=="") {
 				//	ages = "";
@@ -700,7 +709,7 @@ function get_lat_log() {
 			}
 
 		}
-		
+
 		function print_page(){
 
 		}
