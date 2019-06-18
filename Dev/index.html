@@ -441,7 +441,15 @@
 	<div data-role="header" data-position="fixed">
 		<h1>Print</h1>
 		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
+		</div>
+		<div data-role="content" class="content">
+				<h1 id="town_name"></h1>
+				<ul id="org_list" data-role="listview" data-inset="true" data-filter="true" data-input="#filterBasic-input">
+				</ul>
+		</div>
 
+		<ul id="org_geo_list" style="display:none;"></ul>
+	</div>
 </div>
 
 
@@ -675,7 +683,7 @@ function get_lat_log() {
 						i = i + 1;
 				});
 
-				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p> Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s):"+ cats_local + "</p></a></li>");
+				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, <b>Category(s):</b>"+ cats_local + "</p></a></li>");
 
 				//cat_names.forEach((cat, index) => {
 				//	if ($('#checkbox-v-'+cat[0]).is(":checked")){
@@ -710,12 +718,36 @@ function get_lat_log() {
 
 		}
 
-		function print_page(){
+	function print_page(){
+		
+	if ($('#town').find(":selected").val() != 0 && !isNaN(Number($('#age').val())) ) {
+				$("#org_list").html("");
+				$("#org_geo_list").html("<li id=\"ge0_points\" v-for=\"item in items\">{{ item['id'] }},{{ item['fields']['Name'] }},{{ item['fields']['Latitude'] }},{{ item['fields']['Longitude'] }}</li>");
+
+				categories = "";
+
+				var cats_local = ""
+				i = 0;
+				cat_names.forEach((cat, index) => {
+						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
+						i = i + 1;
+				});
+
+				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\">{{ item['fields']['Name'] }}<p> Description: {{ item['fields']['Description'] }}, <b>Category(s):</b>"+ cats_local + "</p></a></li>");
+
+
+				$('#town_name').html($('#town').find(":selected").text());
+
+		    load_api_data('#results',2);
+
+
+	  	} else {
+				return false;
+			}
 
 		}
 
-
-		function details_page(id) {
+	function details_page(id) {
 		
 		var cats_local = ""
 				i = 0;
