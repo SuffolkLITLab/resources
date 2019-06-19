@@ -682,7 +682,7 @@ function get_lat_log() {
 						i = i + 1;
 				});
 
-				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, <b>Category(s):</b>"+ cats_local + "</p></a></li>");
+				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, <b>Category(s):</b> "+ cats_local + "</p></a></li>");
 
 				//cat_names.forEach((cat, index) => {
 				//	if ($('#checkbox-v-'+cat[0]).is(":checked")){
@@ -731,7 +731,7 @@ function get_lat_log() {
 						i = i + 1;
 				});
 
-				$("#print_list").html($("#print_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\">{{ item['fields']['Name'] }}<p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b>{{ item['fields']['Phone'] }}</p><p><b> Description:</b> {{ item['fields']['Description'] }}</p></a></li>");
+				$("#print_list").html($("#print_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\">{{ item['fields']['Name'] }}<p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p><b> Description:</b> {{ item['fields']['Description'] }}</p></a></li>");
 
 
 		    load_api_data('#print',2);
