@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -436,7 +437,7 @@
 
 </div>
 
-<div data-role="page" id="print" style="overflow:visible;white-space:normal;">
+<div data-role="page" id="print">
 	<div data-role="header" data-position="fixed">
 		<h1>Print</h1>
 		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
@@ -680,7 +681,6 @@ function get_lat_log() {
 				$("#org_list").html("");
 
 				$("#org_geo_list").html("<li id=\"ge0_points\" v-for=\"item in items\">{{ item['id'] }},{{ item['fields']['Name'] }},{{ item['fields']['Latitude'] }},{{ item['fields']['Longitude'] }}</li>");
-
 				// check if list is blank and if it is:
 				//$("#org_geo_list").html("<li id=\"ge0_points\">no results</li>");
 
@@ -742,7 +742,7 @@ function get_lat_log() {
 						i = i + 1;
 				});
 
-				$("#print_list").html($("#print_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\">{{ item['fields']['Name'] }}<p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p><b> Description:</b> {{ item['fields']['Description'] }}</p></a></li>");
+				$("#print_list").html($("#print_list").html() + "<li  data-role=\"listview\" v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\">{{ item['fields']['Name'] }}<p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></a></li>");
 
 
 		    load_api_data('#print',2);
