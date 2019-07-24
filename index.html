@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -59,9 +60,9 @@
 					if (zoomin==14) {
 						miles = 1
 					} else if (zoomin==13) {
-						miles = 20
+						miles = 10
 					} else if (zoomin==12) {
-						miles = 50
+						miles = 30
 					} else if (zoomin==11) {
 						miles = 100
 					} else if (zoomin==10) {
@@ -142,6 +143,7 @@
 											console.log(readCookie("region"),"there is a region cookie")
 											app_id = readCookie("region");
 											region_name = readCookie("region_name");
+											$('#title').html(region_name);
 											cat_names = load_cat_names();
 											load_regions(0)
 											//load_first();
@@ -159,10 +161,11 @@
 				createCookie('region_name',rname,365*100)
 				app_id = region_val;
 				region_name = rname;
+				$('#title').html(rname);
 				cat_names = load_cat_names();
 				console.log(region_val)
 				//load_first();
-				//$("#title").html('state'“>”'region');
+
 			}
 			function remove_cookies() {
 				createCookie('region',"",-1);
@@ -321,15 +324,14 @@
 	</div>
 
 	<div data-role="content" id="regions" class="content">
-		<p>Choose the region for desired program.</p>
+		<p>Choose the desired state and region for a list of programs in that area.</p>
 	</div>
-
 </div>
 
 
 <div data-role="page" id="filter">
 	<div data-role="header" data-position="fixed">
-		<h1 id="title"></h>
+		<h1 id="title"></h1>
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
 	</div>
@@ -356,7 +358,7 @@
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
-		<a href="javascript:results_page();" onClick="get_lat_log();list_page();saveCookies();save_cats();i=0;" data-role="button">Find Resources</a>
+		<a href="javascript:results_page();" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;" data-role="button">Find Resources</a>
 
 	</div>
 </div>
@@ -367,13 +369,11 @@
 		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
 	</div>
 	<div data-role="content" class="content">
-		<p> This app was created through the collaborative efforts of Northeastern University Law Lab, Nicole Siino, and Will Bean.</p>
-		<p> Nicole Siino is American Bar Association NextGen 2018/2019 Fellow and a recent graduate of Suffolk University Law School. During her time in law school, she was a Student Attorney in the Juvenile Defender Clinic. Nicole was also the Legal Innovation & Technology Fellow in her clinic in addition to representing juveniles in their delinquency matters. As a law student, Nicole created a website app that contains a comprehensive list of youth programs & resources in and around the Boston area which allows users to filter through to find the perfect program. It was through this fellowship that Nicole discovered she wanted to be part of the legal tech field. </p>
-		<p> This web app contains a comprehensive list of criminal justice programs & services to help to provide access to justice. The use of the app allows people to find and successfully participate in these programs which can have long-lasting impacts on their sentences - and their futures. The app enables its users to quickly search and find resources while in court, on the go, or sitting in an office.</p>
-		<p> You can check out the <a href="https://www.suffolklitlab.org">Suffolk Lit Lab's</a> website to see other LIT projects!</p>
-		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2">Airtable</a>. If you find any errors, please <a href="mailto:litlab@suffolk\.edu">Email</a> the Suffolk LIT Lab.</p>
-		<p style="text-align:center"><a href="https://suffolklitlab.org/" target="_blank"><img src="images/LIT_logo.png" width="200px"/ border="0"></a></p>
-
+		<p> This app was created through the collaborative efforts of Nicole Siino, Will Bean, and Northeastern University Law Lab.</p>
+		<p> Nicole Siino is an American Bar Association 2018/2019 NextGen Fellow and a 2018 graduate of Suffolk University Law School. During her time in law school, she was a Student Attorney in the Juvenile Defender Clinic. Nicole was also the Legal Innovation & Technology Fellow in her clinic in addition to representing juveniles in their delinquency matters. As a law student, Nicole created a website app that contains a list of youth programs & resources in and around the Boston area which allows users to filter through to find the perfect program. It was through this fellowship that Nicole discovered she wanted to be part of the legal tech field. </p>
+		<p> As a NextGen Fellow, she expanded the juvenile app to create this website application. This web app contains a list of adult and juvenile criminal justice programs & services in the areas listed. The use of the app allows people to quickly search and find programs which can have long-lasting impacts on their lives. The app can be used on any smart phone or computer.</p>
+		<p> The Massachusetts resources are maintained by the Massachusetts Committee for Public Counsel Services. <b> The list of resources does not contain all programs that may be available to people. The resources are not vetted for quality and any resources listed does not indicate the quality of services. Do not rely solely on this list of services, additional due diligence is required. </b></p>
+		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2">Airtable</a>.</p>
 	</div>
 </div>
 
@@ -394,6 +394,7 @@
 	<div data-role="header" data-position="fixed">
 		<h1>Results</h1>
 		<a href="#filter" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext"></a>
+		<a href="#print" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-action ui-btn-icon-notext"></a>
 		<div data-role="navbar">
 			<ul>
 				<li><a href="#results">List</a></li>
@@ -435,6 +436,17 @@
 
 </div>
 
+<div data-role="page" id="print">
+	<div data-role="header" data-position="fixed">
+		<h1>Print</h1>
+		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
+	</div>
+	<div data-role="content" class="content">
+		<ul data-role="listview" data-inset="true" id="print_list">
+		</ul>
+	</div>
+</div>
+
 
 <!-- Include Dependency Scripts -->
 <!--<script type="text/javascript" src="https://unpkg.com/vue"></script>-->
@@ -445,7 +457,7 @@
 
 <script type="text/javascript">
 
-	var meta_app_id = "app91Hf1BF6Zx11lT";
+	var meta_app_id = "appvDg82vGxAzasWm";
 	var app_key = "keyMCwJmZpyayqYhY";
 
 
@@ -453,7 +465,7 @@
 	var x = [];
 	function load_region_list() {
 		axios.get(
-	             'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
+	             'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data 2/?sort[0][field]=State',
 	            {
 	              headers: { Authorization: "Bearer "+app_key }
 	            }
@@ -555,16 +567,15 @@ function indexis(variablename) {
 	function load_api_data(target,mode=3,id='') {
 			work = 1;
 			console.log("LOAD API DATA:",target,mode,id)
-			//https://api.airtable.com/v0/appHUknSmoIogemD5/Boston/?filterByFormula=AND(20<={Maximum Age},20>={Minimum Age},OR((FIND("Community Outreach",{Category})),(FIND("Counseling",{Category}))))
 
 			if (mode == -1) {
-				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data/?filterByFormula=(State=\""+id+"\")";
+				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data 2/?filterByFormula=(State=\""+id+"\")";
 			} else if (mode == 0) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/Locations/?sort[0][field]=Name&sort[0][direction]=asc";
 			} else if (mode == 1) {
 				//apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?limit=1";
 			} else if (mode == 2) {
-				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor(zoomin,lat,lon,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,lat,lon,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,lat,lon,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,lat,lon,"lon"))+">={Longitude}"+cats_filter()+")&sort[0][field]=Name&sort[0][direction]=asc";
+				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor(zoomin,lat,lon,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,lat,lon,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,lat,lon,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,lat,lon,"lon"))+">={Longitude}"+cats_filter()+","+$("#age").val()+"<={Maximum Age},"+$("#age").val()+">={Minimum Age})&sort[0][field]=Name&sort[0][direction]=asc";
 				//console.log(lat,lon,apicall)
 			} else if (mode == 3) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";
@@ -598,7 +609,19 @@ function indexis(variablename) {
 						                      }).catch(function(error){
 						                          console.log(error)
 						                      })
-	                  }
+													axios.get(
+																			 apicall,
+						                          {
+						                              headers: { Authorization: "Bearer "+ app_key }
+						                          }
+							                      ).then(function(response){
+							                          self.items = response.data.records;
+																				work = 0;
+																				//console.log(response)
+																				console.log(self.items)
+							                      }).catch(function(error){
+							                          console.log(error)
+							                      })	                  }
 	              }
 	          });
 
@@ -655,20 +678,32 @@ function get_lat_log() {
 
 		if ($('#town').find(":selected").val() != 0 && !isNaN(Number($('#age').val())) ) {
 				$("#org_list").html("");
+
 				$("#org_geo_list").html("<li id=\"ge0_points\" v-for=\"item in items\">{{ item['id'] }},{{ item['fields']['Name'] }},{{ item['fields']['Latitude'] }},{{ item['fields']['Longitude'] }}</li>");
+				// check if list is blank and if it is:
+				//$("#org_geo_list").html("<li id=\"ge0_points\">no results</li>");
 
 				categories = "";
 
+				var cats_local = ""
+				i = 0;
 				cat_names.forEach((cat, index) => {
-					if ($('#checkbox-v-'+cat[0]).is(":checked")){
-						$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-						$("#org_list").html( $("#org_list").html() + "<li v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}</p></a></li>")
-						if (categories != "") {
-							categories = categories+",";
-						}
-						categories = categories+"FIND(\""+cat[1]+"\",{Category})";
-				}
+						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
+						i = i + 1;
 				});
+
+				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, <b>Category(s):</b> "+ cats_local + "</p></a></li>");
+
+				//cat_names.forEach((cat, index) => {
+				//	if ($('#checkbox-v-'+cat[0]).is(":checked")){
+						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
+				//		$("#org_list").html($("#org_list").html() + "<li  v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
+				//		if (categories != "") {
+				//			categories = categories+",";
+				//		}
+				//		categories = categories+"FIND(\""+cat[1]+"\",{Category})";
+				//}
+				//});
 
 				//if ($('#age').val()=="") {
 				//	ages = "";
@@ -692,13 +727,46 @@ function get_lat_log() {
 
 		}
 
-		function details_page(id) {
+	function print_page(){
+
+	if ($('#town').find(":selected").val() != 0 && !isNaN(Number($('#age').val())) ) {
+				$("#print_list").html("");
+
+				categories = "";
+
+				var cats_local = ""
+				i = 0;
+				cat_names.forEach((cat, index) => {
+						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
+						i = i + 1;
+				});
+
+				$("#print_list").html($("#print_list").html() + "<li  data-role=\"listview\" v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\">{{ item['fields']['Name'] }}<p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></a></li>");
+
+
+		    load_api_data('#print',2);
+
+
+	  	} else {
+				return false;
+			}
+
+		}
+
+	function details_page(id) {
+
+		var cats_local = ""
+				i = 0;
+				cat_names.forEach((cat, index) => {
+						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
+						i = i + 1;
+				});
 
       	$("#detail").attr("v-for", "item in items");
       	//$("#detail").attr("v-if", "item['id'] == '"+id+"'");
       	$("#detail").html("");
       	$("#detail").html($("#detail").html() + "<h3>{{ item['fields']['Name'] }}</h3>")
-      	$("#detail").html($("#detail").html() + "<h4>{{ item['fields']['Category'] }}</h4>");
+      	$("#detail").html($("#detail").html() + "<p><b>Category(s):</b> "+ cats_local + "</p>");
       	$("#detail").html($("#detail").html() + "<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }} &nbsp;&nbsp; <b>Gender(s):</b> {{ item['fields']['Gender'] }}</p>");
 		$("#detail").html($("#detail").html() + "<p><b>Phone:</b> <a v-bind:href=\"'tel:'+item['fields']['Phone']\" target=\"_blank\">{{ item['fields']['Phone'] }}</p>");
 		$("#detail").html($("#detail").html() + "<p><b>Email:</b> <a v-bind:href=\"'mailto:'+item['fields']['Email']\" target=\"_blank\">{{ item['fields']['Email'] }}</a></p>");
