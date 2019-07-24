@@ -569,7 +569,7 @@ function indexis(variablename) {
 			console.log("LOAD API DATA:",target,mode,id)
 
 			if (mode == -1) {
-				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data 2/?filterByFormula=(State=\""+id+"\")";
+				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data/?filterByFormula=(State=\""+id+"\")";
 			} else if (mode == 0) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/Locations/?sort[0][field]=Name&sort[0][direction]=asc";
 			} else if (mode == 1) {
