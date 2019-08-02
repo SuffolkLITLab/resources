@@ -623,8 +623,11 @@ function indexis(variablename) {
 																				// define app_id_2
 																				//app_id_2 = app_id
 																				app_id_2 = response.data.records
-																				// response.data.records[0]["fields"]["Region"]
-																				console.log("Remove Statewid")
+																				//response.data.records[0]["fields"]["Region"]
+																				//remove ("Statewide"){
+																					//this.$delete(this.response.data.records, [0]["fields"]["Region"])
+																					//}
+																				console.log("Remove Statewide")
 																			} else if ((response.data.records.length == 0) && (mode == 2)){
 																					console.log("=0")
 																					$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
