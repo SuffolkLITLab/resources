@@ -25,7 +25,8 @@
 			var app_id = ""
 			var app_id_statewide = []
 			var app_id_2 = ""
-			var testbucket
+			var local_list
+			var state_list
 			var region_name = ""
 			var lat = ""
 			var lon = ""
@@ -129,6 +130,7 @@
 
       function load_filter () {
 				if (work == 0) {
+					$.mobile.loading("hide");
 					$.mobile.changePage($('#filter'), { transition: 'slide'});
 				} else {
 					if ($.mobile.loading().is(':hidden')) {
@@ -163,7 +165,9 @@
 			function region_to_filter(region_val,rname,region_statewide){
 				createCookie('region',region_val,365*100);
 				createCookie('region_name',rname,365*100)
-				createCookie('region_statewide',region_statewide,365*100);
+				if (region_statewide) {
+					createCookie('region_statewide',region_statewide,365*100);
+				}
 				app_id = region_val;
 				region_name = rname;
 				$('#title').html(rname);
@@ -366,7 +370,7 @@
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
-		<a href="javascript:results_page();" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;" data-role="button">Find Resources</a>
+		<a href="javascript:void('')" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;results_page();" data-role="button">Find Resources</a>
 
 		<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:??">Committee for Public Counsel Services</a>.</p>
 	</div>
@@ -621,8 +625,6 @@ function indexis(variablename) {
 					                              headers: { Authorization: "Bearer "+ app_key }
 					                          }
 						                      ).then(function(response){
-																			work = 0;
-																			//console.log(response)
 																			if (mode == -1) {
 																				var i = 0;
 																				response.data.records.forEach(function(element) {
@@ -631,42 +633,57 @@ function indexis(variablename) {
 																							statewide_id = element['fields']['API Documentation (Base)']
 																							app_id_statewide[state] = statewide_id;
 																							app_id_statewide.push(app_id_statewide);
-																							console.log("Remove Statewide!!!!!");
-																							console.log(response.data.records);
+																							console.log("Remove Statewide!");
+																							//console.log(response.data.records);
 																							response.data.records.splice(i,1);
 																						}
 																						i = i + 1;
 																        });
-																			} else if ((response.data.records.length == 0) && (mode == 2)){
-																					console.log("=0")
-																					$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
+																				self.items = response.data.records;
+																				work = 0;
+																			//} else if ((response.data.records.length == 0) && (mode == 2)){
+																			//		console.log("=0")
+																			//		$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
+																		 } else if ((mode == 2) && (app_id_2)){
+																				console.log("Second call")
+																				console.log(apicall_2)
+																				axios.get(
+																										 apicall_2,
+																										{
+																												headers: { Authorization: "Bearer "+ app_key }
+																										}
+																									).then(function(response_too){
+																											//console.log(response.data.records)
+																											//console.log(response_too.data.records)
+																											//console.log(response_too.data.records.concat(response.data.records))
+																											if (response_too.data.records.length != 0) {
+																												self.items = response_too.data.records.concat(response.data.records)
+																											} else {
+																												self.items = response.data.records
+																											}
+																											work = 0;
+																											testbucket = self.items
+																									}).catch(function(error){
+																											console.log(error)
+																									})
+																				//self.items = response.data.records;
+																			} else {
+																				self.items = response.data.records;
+																				work = 0;
 																			}
-																			self.items = response.data.records;
-																			testbucket = self.items
-																			//console.log(self.items)
+
 						                      }).catch(function(error){
 						                          console.log(error)
 						                      })
 
-												if (mode == 2){
-													console.log("Second call")
-													console.log(apicall_2)
-													axios.get(
-																			 apicall_2,
-																			{
-																					headers: { Authorization: "Bearer "+ app_key }
-																			}
-																		).then(function(response){
-																				console.log(self.items)
-																				console.log(response.data.records)
-																				console.log("self.items = self.items + response.data.records")
-																		}).catch(function(error){
-																				console.log(error)
-																		})
-												}
+
+
 
 	                  }
 	              }
+
+
+
 	          });
 
 
@@ -690,6 +707,7 @@ function indexis(variablename) {
 
 	function next_page_1() {
 		if (work == 0) {
+			$.mobile.loading("hide");
 			if ($('input[name=radio-choice-h-2]:checked', '#filter').val() == "map") {
 					size_map();
 					$.mobile.changePage($('#map-page'), { transition: 'slide'});
@@ -754,7 +772,7 @@ function get_lat_log() {
 				//	ages = Number($('#age').val())+"<={Maximum Age},"+Number($('#age').val())+">={Minimum Age},";
 				//}
 
-				$('#town_name').html($('#town').find(":selected").text());
+				//$('#town_name').html($('#town').find(":selected").text());
 
 		    load_api_data('#results',2);
 
@@ -765,7 +783,7 @@ function get_lat_log() {
 			//zoomin = geo_data[2];
 
 	  	//} else if ($("#org_geo_list").length > 0){
-
+			} else {
 			//$("#org_list").html("<p id=\"ge0_points\">No resources meet this criteria.</p>");
 			//	alert('No resources meet this criteria.')};
 				return false;
@@ -780,14 +798,7 @@ function get_lat_log() {
 
 				categories = "";
 
-				var cats_local = ""
-				i = 0;
-				cat_names.forEach((cat, index) => {
-						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
-						i = i + 1;
-				});
-
-				$("#print_list").html($("#print_list").html() + "<li  data-role=\"listview\" v-for=\"item in items\" v-bind:id=\"item['id']\"><h1>{{ item['fields']['Name'] }}</h1><p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></li>");
+				$("#print_list").html($("#print_list").html() + "<li data-role=\"listview\" v-for=\"item in items\"><h1>{{ item['fields']['Name'] }}</h1><p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></li>");
 
 
 		    load_api_data('#print',2);
@@ -836,6 +847,7 @@ function get_lat_log() {
 
 		function next_page_2() {
 			if (work == 0) {
+				$.mobile.loading("hide");
 				$.mobile.changePage($('#details'), { transition: 'slide'})
 			} else {
 				if ($.mobile.loading().is(':hidden')) {
