@@ -661,13 +661,23 @@ function indexis(variablename) {
 																											} else {
 																												self.items = response.data.records
 																											}
+																											if ((response.data.records.length == 0) && (response_too.data.records.length == 0)) {
+																												$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
+																											}
 																											work = 0;
 																											testbucket = self.items
 																									}).catch(function(error){
 																											console.log(error)
 																									})
 																				//self.items = response.data.records;
-																			} else {
+																			} else if (mode == 2){
+																					if (response.data.records.length == 0) {
+																						$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
+																					} else {
+																						self.items = response.data.records
+																					}
+																					work = 0;
+																		 	} else {
 																				self.items = response.data.records;
 																				work = 0;
 																			}
