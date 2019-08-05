@@ -624,6 +624,7 @@ function indexis(variablename) {
 																			work = 0;
 																			//console.log(response)
 																			if (mode == -1) {
+<<<<<<< HEAD
 																				var i = 0;
 																				response.data.records.forEach(function(element) {
 																						if (element['fields']['Region'] == "Statewide" && element['fields']['State'] == id) {
@@ -637,6 +638,18 @@ function indexis(variablename) {
 																						}
 																						i = i + 1;
 																        });
+=======
+																				// define app_id_2
+																				//app_id_2 = app_id
+																				//response.data.records[0]["fields"]["Region"]
+																				//response.data.records.forEach((cat, index)
+																					//app_id_2 = response.data.records
+																					//i = i; 
+																				//remove ("Statewide"){
+																					//this.$delete(this.response.data.records, [0]["fields"]["Region"])
+																					//}
+																				console.log("Remove Statewide")
+>>>>>>> 5beff5dab5636f4e739605228a3582edc803a56d
 																			} else if ((response.data.records.length == 0) && (mode == 2)){
 																					console.log("=0")
 																					$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
