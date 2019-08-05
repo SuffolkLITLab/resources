@@ -23,6 +23,7 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>
 			var app_id = ""
+			var app_id_statewide = {}
 			var region_name = ""
 			var lat = ""
 			var lon = ""
@@ -584,7 +585,7 @@ function indexis(variablename) {
 				}
 
 				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor(zoomin,lat,lon,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,lat,lon,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,lat,lon,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,lat,lon,"lon"))+">={Longitude}"+cats_filter()+	age_str +")&sort[0][field]=Name&sort[0][direction]=asc";
-				
+
 				//console.log(lat,lon,apicall)
 			} else if (mode == 3) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";

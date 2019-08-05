@@ -23,7 +23,9 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>
 			var app_id = ""
+			var app_id_statewide = []
 			var app_id_2 = ""
+			var testbucket
 			var region_name = ""
 			var lat = ""
 			var lon = ""
@@ -143,6 +145,7 @@
 			            if (readCookie("region")) {
 											console.log(readCookie("region"),"there is a region cookie")
 											app_id = readCookie("region");
+											app_id_2 = readCookie("region_statewide");
 											region_name = readCookie("region_name");
 											$('#title').html(region_name);
 											cat_names = load_cat_names();
@@ -157,9 +160,10 @@
 			        }, 1000);
 			}
 
-			function region_to_filter(region_val,rname){
+			function region_to_filter(region_val,rname,region_statewide){
 				createCookie('region',region_val,365*100);
 				createCookie('region_name',rname,365*100)
+				createCookie('region_statewide',region_statewide,365*100);
 				app_id = region_val;
 				region_name = rname;
 				$('#title').html(rname);
@@ -511,7 +515,7 @@
 			console.log("LOAD REGIONS")
 			console.log(region_names)
 			region_names.forEach((cat, index) => {
-					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"javascript:void('');\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"region_to_filter(this.id,$('#'+this.id).html());\">{{ item['fields']['Region'] }}</a></li></ul></div>");
+					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"javascript:void('');\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"app_id_2= app_id_statewide['"+cat+"'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);\">{{ item['fields']['Region'] }}</a></li></ul></div>");
 			});
 			region_names.forEach((cat, index) => {
 				load_api_data('#reg_'+cat.replace(/ /g,"\\ "),-1,cat);
@@ -620,19 +624,25 @@ function indexis(variablename) {
 																			work = 0;
 																			//console.log(response)
 																			if (mode == -1) {
-																				// define app_id_2
-																				//app_id_2 = app_id
-																				app_id_2 = response.data.records
-																				//response.data.records[0]["fields"]["Region"]
-																				//remove ("Statewide"){
-																					//this.$delete(this.response.data.records, [0]["fields"]["Region"])
-																					//}
-																				console.log("Remove Statewide")
+																				var i = 0;
+																				response.data.records.forEach(function(element) {
+																						if (element['fields']['Region'] == "Statewide" && element['fields']['State'] == id) {
+																							state = element['fields']['State'];
+																							statewide_id = element['fields']['API Documentation (Base)']
+																							app_id_statewide[state] = statewide_id;
+																							app_id_statewide.push(app_id_statewide);
+																							console.log("Remove Statewide!!!!!");
+																							console.log(response.data.records);
+																							response.data.records.splice(i,1);
+																						}
+																						i = i + 1;
+																        });
 																			} else if ((response.data.records.length == 0) && (mode == 2)){
 																					console.log("=0")
 																					$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
 																			}
 																			self.items = response.data.records;
+																			testbucket = self.items
 																			//console.log(self.items)
 						                      }).catch(function(error){
 						                          console.log(error)
