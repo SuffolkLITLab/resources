@@ -333,7 +333,7 @@
 	</div>
 	<div data-role="content" class="content">
 		<p> This website application can help you find community based programs and services in your area. Watch the following video to learn how the Resource Finder works.</p>
-		<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" width="400" height="200" align="middle">
+		<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" width="400" height="200" style="float:middle">
 		</iframe>
 	</div>
 	
@@ -373,7 +373,7 @@
 		</fieldset>
 
 		<a href="javascript:void('')" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;results_page();" data-role="button">Find Resources</a>
-
+	
 		<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
 	</div>
 </div>
@@ -424,6 +424,7 @@
 				</form>
 				<ul id="org_list" data-role="listview" data-inset="true" data-filter="true" data-input="#filterBasic-input">
 				</ul>
+			
 			<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
 		</div>
 
@@ -605,6 +606,8 @@ function indexis(variablename) {
 				//console.log(lat,lon,apicall)
 			} else if (mode == 3) {
 				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";
+				
+				//apicall_2 = "https://api.airtable.com/v0/"+app_id_2+"/Statewide/?filterByFormula=(RECORD_ID()=\""+id+"\")";
 			}
 
 			console.log("First call")
