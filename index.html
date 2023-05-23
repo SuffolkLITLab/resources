@@ -7,15 +7,6 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <title>Resource Finder</title>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-108858221-1');
-	</script>
 	<meta property="og:image" content="images/icon_300.png"/>
 	<link rel="apple-touch-icon" href="images/icon_300.png"/>
 
@@ -178,7 +169,7 @@
 			                             ).then(function(response){
 			                                     dcat =  response.data.records[0].fields;
 			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Locations", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
-																						cat_names = keys;
+																						cat_names = keys.sort();
 																						load_first();
 			                             }).catch(function(error){
 			                                     console.log(error)
@@ -218,7 +209,7 @@
 			             	  //   call function to get list of regions
 											load_regions();
 			            }
-			        }, 1000);
+			        }, 1);
 			}
 
 			function region_to_filter(region_val,rname,region_statewide){
@@ -390,15 +381,16 @@
 		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
 		<h1>Resource Finder</h1>
 	</div>
-	<div data-role="content" class="content" style="padding:0px;">
-		<p> This website application can help you find community based programs and services in your area. Watch the following video to learn how the Resource Finder works.</p>
+	<div data-role="content" class="content" style="padding:0px 8px;">
+		<p> This website application can help you find community based programs and services in <b>Massachussets</b>. Watch the following video to learn how the Resource Finder works.</p>
 
-		<div class="vid_wrapper"><div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube.com/embed/aoIXtw_l3YY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div></div>
+		<div class="vid_wrapper"><div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/aoIXtw_l3YY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div></div>
 
 	</div>
 
 	<div data-role="content" id="regions" class="content">
-		<p>Choose the desired state and region for a list of programs in that area.</p>
+		<p>Choose the desired region for a list of programs in that area.</p><br>
+		<ul id="list_Massachusetts" data-role="listview" class="ui-listview"><li class="ui-first-child"><a href="javascript:void('');" id="appbE8WoSE1x8sE3O" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Western</a></li><li><a href="javascript:void('');" id="appO9yLSOwwtk7ffU" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Southeastern</a></li><li><a href="javascript:void('');" id="app7PZwEqjHdsySWf" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Central</a></li><li><a href="javascript:void('');" id="appx6GeXqiyNqQDRD" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Northeastern</a></li><li><a href="javascript:void('');" id="appLPAuFsW119TOwC" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Cape Cod</a></li><li class="ui-last-child"><a href="javascript:void('');" id="app1coUtTecDQTZuF" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Eastern</a></li></ul></div>
 	</div>
 </div>
 
@@ -432,7 +424,7 @@
     		<label for="radio-choice-h-2b">Map View</label>
 		</fieldset>
 
-		<a href="javascript:void('')" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;results_page();" data-role="button">Find Resources</a>
+		<a href="javascript:void('')" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;results_page();" data-role="button" data-theme="b">Find Resources</a>
 
 		<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
 	</div>
@@ -448,7 +440,7 @@
 		<p> Nicole Siino is an American Bar Association 2018/2019 NextGen Fellow and a 2018 graduate of Suffolk University Law School. During her time in law school, she was a Student Attorney in the Juvenile Defender Clinic. Nicole was also the Legal Innovation & Technology Fellow in her clinic in addition to representing juveniles in their delinquency matters. As a law student, Nicole created a website app that contains a list of youth programs & resources in and around the Boston area which allows users to filter through to find the perfect program. It was through this fellowship that Nicole discovered she wanted to be part of the legal tech field. </p>
 		<p> As a NextGen Fellow, she expanded the juvenile app to create this website application. This web app contains a list of adult and juvenile criminal justice programs & services in the areas listed. The use of the app allows people to quickly search and find programs which can have long-lasting impacts on their lives. The app can be used on any smart phone or computer.</p>
 		<p> The Massachusetts resources are maintained by the Massachusetts Committee for Public Counsel Services. <b> The list of resources does not contain all programs that may be available to people. The resources are not vetted for quality and any resources listed does not indicate the quality of services. Do not rely solely on this list of services, additional due diligence is required. </b> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
-		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2">Airtable</a>.</p>
+		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2" target="_blank">Airtable</a>.</p>
 	</div>
 </div>
 
@@ -542,27 +534,32 @@
 	var data;
 	var x = [];
 	function load_region_list() {
-		axios.get(
-	             'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
-	            {
-	              headers: { Authorization: "Bearer "+app_key }
-	            }
-	          ).then(function(response){
-								data =  response.data.records;
-								data.forEach(function (arrayItem) {
-								    if ((arrayItem.fields.State) && (x.indexOf(arrayItem.fields.State)==-1)) {
-								            x.push(arrayItem.fields.State)
-														//console.log("hey there!!!");
-								        }
-								});
-	          }).catch(function(error){
-	              console.log(error)
-	          })
+		//axios.get(
+	    //         'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data/?sort[0][field]=State',
+	    //        {
+	    //          headers: { Authorization: "Bearer "+app_key }
+	    //        }
+	    //      ).then(function(response){
+		//						data =  response.data.records;
+		//						data.forEach(function (arrayItem) {
+		//						    if ((arrayItem.fields.State) && (x.indexOf(arrayItem.fields.State)==-1)) {
+		//						            x.push(arrayItem.fields.State)
+		//												//console.log("hey there!!!");
+		//						        }
+		//						});
+	    //      }).catch(function(error){
+	    //          console.log(error)
+	    //      })
+
+		data = [{"id":"recWgvFGTzrYKjpuN","createdTime":"2019-01-17T21:13:42.000Z","fields":{"API Documentation (Base)":"appx6GeXqiyNqQDRD","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Northeastern"}},{"id":"recnGsRrSqorRnsm7","createdTime":"2019-01-17T21:13:42.000Z","fields":{"API Documentation (Base)":"app1coUtTecDQTZuF","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Eastern"}},{"id":"reciIq6FKEoDxu7cX","createdTime":"2019-05-14T17:49:20.000Z","fields":{"API Documentation (Base)":"appLPAuFsW119TOwC","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Cape Cod"}},{"id":"recARpBApBjj7301z","createdTime":"2019-05-14T18:06:48.000Z","fields":{"API Documentation (Base)":"appO9yLSOwwtk7ffU","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Southeastern"}},{"id":"recJ0eToKBRg57BDc","createdTime":"2019-08-08T13:37:58.000Z","fields":{"API Documentation (Base)":"appODEoshDLPT2pU5","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Statewide"}},{"id":"recAlVOAiK9gxzYPu","createdTime":"2019-08-08T13:38:23.000Z","fields":{"API Documentation (Base)":"app7PZwEqjHdsySWf","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Central"}},{"id":"rec3k506OoxhD3jZW","createdTime":"2019-08-08T13:38:27.000Z","fields":{"API Documentation (Base)":"appbE8WoSE1x8sE3O","State":"Massachusetts","API Key":"keyMCwJmZpyayqYhY","Region":"Western"}}];
+		data.forEach(function (arrayItem) {
+			if ((arrayItem.fields.State) && (x.indexOf(arrayItem.fields.State)==-1)) {
+					x.push(arrayItem.fields.State)
+				}
+		});
+
 	return x;
 	}
-
-
-
 
 	var y = [];
 
@@ -584,7 +581,9 @@
 			console.log("LOAD REGIONS")
 			console.log(region_names)
 			region_names.forEach((cat, index) => {
-					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"javascript:void('');\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"app_id_2= app_id_statewide['"+cat+"'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);\">{{ item['fields']['Region'] }}</a></li></ul></div>");
+					//$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"javascript:void('');\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"app_id_2= app_id_statewide['"+cat+"'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);\">{{ item['fields']['Region'] }}</a></li></ul></div>");
+					
+					//$("#regions").html( $("#regions").html() + `<div data-role="collapsible"  data-collapsed="false" id="reg_Massachusetts" data-inset="false" class="ui-collapsible ui-collapsible-themed-content"><h3 class="ui-collapsible-heading">Massachusetts</h3><ul id="list_Massachusetts" data-role="listview" class="ui-listview"><li class="ui-first-child"><a href="javascript:void('');" id="appbE8WoSE1x8sE3O" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Western</a></li><li><a href="javascript:void('');" id="appO9yLSOwwtk7ffU" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Southeastern</a></li><li><a href="javascript:void('');" id="app7PZwEqjHdsySWf" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Central</a></li><li><a href="javascript:void('');" id="appx6GeXqiyNqQDRD" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Northeastern</a></li><li><a href="javascript:void('');" id="appLPAuFsW119TOwC" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Cape Cod</a></li><li class="ui-last-child"><a href="javascript:void('');" id="app1coUtTecDQTZuF" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Eastern</a></li></ul></div></div>`);
 			});
 			region_names.forEach((cat, index) => {
 				load_api_data('#reg_'+cat.replace(/ /g,"\\ "),-1,cat);
