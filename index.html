@@ -71,95 +71,96 @@
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>
-			var app_id = ""
-			var app_id_statewide = []
-			var app_id_2 = ""
-			var statewide_ids = []
-			var local_list
-			var state_list
-			var region_name = ""
-			var lat = ""
-			var lon = ""
-			var zoomin = ""
+		var app_id = ""
+		var app_id_statewide = []
+		var app_id_2 = ""
+		var statewide_ids = []
+		var local_list
+		var state_list
+		var region_name = ""
+		var lat = ""
+		var lon = ""
+		var zoomin = ""
 
-			function zoomfactor(zoomin,lat,lon,latorlon) {
+		function zoomfactor(zoomin,lat,lon,latorlon) {
 
-				// See https://www.johndcook.com/blog/2009/04/27/converting-miles-to-degrees-longitude-or-latitude/
+			// See https://www.johndcook.com/blog/2009/04/27/converting-miles-to-degrees-longitude-or-latitude/
 
-				var earth_radius = 3960.0
-				var degrees_to_radians = Math.PI/180.0
-				var radians_to_degrees = 180.0/Math.PI
-				var miles = 1
+			var earth_radius = 3960.0
+			var degrees_to_radians = Math.PI/180.0
+			var radians_to_degrees = 180.0/Math.PI
+			var miles = 1
 
-				if (latorlon == "lat") {
+			if (latorlon == "lat") {
 
-					if (zoomin==15) {
-						miles = 4
-					} else if (zoomin==14) {
-						miles = 8
-					} else if (zoomin==13) {
-						miles = 20
-					} else if (zoomin==12) {
-						miles = 50
-					} else if (zoomin==11) {
-						miles = 100
-					} else if (zoomin==10) {
-						miles = 150
-					}
-
-					return (miles/earth_radius)*radians_to_degrees
-
-				} else {
-
-					if (zoomin==14) {
-						miles = 1
-					} else if (zoomin==13) {
-						miles = 10
-					} else if (zoomin==12) {
-						miles = 30
-					} else if (zoomin==11) {
-						miles = 100
-					} else if (zoomin==10) {
-						miles = 150
-					}
-
-					var r = earth_radius*Math.cos(lat*degrees_to_radians)
-					return (miles/r)*radians_to_degrees
-
+				if (zoomin==15) {
+					miles = 4
+				} else if (zoomin==14) {
+					miles = 8
+				} else if (zoomin==13) {
+					miles = 20
+				} else if (zoomin==12) {
+					miles = 50
+				} else if (zoomin==11) {
+					miles = 100
+				} else if (zoomin==10) {
+					miles = 150
 				}
+
+				return (miles/earth_radius)*radians_to_degrees
+
+			} else {
+
+				if (zoomin==14) {
+					miles = 1
+				} else if (zoomin==13) {
+					miles = 10
+				} else if (zoomin==12) {
+					miles = 30
+				} else if (zoomin==11) {
+					miles = 100
+				} else if (zoomin==10) {
+					miles = 150
+				}
+
+				var r = earth_radius*Math.cos(lat*degrees_to_radians)
+				return (miles/r)*radians_to_degrees
+
 			}
+		}
 
-			var undisc = 0;
-    	$(document).on("mobileinit", function () {
-        	$.mobile.hashListeningEnabled = false;
-        	$.mobile.pushStateEnabled = false;
+		var undisc = 0;
+		$(document).on("mobileinit", function () {
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
 					$.mobile.changePage.defaults.changeHash = false;
-    	});
+		});
 
-			$(document).on('pagecontainershow', function(e, ui) {
-				if (readCookie("town") && ($.mobile.pageContainer.pagecontainer("getActivePage")[0].id == "filter")) {
-								console.log("change dropdown et al")
-								$("#town").val(readCookie("town")).attr('selected', true);
-								$("#town").selectmenu("refresh", true);
+		$(document).on('pagecontainershow', function(e, ui) {
+			if (readCookie("town") && ($.mobile.pageContainer.pagecontainer("getActivePage")[0].id == "filter")) {
+							console.log("change dropdown et al"+readCookie("town"))
+							$("#town").val(readCookie("town")).attr('selected', true);
+							$("#town").selectmenu("refresh", true);
 
-								$("#age").val(readCookie("age"));
+							$("#age").val(readCookie("age"));
 
-								load_cats();
+							load_cats();
 
-								if (readCookie("list_map") == "list") {
-									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
-									$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
-									$('#radio-choice-h-2b').attr('checked',false).checkboxradio('refresh');
-                } else if (readCookie("list_map") == "map") {
-									$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
-									$('#radio-choice-h-2a').attr('checked',false).checkboxradio('refresh');
-									$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
-								}
-				}
-			});
-			var dcat;
-			var keys = [];
-		 function load_cat_names() {
+							if (readCookie("list_map") == "list") {
+								$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
+								$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
+								$('#radio-choice-h-2b').attr('checked',false).checkboxradio('refresh');
+			} else if (readCookie("list_map") == "map") {
+								$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
+								$('#radio-choice-h-2a').attr('checked',false).checkboxradio('refresh');
+								$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
+							}
+			} 
+		});
+		var dcat;
+		var keys = [];
+		 
+		function load_cat_names() {
 		 	 console.log("catnames: "+ app_id + '/' + region_name)
 			 axios.get(
 			                                  'https://api.airtable.com/v0/' + app_id + '/' + region_name + '/?limit=1',
@@ -382,7 +383,7 @@
 		<h1>Resource Finder</h1>
 	</div>
 	<div data-role="content" class="content" style="padding:0px 8px;">
-		<p> This website application can help you find community based programs and services in <b>Massachussets</b>. Watch the following video to learn how the Resource Finder works.</p>
+		<p> This website can help you find community-based programs and services in <b>Massachussets</b>. Watch the following video to learn how the Resource Finder works.</p>
 
 		<div class="vid_wrapper"><div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube-nocookie.com/embed/aoIXtw_l3YY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div></div>
 
@@ -391,7 +392,9 @@
 	<div data-role="content" id="regions" class="content">
 		<p>Choose the desired region for a list of programs in that area.</p><br>
 		<ul id="list_Massachusetts" data-role="listview" class="ui-listview"><li class="ui-first-child"><a href="javascript:void('');" id="appbE8WoSE1x8sE3O" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Western</a></li><li><a href="javascript:void('');" id="appO9yLSOwwtk7ffU" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Southeastern</a></li><li><a href="javascript:void('');" id="app7PZwEqjHdsySWf" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Central</a></li><li><a href="javascript:void('');" id="appx6GeXqiyNqQDRD" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Northeastern</a></li><li><a href="javascript:void('');" id="appLPAuFsW119TOwC" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Cape Cod</a></li><li class="ui-last-child"><a href="javascript:void('');" id="app1coUtTecDQTZuF" onclick="app_id_2= app_id_statewide['Massachusetts'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);" class="ui-btn ui-btn-icon-right ui-icon-carat-r">Eastern</a></li></ul></div>
+		<p style="text-align: center;">To share your feedback, please use this <a href="https://forms.gle/2MATCBLmow1srRCdA" target="_blank">feedback form</a>.</p>
 	</div>
+
 </div>
 
 
@@ -403,7 +406,7 @@
 	</div>
 
 	<div data-role="content" class="content">
-		<div class="ui-field-contain">Use the following selections to find social, community based programs & services.
+		<div class="ui-field-contain">Use the following selections to find social, community-based programs & services.
 			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="">
         		<option value="0" class="town_entry">Choose a Location</option>
 						<option v-for="item in items" v-bind:value="item['fields']['Latitude, Longitude, Zoom']"  class="town_entry">{{ item['fields']['Name'] }}</option>
@@ -426,7 +429,7 @@
 
 		<a href="javascript:void('')" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;results_page();" data-role="button" data-theme="b">Find Resources</a>
 
-		<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
+		<p style="text-align: center;">To share your feedback, please use this <a href="https://forms.gle/2MATCBLmow1srRCdA" target="_blank">feedback form</a>.</p>
 	</div>
 </div>
 
@@ -436,11 +439,10 @@
 		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
 	</div>
 	<div data-role="content" class="content">
-		<p> This app was created through the collaborative efforts of Nicole Siino, Suffolk University Legal Innovation & Technology Lab, and Northeastern University Law Lab.</p>
-		<p> Nicole Siino is an American Bar Association 2018/2019 NextGen Fellow and a 2018 graduate of Suffolk University Law School. During her time in law school, she was a Student Attorney in the Juvenile Defender Clinic. Nicole was also the Legal Innovation & Technology Fellow in her clinic in addition to representing juveniles in their delinquency matters. As a law student, Nicole created a website app that contains a list of youth programs & resources in and around the Boston area which allows users to filter through to find the perfect program. It was through this fellowship that Nicole discovered she wanted to be part of the legal tech field. </p>
-		<p> As a NextGen Fellow, she expanded the juvenile app to create this website application. This web app contains a list of adult and juvenile criminal justice programs & services in the areas listed. The use of the app allows people to quickly search and find programs which can have long-lasting impacts on their lives. The app can be used on any smart phone or computer.</p>
-		<p> The Massachusetts resources are maintained by the Massachusetts Committee for Public Counsel Services. <b> The list of resources does not contain all programs that may be available to people. The resources are not vetted for quality and any resources listed does not indicate the quality of services. Do not rely solely on this list of services, additional due diligence is required. </b> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
-		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2" target="_blank">Airtable</a>.</p>
+		<p>This app was created through the collaborative efforts of Nicole Siino, Suffolk University Legal Innovation & Technology Lab, Northeastern University Law Lab, Dismas House, and the Crime Justice Institute (CJI).</p>
+		<p>Resources are maintained by Dasmas House and CJI. <b>The list of resources does not exhaustive. Do not rely on it as the only list of services. </b>
+		</p>
+		<p>To share your feedback, please use this <a href="https://forms.gle/2MATCBLmow1srRCdA" target="_blank">feedback form</a>.</p>
 	</div>
 </div>
 
@@ -477,7 +479,7 @@
 				<ul id="org_list" data-role="listview" data-inset="true" data-filter="true" data-input="#filterBasic-input">
 				</ul>
 
-			<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
+				<p style="text-align: center;">To share your feedback, please use this <a href="https://forms.gle/2MATCBLmow1srRCdA" target="_blank">feedback form</a>.</p>
 		</div>
 
 		<ul id="org_geo_list" style="display:none;"></ul>
@@ -632,7 +634,7 @@ function indexis(variablename) {
         filter_string = ",OR("
         for (var i = 0; i < checked_cats().length; i++) {
         console.log(checked_cats()[i]);
-                filter_string= filter_string+"{"+ indexis(cutoff(checked_cats()[i])) +"}=1"
+                filter_string= filter_string+"{"+ encodeURIComponent(indexis(cutoff(checked_cats()[i]))) +"}=1"
                 if (i<checked_cats().length-1) {
                     filter_string= filter_string+","
                 }
@@ -873,14 +875,22 @@ function get_lat_log() {
 
 		}
 
-	function print_page(){
+	function print_page() {
 
 	if ($('#town').find(":selected").val() != 0 && !isNaN(Number($('#age').val())) ) {
 				$("#print_list").html("");
 
 				categories = "";
 
-				$("#print_list").html($("#print_list").html() + "<li data-role=\"listview\" v-for=\"item in items\"><h1>{{ item['fields']['Name'] }}</h1><p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></li>");
+				//$("#print_list").html($("#print_list").html() + "<li data-role=\"listview\" v-for=\"item in items\"><h1>{{ item['fields']['Name'] }}</h1><p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></li>");
+
+				list_text = "<li data-role=\"listview\" v-for=\"item in items\"><h1>{{ item['fields']['Name'] }}</h1><p>";
+				list_text += "<span v-if=\"item['fields']['Email']\"><b>Email:</b> {{ item['fields']['Email'] }} </span> ";
+				list_text += "<span v-if=\"item['fields']['Phone']\"><b>Phone:</b> {{ item['fields']['Phone'] }}</span>";
+				list_text += "</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></li>";
+
+				$("#print_list").html($("#print_list").html() + list_text );
+
 
 
 		    load_api_data('#print',2);
@@ -890,7 +900,7 @@ function get_lat_log() {
 				return false;
 			}
 
-		}
+	}
 
 	function details_page(id) {
 
@@ -903,18 +913,22 @@ function get_lat_log() {
 
       	$("#detail").attr("v-for", "item in items");
       	//$("#detail").attr("v-if", "item['id'] == '"+id+"'");
-      	$("#detail").html("");
-      	$("#detail").html($("#detail").html() + "<h3>{{ item['fields']['Name'] }}</h3>")
-      	$("#detail").html($("#detail").html() + "<p><b>Category(s):</b> "+ cats_local + "</p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }} &nbsp;&nbsp; <b>Gender(s):</b> {{ item['fields']['Gender'] }}</p>");
-		$("#detail").html($("#detail").html() + "<p><b>Phone:</b> <a v-bind:href=\"'tel:'+item['fields']['Phone']\" target=\"_blank\">{{ item['fields']['Phone'] }}</p>");
-		$("#detail").html($("#detail").html() + "<p><b>Email:</b> <a v-bind:href=\"'mailto:'+item['fields']['Email']\" target=\"_blank\">{{ item['fields']['Email'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Website:</b> <a v-bind:href=\"item['fields']['Website']\" target=\"_blank\">{{ item['fields']['Website'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Address:</b> <a v-bind:href=\"'https://www.google.com/maps/place/'+item['fields']['Address']\" target=\"_blank\">{{ item['fields']['Address'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Locations:</b> <a v-bind:href=\"item['fields']['Locations']\" target=\"_blank\">{{ item['fields']['Locations'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Application Requirements/Restrictions (if any):</b> {{ item['fields']['Application Requirements/Restrictions (if any)'] }}</p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Description:</b> {{ item['fields']['Description'] }}</p>");
-		$("#detail").html($("#detail").html() + "<p><b>Valid As Of:</b> {{ item['fields']['Valid As Of'] }}</p>");
+
+		list_text = ""
+
+      	//$("#detail").html("");
+      	list_text += "<h3>{{ item['fields']['Name'] }}</h3>";
+      	list_text += "<p><b>Category(s):</b> "+ cats_local + "</p>";
+      	list_text += "<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }} &nbsp;&nbsp; <b>Gender(s):</b> {{ item['fields']['Gender'] }}</p>";
+		list_text += "<p v-if=\"item['fields']['Phone']\"><b>Phone:</b> <a v-bind:href=\"'tel:'+item['fields']['Phone']\" target=\"_blank\">{{ item['fields']['Phone'] }}</a></p>";
+		list_text += "<p v-if=\"item['fields']['Email']\"><b>Email:</b> <a v-bind:href=\"'mailto:'+item['fields']['Email']\" target=\"_blank\">{{ item['fields']['Email'] }}</a></p>";
+		list_text += "<p v-if=\"item['fields']['Website']\"><b>Website:</b> <a v-bind:href=\"item['fields']['Website']\" target=\"_blank\">{{ item['fields']['Website'] }}</a></p>";
+		list_text += "<p v-if=\"item['fields']['Address']\"><b>Address:</b> <a v-bind:href=\"'https://www.google.com/maps/place/'+item['fields']['Address']\" target=\"_blank\">{{ item['fields']['Address'] }}</a></p>";
+		list_text += "<p v-if=\"item['fields']['Locations']\"><b>Locations:</b> <a v-bind:href=\"item['fields']['Locations']\" target=\"_blank\">{{ item['fields']['Locations'] }}</a></p>";
+		list_text += "<p v-if=\"item['fields']['Application Requirements/Restrictions (if any)']\"><b>Application Requirements/Restrictions (if any):</b> {{ item['fields']['Application Requirements/Restrictions (if any)'] }}</p>";
+		list_text += "<p><b>Description:</b> {{ item['fields']['Description'] }}</p>";
+		list_text += "<p><b>Valid As Of:</b> {{ item['fields']['Valid As Of'] }}</p>";
+		$("#detail").html(list_text);
 
 			load_api_data('#details',3,id);
 
