@@ -1,1020 +1,382 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA Resource Directory</title>
+
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-capable" content="no" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <title>Resource Finder (Beta)</title>
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-108858221-1');
-	</script>
-	<meta property="og:image" content="images/icon_300.png"/>
-	<link rel="apple-touch-icon" href="images/icon_300.png"/>
-
-	<style>
-
-	.vid_wrapper, .vid_wrapper_right {
-		box-sizing: border-box;
-		position:relative;
-		width:100%;
-	}
-	.profile_vid, .profile_vid_right {
-		box-sizing: border-box;
-		float:none;
-		position:relative;
-		margin:15px auto;
-		width:400px;
-	}
-	.embed_vid {
-		float:none;
-		height:225px;
-		width:100%;
-	}
-	.profile_img {
-		float:none;
-		position:relative;
-		margin:15px auto;
-		width:400px;
-	}
-
-
-@media only screen and (max-width: 480px) {
-
-	.listing {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.profile_wrapper {
-		position:relative;
-		width:100%;
-	}
-	.profile_pic {
-		float:none;
-		position:relative;
-		margin:15px auto;
-		width:200px;
-	}
-
-	.profile_vid, .profile_vid_right {
-		float:none;
-		width:100%;
-	}
-
-	.profile_img {
-		float:none;
-		width:100%;
-	}
-
-}
-	</style>
-
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script>
-			var app_id = ""
-			var app_id_statewide = []
-			var app_id_2 = ""
-			var statewide_ids = []
-			var local_list
-			var state_list
-			var region_name = ""
-			var lat = ""
-			var lon = ""
-			var zoomin = ""
-
-			function zoomfactor(zoomin,lat,lon,latorlon) {
-
-				// See https://www.johndcook.com/blog/2009/04/27/converting-miles-to-degrees-longitude-or-latitude/
-
-				var earth_radius = 3960.0
-				var degrees_to_radians = Math.PI/180.0
-				var radians_to_degrees = 180.0/Math.PI
-				var miles = 1
-
-				if (latorlon == "lat") {
-
-					if (zoomin==15) {
-						miles = 4
-					} else if (zoomin==14) {
-						miles = 8
-					} else if (zoomin==13) {
-						miles = 20
-					} else if (zoomin==12) {
-						miles = 50
-					} else if (zoomin==11) {
-						miles = 100
-					} else if (zoomin==10) {
-						miles = 150
-					}
-
-					return (miles/earth_radius)*radians_to_degrees
-
-				} else {
-
-					if (zoomin==14) {
-						miles = 1
-					} else if (zoomin==13) {
-						miles = 10
-					} else if (zoomin==12) {
-						miles = 30
-					} else if (zoomin==11) {
-						miles = 100
-					} else if (zoomin==10) {
-						miles = 150
-					}
-
-					var r = earth_radius*Math.cos(lat*degrees_to_radians)
-					return (miles/r)*radians_to_degrees
-
-				}
-			}
-
-			var undisc = 0;
-    	$(document).on("mobileinit", function () {
-        	$.mobile.hashListeningEnabled = false;
-        	$.mobile.pushStateEnabled = false;
-					$.mobile.changePage.defaults.changeHash = false;
-    	});
-
-			$(document).on('pagecontainershow', function(e, ui) {
-				if (readCookie("town") && ($.mobile.pageContainer.pagecontainer("getActivePage")[0].id == "filter")) {
-								console.log("change dropdown et al")
-								$("#town").val(readCookie("town")).attr('selected', true);
-								$("#town").selectmenu("refresh", true);
-
-								$("#age").val(readCookie("age"));
-
-								load_cats();
-
-								if (readCookie("list_map") == "list") {
-									$('input:radio[name="radio-choice-h-2"]')[0].checked = true;
-									$('#radio-choice-h-2a').attr('checked',true).checkboxradio('refresh');
-									$('#radio-choice-h-2b').attr('checked',false).checkboxradio('refresh');
-                } else if (readCookie("list_map") == "map") {
-									$('input:radio[name="radio-choice-h-2"]')[1].checked = true;
-									$('#radio-choice-h-2a').attr('checked',false).checkboxradio('refresh');
-									$('#radio-choice-h-2b').attr('checked',true).checkboxradio('refresh');
-								}
-				}
-			});
-			var dcat;
-			var keys = [];
-		 function load_cat_names() {
-		 	 console.log("catnames: "+ app_id + '/' + region_name)
-			 axios.get(
-			                                  'https://api.airtable.com/v0/' + app_id + '/' + region_name + '/?limit=1',
-			                                 {
-			                                     headers: { Authorization: "Bearer "+app_key }
-			                                 }
-			                             ).then(function(response){
-			                                     dcat =  response.data.records[0].fields;
-			    for(var k in dcat) if (["Name", "Minimum Age", "Maximum Age", "Gender", "Address", "Description", "Application Requirements/Restrictions (if any)", "Website", "Phone", "Email", "Valid As Of", "Latitude", "Longitude"].indexOf(k) == -1) { keys.push([k.replace(/\W+/g,""),k]) };
-																						cat_names = keys;
-																						load_first();
-			                             }).catch(function(error){
-			                                     console.log(error)
-			                             })
-				return true;
-				//return [["Outreach","Community Outreach"],["Counseling","Counseling"],["Training","Job Opportunities/Training"],["Health","Health Services"],["Academic","Academic Support"],["Case","Case Management"],["Mentor","Mentoring"],["Shelter","Shelter"],["LGBTQ","LGBTQ"],["Housing","Housing"]];
-				}
-
-      function load_filter () {
-				if (work == 0) {
-					$.mobile.loading("hide");
-					$.mobile.changePage($('#filter'), { transition: 'slide'});
-				} else {
-					if ($.mobile.loading().is(':hidden')) {
-						$.mobile.loading("show");
-					}
-					setTimeout(function () {
-						load_filter()
-					}, 100);
-				}
-			}
-
-			function page_load() {
-			        setTimeout(function(){
-			            if (readCookie("region")) {
-											console.log(readCookie("region"),"there is a region cookie")
-											app_id = readCookie("region");
-											app_id_2 = readCookie("region_statewide");
-											region_name = readCookie("region_name");
-											$('#title').html(region_name);
-											cat_names = load_cat_names();
-											load_regions(0)
-											//load_first();
-											load_filter();
-			            } else {
-											console.log("there is NOT a region cookie")
-			             	  //   call function to get list of regions
-											load_regions();
-			            }
-			        }, 1000);
-			}
-
-			function region_to_filter(region_val,rname,region_statewide){
-				createCookie('region',region_val,365*100);
-				createCookie('region_name',rname,365*100)
-				if (region_statewide) {
-					createCookie('region_statewide',region_statewide,365*100);
-				}
-				app_id = region_val;
-				region_name = rname;
-				$('#title').html(rname);
-				cat_names = load_cat_names();
-				console.log(region_val)
-				//load_first();
-
-			}
-			function remove_cookies() {
-				createCookie('region',"",-1);
-				createCookie('region_name',"",-1);
-				createCookie("age","",-1);
-				createCookie("town","",-1);
-				createCookie("list_map","",-1);
-				createCookie("cats","",-1);
-				$('#town').html("<option value=\"0\" class=\"town_entry\">Choose a Location</option>\n<option v-for=\"item in items\" v-bind:value=\"item['fields']['Latitude, Longitude, Zoom']\"  class=\"town_entry\">{{ item['fields']['Name'] }}</option>");
-				cat_names = [];
-				keys = [];
-			}
-	</script>
-
-	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script>
-		function createCookie(name,value,days) {
-				if (days) {
-					var date = new Date();
-					date.setTime(date.getTime()+(days*24*60*60*1000));
-					var expires = "; expires="+date.toGMTString();
-				}
-				else var expires = "";
-				document.cookie = name+"="+value+expires+"; path=/";
-			}
-			function readCookie(name) {
-				var nameEQ = name + "=";
-				var ca = document.cookie.split(';');
-				for(var i=0;i < ca.length;i++) {
-					var c = ca[i];
-					while (c.charAt(0)==' ') c = c.substring(1,c.length);
-					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-				}
-				return null;
-			}
-		function saveCookies() {
-						age = $("#age").val();
-						town = $("#town").val();
-						list_map = $('input[name="radio-choice-h-2"]:checked', '#filter').val()
-						createCookie("age",age,365*100);
-						createCookie("town",town,365*100);
-						createCookie("list_map",list_map,365*100);
-		}
-
-		function load_cats() {
-			for (var i = 0; i < readCookie("cats").split(",").length; i++) {
-        console.log(readCookie("cats").split(",")[i]);
-        //Do something
-        $('#'+readCookie("cats").split(",")[i]).prop('checked', true).checkboxradio('refresh');
-    }
-		}
-
-		function save_cats() {
-						createCookie("cats",checked_cats(),365*100)
-		}
-	</script>
-
-	<style>
-		.content {
-			text-align:left;
-			max-width:700px;
-			margin:0 auto 0 auto;
-			padding:0 15px 25px 15px
-		}
-	</style>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* Popup container - can be anything you want */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* The actual popup */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
-.logos {
-	width:100%;
-	text-align:center;
-	padding-top: 15px;
-}
-
-</style>
-
-</head>
-<body onLoad="page_load();">
-
-<div data-role="page" id="loading">
-	<div data-role="header" data-position="fixed">
-		<h1>Loading...</h1>
-	</div>
-
-	<div data-role="content" class="content">
-	<div class="logos">
-		<p><img src="images/LIT_logo.png" width="150px"/ border="0" ></p>
-		<p><img src="images/NU.png" width="200px"/ border="0" ></p>
-		<p><img src="images/ABA.png" width="200px"/ border="0" ></p>
-	</div>
-	</div>
-
-</div>
-
-<div data-role="page" id="region">
-	<div data-role="header" data-position="fixed">
-		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<h1>Resource Finder (Beta)</h1>
-	</div>
-	<div data-role="content" class="content" style="padding:0px;">
-		<p> This website application can help you find community based programs and services in your area. Watch the following video to learn how the Resource Finder works.</p>
-
-		<div class="vid_wrapper"><div class="profile_vid"><iframe class="embed_vid" src="https://www.youtube.com/embed/aoIXtw_l3YY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></div></div>
-
-	</div>
-
-	<div data-role="content" id="regions" class="content">
-		<p>Choose the desired state and region for a list of programs in that area.</p>
-	</div>
-</div>
-
-
-<div data-role="page" id="filter">
-	<div data-role="header" data-position="fixed">
-		<h1 id="title"></h1>
-		<a href="#about" class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all ui-btn-right" data-transition="slide"></a>
-		<a href="#region" onClick="remove_cookies();" class="ui-btn ui-icon-gear ui-btn-icon-notext ui-corner-all ui-btn-left ui-icon-gear" data-transition="slide" data-direction="reverse"></a>
-	</div>
-
-	<div data-role="content" class="content">
-		<div class="ui-field-contain">Use the following selections to find social, community based programs & services.
-			<select id="town" name="select-native-1" id="select-native-1" style="width:100%" onChange="">
-        		<option value="0" class="town_entry">Choose a Location</option>
-						<option v-for="item in items" v-bind:value="item['fields']['Latitude, Longitude, Zoom']"  class="town_entry">{{ item['fields']['Name'] }}</option>
-    	</select>
-		</div>
-
-		<p> Enter age of the person seeking services. Leave age blank to view all services.</p>
-		<div  id="age_container"><input name="age" id="age" data-type="number" placeholder="Input Age" onChange="list_page();"></div>
-
-		<fieldset id="categories" data-role="controlgroup">
-			<p style="margin-top:15px;">Check the type(s) of service(s) you are looking for:</p>
-		</fieldset>
-
-		<fieldset data-role="controlgroup" data-type="horizontal">
-    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="list" checked="checked">
-    		<label for="radio-choice-h-2a">List View</label>
-    		<input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="map">
-    		<label for="radio-choice-h-2b">Map View</label>
-		</fieldset>
-
-		<a href="javascript:void('')" onClick="get_lat_log();list_page();print_page();saveCookies();save_cats();i=0;results_page();" data-role="button">Find Resources</a>
-
-		<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
-	</div>
-</div>
-
-<div data-role="page" id="about">
-	<div data-role="header" data-position="fixed">
-		<h1>About</h1>
-		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
-	</div>
-	<div data-role="content" class="content">
-		<p> This app was created through the collaborative efforts of Nicole Siino, Suffolk University Legal Innovation & Technology Lab, and Northeastern University Law Lab.</p>
-		<p> Nicole Siino is an American Bar Association 2018/2019 NextGen Fellow and a 2018 graduate of Suffolk University Law School. During her time in law school, she was a Student Attorney in the Juvenile Defender Clinic. Nicole was also the Legal Innovation & Technology Fellow in her clinic in addition to representing juveniles in their delinquency matters. As a law student, Nicole created a website app that contains a list of youth programs & resources in and around the Boston area which allows users to filter through to find the perfect program. It was through this fellowship that Nicole discovered she wanted to be part of the legal tech field. </p>
-		<p> As a NextGen Fellow, she expanded the juvenile app to create this website application. This web app contains a list of adult and juvenile criminal justice programs & services in the areas listed. The use of the app allows people to quickly search and find programs which can have long-lasting impacts on their lives. The app can be used on any smart phone or computer.</p>
-		<p> The Massachusetts resources are maintained by the Massachusetts Committee for Public Counsel Services. <b> The list of resources does not contain all programs that may be available to people. The resources are not vetted for quality and any resources listed does not indicate the quality of services. Do not rely solely on this list of services, additional due diligence is required. </b> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
-		<p> This website application runs of the data from this <a href="https://airtable.com/invite/l?inviteId=invT48E7v0Q3l0yzT&inviteToken=ad4c4e1de78fb9ba616c55f6e294e8998001b321f827c700f835bc22a2e7dea2">Airtable</a>.</p>
-	</div>
-</div>
-
-<div data-role="page" id="details">
-	<div data-role="header" data-position="fixed">
-		<h1>Details</h1>
-		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
-	</div>
-	<div data-role="content" class="content">
-		<div id="detail" v-for="" v-if="">
-		</div>
-	</div>
-</div>
-
-
-
-<div data-role="page" id="results">
-	<div data-role="header" data-position="fixed">
-		<h1>Results</h1>
-		<a href="#filter" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext"></a>
-		<a href="#print" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-action ui-btn-icon-notext"></a>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#results">List</a></li>
-				<li><a href="javascript:void('');" style="color:#ccc" onClick="size_map();$.mobile.changePage($('#map-page'), { transition: 'none'});">Map</a></li>
-			</ul>
-		</div>
-	</div>
-		<div data-role="content" class="content">
-				<h1 id="town_name"></h1>
-				<form id="searchfilter"class="ui-filterable">
-					<input id="filterBasic-input" data-type="search">
-				</form>
-				<ul id="org_list" data-role="listview" data-inset="true" data-filter="true" data-input="#filterBasic-input">
-				</ul>
-
-			<p> For questions or updates on the Massachusetts resources listed in the app, please contact the <a href="mailto:Resourcefinder@publiccounsel.net">Committee for Public Counsel Services</a>.</p>
-		</div>
-
-		<ul id="org_geo_list" style="display:none;"></ul>
-
-</div>
-
-
-
-<div data-role="page" id="map-page" style="background:#798e9e;">
-	<div data-role="header" data-position="fixed">
-		<h1>Results</h1>
-		<a href="#filter" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext"></a>
-		<a href="#print" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-action ui-btn-icon-notext"></a>
-		<div data-role="navbar">
-			<ul>
-				<li><a href="#results" data-transition="none" style="color:#ccc">List</a></li>
-				<li><a href="#map-page">Map</a></li>
-			</ul>
-		</div>
-
-	</div>
-
-	<div>
-		<div id="map" style="width:100%;height:100px;"></div>
-	</div>
-
-</div>
-
-<div data-role="page" id="print">
-	<div data-role="header" data-position="fixed">
-		<h1>Print</h1>
-		<a href="#" data-rel="back" data-transition="slide" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l ui-btn-icon-notext"></a>
-	</div>
-	<div data-role="content" class="content">
-		<ol data-role="listview" data-inset="true" id="print_list">
-		</ol>
-	</div>
-</div>
-
-
-<!-- Include Dependency Scripts -->
-<!--<script type="text/javascript" src="https://unpkg.com/vue"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCDs-cJfxydB2mKizGvtEt5tGMhcxMjmk"></script>
-
-<script type="text/javascript">
-
-	var meta_app_id = "appvDg82vGxAzasWm";
-	var app_key = "keyMCwJmZpyayqYhY";
-
-
-	var data;
-	var x = [];
-	function load_region_list() {
-		axios.get(
-	             'https://api.airtable.com/v0/'+meta_app_id+'/Meta Data 2/?sort[0][field]=State',
-	            {
-	              headers: { Authorization: "Bearer "+app_key }
-	            }
-	          ).then(function(response){
-								data =  response.data.records;
-								data.forEach(function (arrayItem) {
-								    if ((arrayItem.fields.State) && (x.indexOf(arrayItem.fields.State)==-1)) {
-								            x.push(arrayItem.fields.State)
-														//console.log("hey there!!!");
-								        }
-								});
-	          }).catch(function(error){
-	              console.log(error)
-	          })
-	return x;
-	}
-
-
-
-
-	var y = [];
-
-	var cat_names = [];
-
-	var region_names = load_region_list();
-
-	var categories = "";
-	//var ages = "";
-	var work = 0;
-
-	$("#region").on("pageshow" , function() {
-			region_names.forEach((cat, index) => {
-	  		$('#list_'+cat.replace(/ /g,"\\ ")).listview('refresh');
-			});
-	});
-
-	function load_regions(go) {
-			console.log("LOAD REGIONS")
-			console.log(region_names)
-			region_names.forEach((cat, index) => {
-					$("#regions").html( $("#regions").html() + "<div data-role=\"collapsible\" id=\"reg_"+cat+"\" data-inset=\"false\"><h3>"+cat+"</h3><ul id=\"list_"+cat+"\" data-role=\"listview\"><li v-for=\"item in items\"><a href=\"javascript:void('');\" v-bind:id=\"item['fields']['API Documentation (Base)']\" onClick=\"app_id_2= app_id_statewide['"+cat+"'];region_to_filter(this.id,$('#'+this.id).html(),app_id_2);\">{{ item['fields']['Region'] }}</a></li></ul></div>");
-			});
-			region_names.forEach((cat, index) => {
-				load_api_data('#reg_'+cat.replace(/ /g,"\\ "),-1,cat);
-			});
-			if (go!=0) {
-				$.mobile.changePage($('#region'), { transition: 'fade', });
-			}
-	}
-
-	function load_first() {
-			console.log("LOAD FIRST")
-			$('#town-button').empty()
-			$("#categories").html("<p style=\"margin-top:15px;\">Check the type(s) of service(s) you are looking for:</p>")
-			$("#age_container").html("<input name=\"age\" id=\"age\" data-type=\"number\" placeholder=\"Input Age\" onChange=\"list_page();\">")
-			cat_names.forEach((cat, index) => {
-					$("#categories").html( $("#categories").html() + "<input type=\"checkbox\" name=\"checkbox-v-"+cat[0]+"\" id=\"checkbox-v-"+cat[0]+"\" onChange=\"list_page();\" class=\"boxcheck\">");
-					$("#categories").html( $("#categories").html() + "<label for=\"checkbox-v-"+cat[0]+"\">"+cat[1]+"</label>");
-			});
-			$( '#categories' ).enhanceWithin();
-			load_api_data('#filter',0);
-			$.mobile.changePage($('#filter'), { transition: 'slide', });
-	}
-
-function checked_cats() {
-	var selected = [];
-	$('.boxcheck:checkbox:checked').each(function() {
-	    selected.push($(this).attr('id'));
-	});
-	return selected;
-}
-
-function cutoff(longname){
-    output = longname.replace(/^checkbox-v-/g,'');
-    return output
-}
-
-function indexis(variablename) {
-        for(var i = 0; i < cat_names.length; i++) {
-            if(cat_names[i][0] == variablename) {
-                return cat_names[i][1];
-            }
+    <link rel="apple-touch-icon" href="images/icon_300.png"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="MA Resource Directory"/>
+	<meta property="og:description" content="Use this directory to find local resources."/>
+	<meta property="og:image" content="images/thefuture.png"/>
+
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Your custom CSS -->
+    <style>
+        /* Add your custom styles here */
+        .container {
+            padding-top: 15px;
         }
-    }
+        .header {
+            background:#1d5791;
+            color:white;
+            padding-bottom: 15px;
+            margin-bottom: 0px;
+        }
+        #tag-list {
+            padding: 10px 0 0px 15px;
+        }
+        .descript {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .descript.collapse {
+            display: block;
+            height: 42px !important;
+            overflow: hidden;
+        }
+        .descript.collapse.show {
+            display: block;
+            height: max-content !important;
+            overflow:auto;
+        }
+        .descript.collapsing {
+            height: 42px !important;
+        }
+        .results {
+            color:#7b8690;
+        }
+    </style>
+</head>
+<body>
+        <div class="header">
+            <div class="container">
+                <h1>Massachusetts Resource Directory</h1>
+                <p>
+                    Use this directory to find local resources.
+                </p>
 
-    function cats_filter() {
-        filter_string = ",OR("
-        for (var i = 0; i < checked_cats().length; i++) {
-        console.log(checked_cats()[i]);
-                filter_string= filter_string+"{"+ indexis(cutoff(checked_cats()[i])) +"}=1"
-                if (i<checked_cats().length-1) {
-                    filter_string= filter_string+","
+                <div class="form-group">
+                    <label for="region">Filter by region:</label>
+                    <div id="container"></div>
+                </div>
+
+                <div class="form-group">
+                    <a href="#" id="show-tags" style="color:rgb(151, 255, 253);text-decoration: underline;">Filter by service type(s)...</a>
+                    <div id="tag-list" style="display: none;">
+                        <!-- List of all possible tags will be displayed here -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="search">Filter by organization name or service type:</label>
+                    <input type="text" id="search" class="form-control" placeholder="Enter a name or service type..." autocomplete="off">
+                </div>
+
+                <div class="form-check">
+                    <p>
+                        <input type="checkbox" class="form-check-input" id="use-location" autocomplete="off">
+                        <label class="form-check-label" for="use-location">Use my location to sort results by distance</label>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <p class="results">
+            <span id="sort" style="float:right;">Sort: Alphabetical</span>
+            Results: <span id="results_n">?</span>
+        </p>
+        <div class="row" id="results">
+            <!-- Search results will be displayed here -->
+        </div>
+
+        <p style="text-align: center;padding-bottom: 20px;">To share your feedback, please use this <a href="https://forms.gle/2MATCBLmow1srRCdA" target="_blank">feedback form</a>.</p>
+    </div>
+
+    <!-- Bootstrap JS and your custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Load the data from the listings.js file
+        function loadListings() {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = 'listings.js';
+                script.onload = resolve;
+                script.onerror = reject;
+                document.body.appendChild(script);
+            });
+        }
+
+        async function init() {
+            await loadListings();
+
+            function generateSelectWithOptions(itemList) {
+                if (!Array.isArray(itemList) || itemList.length === 0) {
+                    return null; // Return null if input is not a valid array
                 }
-    }
-        filter_string = filter_string+")"
-        return filter_string
-    }
-
-	function load_api_data(target,mode=3,id='') {
-			work = 1;
-			console.log("LOAD API DATA:",target,mode,id)
-
-			if (mode == -1) {
-				apicall = "https://api.airtable.com/v0/"+meta_app_id+"/Meta Data 2/?filterByFormula=(State=\""+id+"\")";
-			} else if (mode == 0) {
-				apicall = "https://api.airtable.com/v0/"+app_id+"/Locations/?sort[0][field]=Name&sort[0][direction]=asc";
-			} else if (mode == 1) {
-				//apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?limit=1";
-			} else if (mode == 2) {
-				if ($("#age").val() == ""){
-					age_str = ""
-				} else {
-					age_str = ","+$("#age").val()+"<={Maximum Age},"+$("#age").val()+">={Minimum Age}";
-				}
-
-				apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=AND("+(lat-zoomfactor(zoomin,lat,lon,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,lat,lon,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,lat,lon,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,lat,lon,"lon"))+">={Longitude}"+cats_filter()+	age_str +")&sort[0][field]=Name&sort[0][direction]=asc";
-
-				apicall_2 = "https://api.airtable.com/v0/"+app_id_2+"/Statewide/?filterByFormula=AND("+(lat-zoomfactor(zoomin,lat,lon,"lat"))+"<={Latitude},"+(lat+zoomfactor(zoomin,lat,lon,"lat"))+">={Latitude},"+(lon-zoomfactor(zoomin,lat,lon,"lon"))+"<={Longitude},"+(lon+zoomfactor(zoomin,lat,lon,"lon"))+">={Longitude}"+cats_filter()+	age_str +")&sort[0][field]=Name&sort[0][direction]=asc";
-
-				//console.log(lat,lon,apicall)
-			} else if (mode == 3) {
-				if (statewide_ids.includes(id)) {
-					apicall = "https://api.airtable.com/v0/"+app_id_2+"/Statewide/?filterByFormula=(RECORD_ID()=\""+id+"\")";
-				} else {
-					apicall = "https://api.airtable.com/v0/"+app_id+"/" + region_name + "/?filterByFormula=(RECORD_ID()=\""+id+"\")";
-				}
-			}
-
-			console.log("First call")
-			console.log(apicall)
-
-			var app = new Vue({
-	              el: String(target),
-	              data: {
-	                  items: []
-	              },
-	              mounted: function(){
-	                 this.loadItems();
-	              },
-	              methods: {
-	                  loadItems: function(){
-	                      // Init variables
-	                      var self = this
-	                      this.items = []
-												axios.get(
-																		 apicall,
-					                          {
-					                              headers: { Authorization: "Bearer "+ app_key }
-					                          }
-						                      ).then(function(response){
-																			if (mode == -1) {
-																				var i = 0;
-																				response.data.records.forEach(function(element) {
-																						if (element['fields']['Region'] == "Statewide" && element['fields']['State'] == id) {
-																							state = element['fields']['State'];
-																							statewide_id = element['fields']['API Documentation (Base)']
-																							app_id_statewide[state] = statewide_id;
-																							app_id_statewide.push(app_id_statewide);
-																							console.log("Remove Statewide!");
-																							//console.log(response.data.records);
-																							response.data.records.splice(i,1);
-																						}
-																						i = i + 1;
-																        });
-																				self.items = response.data.records;
-																				work = 0;
-																			//} else if ((response.data.records.length == 0) && (mode == 2)){
-																			//		console.log("=0")
-																			//		$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
-																		 } else if ((mode == 2) && (app_id_2)){
-																				console.log("Second call")
-																				console.log(apicall_2)
-																				axios.get(
-																										 apicall_2,
-																										{
-																												headers: { Authorization: "Bearer "+ app_key }
-																										}
-																									).then(function(response_too){
-																											//console.log(response.data.records)
-																											//console.log(response_too.data.records)
-																											//console.log(response_too.data.records.concat(response.data.records))
-																											if (response_too.data.records.length != 0) {
-																												for (var key in response_too.data.records) {
-																														statewide_ids.push(response_too.data.records[key]["id"])
-																												};
-																												self.items = response_too.data.records.concat(response.data.records)
-																											} else {
-																												self.items = response.data.records
-																											}
-																											testbucket = self.items
-
-																											if ((response.data.records.length == 0) && (response_too.data.records.length == 0)) {
-																												$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
-																											}
-																											work = 0;
-																									}).catch(function(error){
-																											console.log(error)
-																									})
-																				//self.items = response.data.records;
-																			} else if (mode == 2){
-																					if (response.data.records.length == 0) {
-																						$("#org_list").html("<h2 style=\"padding:15px;text-align:center;\">No resources meet this criteria.</h2>");
-																					} else {
-																						self.items = response.data.records
-																					}
-																					work = 0;
-																		 	} else {
-																				self.items = response.data.records;
-																				work = 0;
-																			}
-
-						                      }).catch(function(error){
-						                          console.log(error)
-						                      })
-
-
-
-
-	                  }
-	              }
-
-
-
-	          });
-
-
-	}
-
-	function results_page() {
-
-		$('#searchfilter').empty()
-		$('#searchfilter').html("<input id=\"filterBasic-input\" data-type=\"search\">")
-
-		if ($('#town').find(":selected").val() == 0) {
-			alert('You must choose a location.');
-		} else if ( isNaN(Number($('#age').val())) ) {
-			alert('You must enter a numeric age (in years) or leave blank.')
-		} else if ($('.boxcheck:checkbox:checked').length > 0) {
-			next_page_1()
-    } else {
-			alert('You must choose at least one type of service.')
-		}
-	}
 
-	function next_page_1() {
-		if (work == 0) {
-			$.mobile.loading("hide");
-			if ($('input[name=radio-choice-h-2]:checked', '#filter').val() == "map") {
-					size_map();
-					$.mobile.changePage($('#map-page'), { transition: 'slide'});
-			} else {
-					$.mobile.changePage($('#results'), { transition: 'slide'});
-			}
-		} else {
-			if ($.mobile.loading().is(':hidden')) {
-				$.mobile.loading("show");
-			}
-			setTimeout(function () {
-        next_page_1()
-    	}, 100);
-		}
-	}
-
-
-function get_lat_log() {
-
-	geo_data = $('#town').find(":selected").val().split(',').map(Number);
-	console.log("LAT LON "+geo_data)
-	lat = geo_data[0];
-	lon = geo_data[1];
-	zoomin = geo_data[2];
-
-}
-
-
-	function list_page() {
-
-		if ($('#town').find(":selected").val() != 0 && !isNaN(Number($('#age').val())) ) {
-				$("#org_list").html("");
-
-				$("#org_geo_list").html("<li id=\"ge0_points\" v-for=\"item in items\">{{ item['id'] }},{{ item['fields']['Name'] }},{{ item['fields']['Latitude'] }},{{ item['fields']['Longitude'] }}</li>");
-				// check if list is blank and if it is:
-
-				categories = "";
-
-				var cats_local = ""
-				i = 0;
-				cat_names.forEach((cat, index) => {
-						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
-						i = i + 1;
-				});
-
-				$("#org_list").html($("#org_list").html() + "<li v-for=\"item in items\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, <b>Category(s):</b> "+ cats_local + "</p></a></li>");
-
-				//cat_names.forEach((cat, index) => {
-				//	if ($('#checkbox-v-'+cat[0]).is(":checked")){
-						//$("#org_list").html( $("#org_list").html() + "<li data-role=\"list-divider\">"+cat[1]+"</li>")
-				//		$("#org_list").html($("#org_list").html() + "<li  v-for=\"item in items\" v-if=\"item['fields']['"+cat[1]+"'] == '1'\"><a href=\"javascript:void('')\" v-bind:id=\"item['id']\" onClick=\"details_page(this.id);\">{{ item['fields']['Name'] }}<p>Ages: {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age']}}, Category(s): {{ item['fields']['"+cat[1]+"']}}</p></a></li>")
-				//		if (categories != "") {
-				//			categories = categories+",";
-				//		}
-				//		categories = categories+"FIND(\""+cat[1]+"\",{Category})";
-				//}
-				//});
-
-				//if ($('#age').val()=="") {
-				//	ages = "";
-				//} else {
-				//	ages = Number($('#age').val())+"<={Maximum Age},"+Number($('#age').val())+">={Minimum Age},";
-				//}
-
-				//$('#town_name').html($('#town').find(":selected").text());
-
-		    load_api_data('#results',2);
-
-			//geo_data = $('#town').find(":selected").val().split(',').map(Number);
-			//console.log(geo_data)
-			//lat = geo_data[0];
-			//lon = geo_data[1];
-			//zoomin = geo_data[2];
-
-	  	//} else if ($("#org_geo_list").length > 0){
-			} else {
-			//$("#org_list").html("<p id=\"ge0_points\">No resources meet this criteria.</p>");
-			//	alert('No resources meet this criteria.')};
-				return false;
-			}
-
-		}
-
-	function print_page(){
-
-	if ($('#town').find(":selected").val() != 0 && !isNaN(Number($('#age').val())) ) {
-				$("#print_list").html("");
-
-				categories = "";
-
-				$("#print_list").html($("#print_list").html() + "<li data-role=\"listview\" v-for=\"item in items\"><h1>{{ item['fields']['Name'] }}</h1><p><b>Email:</b> {{ item['fields']['Email'] }} <b>Phone:</b> {{ item['fields']['Phone'] }}</p><p style=\"overflow:visible;white-space:normal;\"><b> Description:</b> {{ item['fields']['Description'] }}</p></li>");
-
-
-		    load_api_data('#print',2);
-
-
-	  	} else {
-				return false;
-			}
-
-		}
-
-	function details_page(id) {
-
-		var cats_local = ""
-				i = 0;
-				cat_names.forEach((cat, index) => {
-						cats_local =  cats_local + "<span v-if=\"item['fields']['"+cat[1]+"'] == '1'\">"+cat[1]+";</span> ";
-						i = i + 1;
-				});
-
-      	$("#detail").attr("v-for", "item in items");
-      	//$("#detail").attr("v-if", "item['id'] == '"+id+"'");
-      	$("#detail").html("");
-      	$("#detail").html($("#detail").html() + "<h3>{{ item['fields']['Name'] }}</h3>")
-      	$("#detail").html($("#detail").html() + "<p><b>Category(s):</b> "+ cats_local + "</p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Ages:</b> {{ item['fields']['Minimum Age'] }}-{{ item['fields']['Maximum Age'] }} &nbsp;&nbsp; <b>Gender(s):</b> {{ item['fields']['Gender'] }}</p>");
-		$("#detail").html($("#detail").html() + "<p><b>Phone:</b> <a v-bind:href=\"'tel:'+item['fields']['Phone']\" target=\"_blank\">{{ item['fields']['Phone'] }}</p>");
-		$("#detail").html($("#detail").html() + "<p><b>Email:</b> <a v-bind:href=\"'mailto:'+item['fields']['Email']\" target=\"_blank\">{{ item['fields']['Email'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Website:</b> <a v-bind:href=\"item['fields']['Website']\" target=\"_blank\">{{ item['fields']['Website'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Address:</b> <a v-bind:href=\"'https://www.google.com/maps/place/'+item['fields']['Address']\" target=\"_blank\">{{ item['fields']['Address'] }}</a></p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Application Requirements/Restrictions (if any):</b> {{ item['fields']['Application Requirements/Restrictions (if any)'] }}</p>");
-      	$("#detail").html($("#detail").html() + "<p><b>Description:</b> {{ item['fields']['Description'] }}</p>");
-		$("#detail").html($("#detail").html() + "<p><b>Valid As Of:</b> {{ item['fields']['Valid As Of'] }}</p>");
-
-			load_api_data('#details',3,id);
-
-
-			//$.mobile.changePage($('#details'), { transition: 'slide'})
-			next_page_2();
-
-      //$('#details').listview('refresh');
-		  //$( '#details' ).enhanceWithin();
-      //$.mobile.changePage($('#details'), { transition: 'slide'});
-      //return true;
-    }
-
-		function next_page_2() {
-			if (work == 0) {
-				$.mobile.loading("hide");
-				$.mobile.changePage($('#details'), { transition: 'slide'})
-			} else {
-				if ($.mobile.loading().is(':hidden')) {
-					$.mobile.loading("show");
-				}
-				setTimeout(function () {
-					next_page_2()
-				}, 100);
-			}
-		}
-
-		//list_page();
-
-		/*
-		https://developers.google.com/maps/documentation/javascript/adding-a-google-map
-			*/
-
-		var markers = [];
-
-		function initMap(lat,lon,zoomin) {
-			var uluru = {lat: lat, lng: lon};
-			var map = new google.maps.Map(document.getElementById('map'), {
-		        zoom: zoomin,
-		        center: uluru
-		      });
-
-			i = 0;
-			$('#org_geo_list li').each(function(){
-				//alert($(this).text());
-				pin_data = $(this).text().split(',');
-				marker = new google.maps.Marker({
-					position: {lat: Number(pin_data[2]), lng: Number(pin_data[3])},
-					map: map
-				});
-				var infowindow = new google.maps.InfoWindow({
-					content: "<div style=\"width:225px;text-align:center;\"><h2>"+pin_data[1]+"</h2><div style=\"width:100%;text-align:center;padding-bottom:10px;\"><a href=\"javascript:details_page(\'"+pin_data[0]+"\')\">view details</a></span></div>"
-				});
-
-				//creates an infowindow 'key' in the marker.
-				marker.infowindow = infowindow;
-
-				//finally call the explicit infowindow object
-				marker.addListener('click', function() {
-					hideAllInfoWindows(map);
-					return this.infowindow.open(map, this);
-				});
-
-				markers.push(marker);
-
-				++i;
-			});
-
-			google.maps.event.addListener(map, 'click', function() {
-			    if (infowindow) {
-			        infowindow.close();
-			    }
-			});
-
-		}
-
-		function hideAllInfoWindows(map) {
-		   markers.forEach(function(marker) {
-		     marker.infowindow.close(map, marker);
-		  });
-		}
-
-		function size_map() {
-			initMap(lat,lon,zoomin);
-			var map_pad = 81;
-			if (undisc==1) {
-				map_pad = 200;
-			}
-			$('#map').height( window.innerHeight - map_pad +  'px');
-
-		}
-
-		$("div[data-role=page]").bind("pagebeforeshow", function (e, data) {
-		  $.mobile.silentScroll(0);
-		  $.mobile.changePage.defaults.transition = 'slide'; // reset default here
-		})
-
+                const selectElement = document.createElement("select");
+                selectElement.id = 'region';
+                selectElement.className = 'form-control';
+                const optionElement = document.createElement("option");
+                optionElement.value = "";
+                optionElement.textContent = "All of Massachusetts";
+                selectElement.appendChild(optionElement);
+
+                itemList.forEach(item => {
+                    const optionElement = document.createElement("option");
+                    optionElement.value = item;
+                    optionElement.textContent = item;
+                    selectElement.appendChild(optionElement);
+                });
+
+                return selectElement;
+            }
+
+            const selectElement = generateSelectWithOptions(regions);
+
+            // Assuming you have an element with an id "container" in your HTML
+            document.getElementById("container").appendChild(selectElement);
+
+            const searchInput = document.getElementById('search');
+            const regionSelect = document.getElementById('region');
+            const showTagsLink = document.getElementById('show-tags');
+            const tagListContainer = document.getElementById('tag-list');
+            const useLocationCheckbox = document.getElementById('use-location');
+            const resultsContainer = document.getElementById('results');
+
+            let userLocation = null;
+
+            searchInput.addEventListener('input', updateResults);
+            regionSelect.addEventListener('change', updateResults);
+            showTagsLink.addEventListener('click', toggleTagList);
+            useLocationCheckbox.addEventListener('change', getUserLocation);
+
+            // Initialize tag list with checkboxes
+            const tagList = document.createElement('ul');
+            tagList.className = 'list-unstyled';
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <label>
+                    <input id="checkAll" type="checkbox" value="ALL" class="tag-checkbox" oninput="$('.tag-checkbox').prop('checked', $(this).prop('checked')); " CHECKED> CHECK / UNCHEK ALL
+                </label>
+            `;
+            tagList.appendChild(listItem);
+            tags.forEach(tag => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <label>
+                        <input id="${tag.replace(/[^a-zA-Z0-9-]/g, '-')}" type="checkbox" value="${tag}" class="tag-checkbox" autocomplete="off" checked> ${tag}
+                    </label>
+                `;
+                tagList.appendChild(listItem);
+            });
+            tagListContainer.appendChild(tagList);
+            
+            var allTags = document.getElementById("checkAll");
+            allTags.addEventListener('input', updateResults);
+            tags.forEach(tag => {
+               var listItem = document.getElementById(tag.replace(/[^a-zA-Z0-9-]/g, '-'));
+               listItem.addEventListener('input', updateResults);
+            });
+
+            function updateResults() {
+                const searchText = searchInput.value.trim().toLowerCase();
+                const selectedRegion = regionSelect.value;
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+                const selectedTags = Array.from(checkboxes).map(checkbox => checkbox.value);
+                var index = selectedTags.indexOf("ALL");
+                //if (index !== -1) {
+                //    selectedTags.splice(index, 1);
+                //}
+
+                const filteredListings = listings.filter(listing => {
+                    return (
+                        (listing.tags.some(tag => tag.toLowerCase().includes(searchText)) ||
+                        listing.Name.toLowerCase().includes(searchText)) &&
+                        (selectedRegion === '' || listing.Region === selectedRegion) &&
+                        ((selectedTags.some(tag => listing.tags.includes(tag))) | ((listing.tags.length==0) && (selectedTags.includes("ALL"))))
+                        //(selectedTags.length === 0 || selectedTags.some(tag => listing.tags.includes(tag)))
+                    );
+                });
+
+                renderListings(filteredListings);
+            }
+
+            function renderListings(listings) {
+                resultsContainer.innerHTML = '';
+                document.getElementById("results_n").innerHTML = listings.length.toLocaleString("en-US"); 
+
+                if (listings.length === 0) {
+                    resultsContainer.innerHTML = '<p style="text-align:center;padding:05px;margin:0 auto 15px auto;"><b><i>No results found.</i></b></p>';
+                }
+
+                const sortedListings = sortListingsByDistance(listings);
+
+                sortedListings.forEach(listing => {
+                    const listingDiv = document.createElement('div');
+                    listingDiv.className = 'col-md-6';
+                    html = `
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">${listing.Name}</h5>
+                                <p id="listing-${listing.Name.replace(/[^a-zA-Z0-9-]/g, '-')}" class="collapse descript">${listing.Description}</p>`;
+
+                    tmp_distance = listing.distance;
+                    if (tmp_distance<3000) {
+                        tmp_distance = "~" + listing.distance.toFixed(2) + " miles"
+                    } else if (tmp_distance>=3000) {
+                        tmp_distance = "<i>unknown distance</i>"
+                    } else {
+                        tmp_distance = "N/A"
+                    }
+                    if (tmp_distance!="N/A") {
+                    html += `     
+                                    <p><strong>Distance:</strong> ${tmp_distance} </p>`;
+                    } 
+                    html += `     
+                                <a href="#" class="btn btn-primary expand-card" data-toggle="collapse" data-target="#listing-${listing.Name.replace(/[^a-zA-Z0-9-]/g, '-')}" aria-expanded="false" onClick="this.innerHTML = (this.innerHTML == 'Show More' ? 'Show Less' : 'Show More');">Show More</a>
+                                <div id="listing-${listing.Name.replace(/[^a-zA-Z0-9-]/g, '-')}" class="collapse mt-3">`;
+                    if (listing["Gender's Served"].length>0) {
+                        html += `                    
+                                    <p><strong>Gender's Served:</strong> ${listing["Gender's Served"].join(', ')}</p>`;
+                                }
+                    if (!isNaN(listing["Minimum Age"])) {
+                        html += `     
+                                    <p><strong>Minimum Age:</strong> ${listing["Minimum Age"]}</p>`;
+                                }
+                    if (!isNaN(listing["Maximunm Age"])) {
+                        html += `     
+                                    <p><strong>Maximum Age:</strong> ${listing["Maximunm Age"]}</p>`;
+                                }
+                    if (listing.Region) {
+                        html += `     
+                                    <p><strong>Region:</strong> ${listing.Region}</p>`;
+                    }
+                    if (listing.Address) {
+                        html += `
+                                        <p><strong>Address:</strong> ${listing.Address} (<a href="https://www.google.com/maps/place/${listing.Address}" target="_blank">map</a>)</p>`;
+                    }
+                    if (listing.Website) {
+                        html += `     
+                                    <p><strong>Website:</strong> <a href="${listing.Website}" target="_blank">${listing.Website}</a></p>`;
+                    }
+                    if (listing.Email) {
+                        html += `     
+                                    <p><strong>Email:</strong> <a href="mailto:${listing.Email}">${listing.Email}</a></p>`;
+                    }
+                    if (listing.Email) {
+                        html += `     
+                                    <p><strong>Phone:</strong> ${listing.Phone}</p>`;
+                    }
+                    if (listing.tags.length>0) {
+                        html += `     
+                                    <p><strong>Tags:</strong> ${listing.tags.join(', ')}</p>`;
+                    }
+                    html += `
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    listingDiv.innerHTML = html;
+                    resultsContainer.appendChild(listingDiv);
+                });
+            }
+
+            function sortListingsByDistance(listings) {
+
+                if ((!userLocation) | (!document.getElementById('use-location').checked)) {
+                    if (document.getElementById('use-location').checked) {
+                        document.getElementById("sort").innerHTML = "UNABLE TO SORT BY DISTANCE";
+                    } else {
+                        document.getElementById("sort").innerHTML = "Sort: Alphabetical";
+                    }
+                    return listings;
+                } else {
+                    document.getElementById("sort").innerHTML = "Sorted by Distance";
+                }
+
+                return listings.map(listing => {
+                    const distance = calculateDistance(userLocation, { latitude: listing.Latitude, longitude: listing.Longitude });
+                    return { ...listing, distance };
+                }).sort((a, b) => (a.distance || Infinity) - (b.distance || Infinity));
+
+            }
+
+            function calculateDistance(location1, location2) {
+                // Simplified formula to calculate distance between two points using latitude and longitude
+                const degToRad = (deg) => deg * (Math.PI / 180);
+                const earthRadius = 6371; // Earth's radius in kilometers
+                const latDiff = degToRad(location2.latitude - location1.latitude);
+                const lonDiff = degToRad(location2.longitude - location1.longitude);
+                const a =
+                    Math.sin(latDiff / 2) * Math.sin(latDiff / 2) +
+                    Math.cos(degToRad(location1.latitude)) * Math.cos(degToRad(location2.latitude)) *
+                    Math.sin(lonDiff / 2) * Math.sin(lonDiff / 2);
+                const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                const distance = earthRadius * c;
+                return distance*0.621371 // convert to miles;
+            }
+
+            function getUserLocation() {
+                if (useLocationCheckbox.checked) {
+                    if ("geolocation" in navigator) {
+                        navigator.geolocation.getCurrentPosition(
+                            position => {
+                                userLocation = {
+                                    latitude: position.coords.latitude,
+                                    longitude: position.coords.longitude
+                                };
+                                updateResults();
+                            },
+                            error => {
+                                console.error(error);
+                                useLocationCheckbox.checked = false;
+                            }
+                        );
+                    } else {
+                        console.log("Geolocation is not available in this browser.");
+                        useLocationCheckbox.checked = false;
+                    }
+                } else {
+                    userLocation = null;
+                    updateResults();
+                }
+            }
+
+            // Toggle tag list
+            function toggleTagList() {
+                if (tagListContainer.style.display === 'none') {
+                    tagListContainer.style.display = 'block';
+                } else {
+                    tagListContainer.style.display = 'none';
+                }
+            }
+
+            // Initial render with all listings
+            renderListings(listings);
+        }
+
+        init();
+    </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108858221-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108858221-1');
 </script>
-
-
 
 </body>
 </html>
