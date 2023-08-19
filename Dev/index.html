@@ -51,14 +51,25 @@
         .results {
             color:#7b8690;
         }
+        .menu{
+            background:#00376e;
+            width:100%;
+            padding:5px 15px;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
         <div class="header">
+            <div class="menu">
+                <a href="https://forms.gle/2MATCBLmow1srRCdA" target="_blank" style="color:white;">feedback</a>
+            </div>
             <div class="container">
                 <h1>Massachusetts Resource Directory</h1>
                 <p>
-                    Use this directory to find local resources.
+                    Use this directory to find local resources. This app was created by Suffolk University Law School's Legal Innovation & Technology Lab, Dasmas House Massachusetts, the Crime Justice Institute (CJI), and the Criminal Justice Task Force (CJTF) of Northeastern University School of Law, with financial support from The Shaw Foundation.
+
+                    Resources are maintained by Dasmas House and CJI. This list of resources is not exhaustive. <b><i>Do not rely on it as your only list of services.</i></b>
                 </p>
 
                 <div class="form-group">
@@ -224,6 +235,8 @@
                 sortedListings.forEach(listing => {
                     const listingDiv = document.createElement('div');
                     listingDiv.className = 'col-md-6';
+                    update_suggestion = "https://docs.google.com/forms/d/e/1FAIpQLSd7nlK-ApcjI3MqtT72lMm_EqS21HKw_pRcvxVLdipo6GTsAg/viewform?usp=pp_url&entry.352300017="+encodeURIComponent(listing.Name);
+
                     html = `
                         <div class="card mb-4">
                             <div class="card-body">
@@ -246,14 +259,17 @@
                                 <a href="#" class="btn btn-primary expand-card" data-toggle="collapse" data-target="#listing-${listing.Name.replace(/[^a-zA-Z0-9-]/g, '-')}" aria-expanded="false" onClick="this.innerHTML = (this.innerHTML == 'Show More' ? 'Show Less' : 'Show More');">Show More</a>
                                 <div id="listing-${listing.Name.replace(/[^a-zA-Z0-9-]/g, '-')}" class="collapse mt-3">`;
                     if (listing["Gender's Served"].length>0) {
+                        update_suggestion += "&entry.891230517="+encodeURIComponent(listing["Gender's Served"].join(', '));
                         html += `                    
                                     <p><strong>Gender's Served:</strong> ${listing["Gender's Served"].join(', ')}</p>`;
                                 }
                     if (!isNaN(listing["Minimum Age"]) && (listing["Minimum Age"]>0)) {
+                        update_suggestion += "&entry.1808778417="+encodeURIComponent(listing["Minimum Age"]);
                         html += `     
                                     <p><strong>Minimum Age:</strong> ${listing["Minimum Age"]}</p>`;
                                 }
                     if (!isNaN(listing["Maximunm Age"]) && (listing["Maximunm Age"]<100)) {
+                        update_suggestion += "&entry.2114366851="+encodeURIComponent(listing["Maximunm Age"]);
                         html += `     
                                     <p><strong>Maximum Age:</strong> ${listing["Maximunm Age"]}</p>`;
                                 }
@@ -262,26 +278,38 @@
                                     <p><strong>Region:</strong> ${listing.Region}</p>`;
                     }
                     if (listing.Address) {
+                        update_suggestion += "&entry.916103888="+encodeURIComponent(listing.Address);
                         html += `
                                         <p><strong>Address:</strong> ${listing.Address} (<a href="https://www.google.com/maps/place/${listing.Address}" target="_blank">map</a>)</p>`;
                     }
                     if (listing.Website) {
+                        update_suggestion += "&entry.437348566="+encodeURIComponent(listing.Website);
                         html += `     
                                     <p><strong>Website:</strong> <a href="${listing.Website}" target="_blank">${listing.Website}</a></p>`;
                     }
                     if (listing.Email) {
+                        update_suggestion += "&entry.743502768="+encodeURIComponent(listing.Email);
                         html += `     
                                     <p><strong>Email:</strong> <a href="mailto:${listing.Email}">${listing.Email}</a></p>`;
                     }
                     if (listing.Email) {
+                        update_suggestion += "&entry.1974416167="+encodeURIComponent(listing.Phone);
                         html += `     
                                     <p><strong>Phone:</strong> ${listing.Phone}</p>`;
                     }
                     if (listing.tags.length>0) {
+                        update_suggestion += "&entry.1181487868="+encodeURIComponent(listing.tags.join(', '));
                         html += `     
                                     <p><strong>Tags:</strong> ${listing.tags.join(', ')}</p>`;
                     }
+
+                    // Description
+                    update_suggestion += "&entry.603641077="+encodeURIComponent(listing.Description);
+
                     html += `
+                    <center>
+                        - <a href="${update_suggestion}" target="_blank">Suggest Update</a> - 
+                    </center>
                                 </div>
                             </div>
                         </div>
