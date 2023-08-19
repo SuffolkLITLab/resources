@@ -249,11 +249,11 @@
                         html += `                    
                                     <p><strong>Gender's Served:</strong> ${listing["Gender's Served"].join(', ')}</p>`;
                                 }
-                    if (!isNaN(listing["Minimum Age"])) {
+                    if (!isNaN(listing["Minimum Age"]) && (listing["Minimum Age"]>0)) {
                         html += `     
                                     <p><strong>Minimum Age:</strong> ${listing["Minimum Age"]}</p>`;
                                 }
-                    if (!isNaN(listing["Maximunm Age"])) {
+                    if (!isNaN(listing["Maximunm Age"]) && (listing["Maximunm Age"]<100)) {
                         html += `     
                                     <p><strong>Maximum Age:</strong> ${listing["Maximunm Age"]}</p>`;
                                 }
