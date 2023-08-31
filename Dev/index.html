@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="search">Filter by organization name or service type:</label>
+                    <label for="search">Narrow your results with additional filters. Use organization name or service type:</label>
                     <input type="text" id="search" class="form-control" placeholder="Enter a name or service type..." autocomplete="off">
                 </div>
 
@@ -254,7 +254,8 @@
                     }
                     if (tmp_distance!="N/A") {
                     html += `     
-                                    <p><strong>Distance:</strong> ${tmp_distance} </p>`;
+                                    <p><strong>Distance:</strong> ${tmp_distance} </br><strong>Address:</strong> ${listing.Address} (<a href="https://www.google.com/maps/place/${listing.Address}" target="_blank">map</a>)</p>
+                                    `;
                     } 
                     html += `     
                                 <a href="#" class="btn btn-primary expand-card" data-toggle="collapse" data-target="#listing-${listing.Name.replace(/[^a-zA-Z0-9-]/g, '-')}" aria-expanded="false" onClick="this.innerHTML = (this.innerHTML == 'Show More' ? 'Show Less' : 'Show More');">Show More</a>
@@ -278,7 +279,7 @@
                         html += `     
                                     <p><strong>Region:</strong> ${listing.Region}</p>`;
                     }
-                    if (listing.Address) {
+                    if (listing.Address && tmp_distance=="N/A") {
                         update_suggestion += "&entry.916103888="+encodeURIComponent(listing.Address);
                         html += `
                                         <p><strong>Address:</strong> ${listing.Address} (<a href="https://www.google.com/maps/place/${listing.Address}" target="_blank">map</a>)</p>`;
