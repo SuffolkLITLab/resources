@@ -9,7 +9,7 @@ listings = [
     "Gender's Served": [
       "All"
     ],
-    "Name": "365Dad Inc",
+    "Name": "365Dad Inc.",
     "Minimum Age": 0.0,
     "Maximum Age": 100.0,
     "Address": "1 Westinghouse Plaza Suite A101 Hyde Park MA 02136",
