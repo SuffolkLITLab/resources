@@ -19,7 +19,7 @@ listings = [
     "Email": "mneal@365dad.net",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.2458974,
-    "Longitude": -71.13241140000001,
+    "Longitude": -71.1324114,
     "Region": "Eastern"
   },
   {
@@ -173,7 +173,7 @@ listings = [
     "Email": "mentor@acechildren.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.26255,
-    "Longitude": -71.80468499999999,
+    "Longitude": -71.804685,
     "Region": "Central"
   },
   {
@@ -192,7 +192,7 @@ listings = [
     "Phone": "617-534-3976",
     "Email": "smackin@bphc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.333836700000006,
+    "Latitude": 42.3338367,
     "Longitude": -71.0724613,
     "Region": "Eastern"
   },
@@ -389,7 +389,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6171558,
-    "Longitude": -70.65260620000001,
+    "Longitude": -70.6526062,
     "Region": "Northeastern"
   },
   {
@@ -495,7 +495,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6833719,
-    "Longitude": -70.91766690000001,
+    "Longitude": -70.9176669,
     "Region": "Southeastern"
   },
   {
@@ -515,8 +515,8 @@ listings = [
     "Phone": "(508) 453-3053",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.276357899999994,
-    "Longitude": -71.79491429999999,
+    "Latitude": 42.2763579,
+    "Longitude": -71.7949143,
     "Region": "Central"
   },
   {
@@ -562,8 +562,8 @@ listings = [
     "Phone": "(413) 209-3124",
     "Email": "wspringfield@adcare.com",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.105284600000005,
-    "Longitude": -72.61869370000001,
+    "Latitude": 42.1052846,
+    "Longitude": -72.6186937,
     "Region": "Western"
   },
   {
@@ -625,8 +625,8 @@ listings = [
     "Phone": "(978) 705-1921",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.670955600000006,
-    "Longitude": -71.32893059999999,
+    "Latitude": 42.6709556,
+    "Longitude": -71.3289306,
     "Region": "Northeastern"
   },
   {
@@ -648,7 +648,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4545149,
-    "Longitude": -71.06696459999999,
+    "Longitude": -71.0669646,
     "Region": "Northeastern"
   },
   {
@@ -667,7 +667,7 @@ listings = [
     "Phone": "(978) 318-1432",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.44739860000001,
+    "Latitude": 42.4473986,
     "Longitude": -71.347505,
     "Region": "Northeastern"
   },
@@ -736,8 +736,8 @@ listings = [
     "Phone": "(781) 794-1095",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.212990500000004,
-    "Longitude": -71.02005240000001,
+    "Latitude": 42.2129905,
+    "Longitude": -71.0200524,
     "Region": "Southeastern"
   },
   {
@@ -778,7 +778,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0614026,
-    "Longitude": -72.61867579999999,
+    "Longitude": -72.6186758,
     "Region": "Western"
   },
   {
@@ -835,7 +835,7 @@ listings = [
     "Phone": "(508) 425-4142",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.250273299999996,
+    "Latitude": 42.2502733,
     "Longitude": -71.7945437,
     "Region": "Central"
   },
@@ -906,8 +906,8 @@ listings = [
     "Phone": "(978) 937-5777",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.632572700000004,
-    "Longitude": -71.34087070000001,
+    "Latitude": 42.6325727,
+    "Longitude": -71.3408707,
     "Region": "Northeastern"
   },
   {
@@ -926,7 +926,7 @@ listings = [
     "Phone": "(413) 935-1884",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.055069399999994,
+    "Latitude": 42.0550694,
     "Longitude": -72.5549937,
     "Region": "Western"
   },
@@ -968,7 +968,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6100626,
-    "Longitude": -71.92663399999999,
+    "Longitude": -71.926634,
     "Region": "Central"
   },
   {
@@ -1100,7 +1100,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.8567209,
-    "Longitude": -70.93236529999999,
+    "Longitude": -70.9323653,
     "Region": "Northeastern"
   },
   {
@@ -1167,7 +1167,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6552759,
-    "Longitude": -71.12973840000001,
+    "Longitude": -71.1297384,
     "Region": "Northeastern"
   },
   {
@@ -1206,7 +1206,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.267936999999996,
+    "Latitude": 42.267937,
     "Longitude": -72.659715,
     "Region": "Western"
   },
@@ -1227,7 +1227,7 @@ listings = [
     "Phone": "(413) 747-5384",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.110895899999996,
+    "Latitude": 42.1108959,
     "Longitude": -72.5612194,
     "Region": "Western"
   },
@@ -1274,7 +1274,7 @@ listings = [
     "Phone": "(508) 799-0688",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.264949200000004,
+    "Latitude": 42.2649492,
     "Longitude": -71.8185051,
     "Region": "Central"
   },
@@ -1304,7 +1304,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2189945,
-    "Longitude": -71.00292759999999,
+    "Longitude": -71.0029276,
     "Region": "Southeastern"
   },
   {
@@ -1325,7 +1325,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.113484,
-    "Longitude": -72.60826829999999,
+    "Longitude": -72.6082683,
     "Region": "Western"
   },
   {
@@ -1344,7 +1344,7 @@ listings = [
     "Phone": "617-221-6402",
     "Email": "office@ascboston.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.352045200000006,
+    "Latitude": 42.3520452,
     "Longitude": -71.0711798,
     "Region": "Eastern"
   },
@@ -1383,7 +1383,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2592911,
-    "Longitude": -71.46555649999999,
+    "Longitude": -71.4655565,
     "Region": "Northeastern"
   },
   {
@@ -1402,8 +1402,8 @@ listings = [
     "Phone": "508-532-7949",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.245689500000005,
-    "Longitude": -71.47534209999999,
+    "Latitude": 42.2456895,
+    "Longitude": -71.4753421,
     "Region": "Northeastern"
   },
   {
@@ -1463,7 +1463,7 @@ listings = [
     "Email": "info@aaca-boston.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3488375,
-    "Longitude": -71.06172609999999,
+    "Longitude": -71.0617261,
     "Region": "Eastern"
   },
   {
@@ -1485,7 +1485,7 @@ listings = [
     "Phone": "(508) 263-9651",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.367713099999996,
+    "Latitude": 42.3677131,
     "Longitude": -71.5670171,
     "Region": "Central"
   },
@@ -1527,8 +1527,8 @@ listings = [
     "Phone": "(508) 767-7364",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.292249700000006,
-    "Longitude": -71.82918520000001,
+    "Latitude": 42.2922497,
+    "Longitude": -71.8291852,
     "Region": "Central"
   },
   {
@@ -1571,7 +1571,7 @@ listings = [
     "Phone": "(508) 222-0151",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.933463399999994,
+    "Latitude": 41.9334634,
     "Longitude": -71.3103885,
     "Region": "Southeastern"
   },
@@ -1654,8 +1654,8 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.276967799999994,
-    "Longitude": -71.76654599999999,
+    "Latitude": 42.2769678,
+    "Longitude": -71.766546,
     "Region": "Central"
   },
   {
@@ -1675,7 +1675,7 @@ listings = [
     "Phone": "(508) 583-8076",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.133261100000006,
+    "Latitude": 42.1332611,
     "Longitude": -71.0407231,
     "Region": "Southeastern"
   },
@@ -1695,8 +1695,8 @@ listings = [
     "Phone": "(508) 588-1847",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.130970399999995,
-    "Longitude": -71.03118140000001,
+    "Latitude": 42.1309704,
+    "Longitude": -71.0311814,
     "Region": "Southeastern"
   },
   {
@@ -1738,7 +1738,7 @@ listings = [
     "Phone": "(978) 772-2771",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.555278200000004,
+    "Latitude": 42.5552782,
     "Longitude": -71.5827213,
     "Region": "Central"
   },
@@ -1759,7 +1759,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5670352,
-    "Longitude": -71.57619709999999,
+    "Longitude": -71.5761971,
     "Region": "Central"
   },
   {
@@ -1803,8 +1803,8 @@ listings = [
     "Phone": "857-293-0845",
     "Email": "jennifer.hyde@backonmyfeet.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.348310999999995,
-    "Longitude": -71.08803950000001,
+    "Latitude": 42.348311,
+    "Longitude": -71.0880395,
     "Region": "Eastern"
   },
   {
@@ -1825,7 +1825,7 @@ listings = [
     "Phone": "(978) 352-2131",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.705161100000005,
+    "Latitude": 42.7051611,
     "Longitude": -71.011216,
     "Region": "Northeastern"
   },
@@ -1865,7 +1865,7 @@ listings = [
     "Phone": "(508) 771-7222",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.65215560000001,
+    "Latitude": 41.6521556,
     "Longitude": -70.2801753,
     "Region": "Cape Cod"
   },
@@ -1886,7 +1886,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4241124,
-    "Longitude": -72.10648459999999,
+    "Longitude": -72.1064846,
     "Region": "Central"
   },
   {
@@ -1905,7 +1905,7 @@ listings = [
     "Phone": "(978) 355-6643",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.43038610000001,
+    "Latitude": 42.4303861,
     "Longitude": -72.105582,
     "Region": "Central"
   },
@@ -1929,7 +1929,7 @@ listings = [
     "Phone": "(774) 294-5722",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.70004779999999,
+    "Latitude": 41.7000478,
     "Longitude": -71.1524821,
     "Region": "Southeastern"
   },
@@ -1949,7 +1949,7 @@ listings = [
     "Phone": "617-371-3000",
     "Email": "hscmpinc@gmail.com",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.363663700000004,
+    "Latitude": 42.3636637,
     "Longitude": -71.059666,
     "Region": "Eastern"
   },
@@ -1971,7 +1971,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1322945,
-    "Longitude": -71.96583570000001,
+    "Longitude": -71.9658357,
     "Region": "Central"
   },
   {
@@ -2041,7 +2041,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1171979,
-    "Longitude": -72.61447009999999,
+    "Longitude": -72.6144701,
     "Region": "Western"
   },
   {
@@ -2082,7 +2082,7 @@ listings = [
     "Phone": "(413) 283-7651",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.169540000000005,
+    "Latitude": 42.16954,
     "Longitude": -72.3421459,
     "Region": "Western"
   },
@@ -2128,7 +2128,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.486424,
-    "Longitude": -71.26924759999999,
+    "Longitude": -71.2692476,
     "Region": "Northeastern"
   },
   {
@@ -2148,7 +2148,7 @@ listings = [
     "Phone": "781-275-2255",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.486902799999996,
+    "Latitude": 42.4869028,
     "Longitude": -71.2622709,
     "Region": "Northeastern"
   },
@@ -2190,7 +2190,7 @@ listings = [
     "Phone": "(781) 843-1242, Ext. 25",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.502776700000005,
+    "Latitude": 42.5027767,
     "Longitude": -71.2737209,
     "Region": "Northeastern"
   },
@@ -2213,7 +2213,7 @@ listings = [
     "Phone": "(855) 713-0075",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.16509310000001,
+    "Latitude": 42.1650931,
     "Longitude": -71.0693692,
     "Region": "Southeastern"
   },
@@ -2237,7 +2237,7 @@ listings = [
     "Phone": "(508) 756-8003",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.271949299999996,
+    "Latitude": 42.2719493,
     "Longitude": -71.8141005,
     "Region": "Central"
   },
@@ -2257,8 +2257,8 @@ listings = [
     "Phone": "(413) 323-4064",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.275130100000005,
-    "Longitude": -72.39710240000001,
+    "Latitude": 42.2751301,
+    "Longitude": -72.3971024,
     "Region": "Western"
   },
   {
@@ -2298,7 +2298,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0252046,
-    "Longitude": -71.48431590000001,
+    "Longitude": -71.4843159,
     "Region": "Eastern"
   },
   {
@@ -2324,7 +2324,7 @@ listings = [
     "Phone": "(508) 754-4539",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.246266399999996,
+    "Latitude": 42.2462664,
     "Longitude": -71.820211,
     "Region": "Central"
   },
@@ -2365,7 +2365,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3926338,
-    "Longitude": -71.18131109999999,
+    "Longitude": -71.1813111,
     "Region": "Eastern"
   },
   {
@@ -2384,7 +2384,7 @@ listings = [
     "Phone": "617-427-2201",
     "Email": "bereasdabostonpastor@gmail.com",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.310391100000004,
+    "Latitude": 42.3103911,
     "Longitude": -71.092164,
     "Region": "Eastern"
   },
@@ -2404,7 +2404,7 @@ listings = [
     "Phone": "(413) 499-4660",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.457745200000005,
+    "Latitude": 42.4577452,
     "Longitude": -73.3143387,
     "Region": "Western"
   },
@@ -2424,7 +2424,7 @@ listings = [
     "Phone": "(413) 528-4521",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.193161700000005,
+    "Latitude": 42.1931617,
     "Longitude": -73.363117,
     "Region": "Western"
   },
@@ -2510,7 +2510,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1628094,
-    "Longitude": -71.36847409999999,
+    "Longitude": -71.3684741,
     "Region": "Central"
   },
   {
@@ -2530,7 +2530,7 @@ listings = [
     "Email": "bethelbaptistroxbury@gmail.com",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3260736,
-    "Longitude": -71.08481040000001,
+    "Longitude": -71.0848104,
     "Region": "Eastern"
   },
   {
@@ -2576,7 +2576,7 @@ listings = [
     "Phone": "(508) 752-7868",
     "Email": "mentor@bbbscm.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.262553100000005,
+    "Latitude": 42.2625531,
     "Longitude": -71.8034504,
     "Region": "Central"
   },
@@ -2596,8 +2596,8 @@ listings = [
     "Phone": "(978) 667-2175",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.55884520000001,
-    "Longitude": -71.27187640000001,
+    "Latitude": 42.5588452,
+    "Longitude": -71.2718764,
     "Region": "Northeastern"
   },
   {
@@ -2616,8 +2616,8 @@ listings = [
     "Phone": "(781) 762-0060",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.191838700000005,
-    "Longitude": -71.20055500000001,
+    "Latitude": 42.1918387,
+    "Longitude": -71.200555,
     "Region": "Southeastern"
   },
   {
@@ -2677,7 +2677,7 @@ listings = [
     "Phone": "(781) 298-3111",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.231098100000004,
+    "Latitude": 42.2310981,
     "Longitude": -71.1473582,
     "Region": "Eastern"
   },
@@ -2701,7 +2701,7 @@ listings = [
     "Phone": "781-298-3111",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.18343370000001,
+    "Latitude": 42.1834337,
     "Longitude": -71.1035377,
     "Region": "Southeastern"
   },
@@ -2721,7 +2721,7 @@ listings = [
     "Phone": "(978) 779-5007",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.430255100000004,
+    "Latitude": 42.4302551,
     "Longitude": -71.6010933,
     "Region": "Central"
   },
@@ -2741,8 +2741,8 @@ listings = [
     "Phone": "978-779-3308",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.435298700000004,
-    "Longitude": -71.60800090000001,
+    "Latitude": 42.4352987,
+    "Longitude": -71.6080009,
     "Region": "Central"
   },
   {
@@ -2802,7 +2802,7 @@ listings = [
     "Email": "chall-herborg@bostoncil.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3550258,
-    "Longitude": -71.06146890000001,
+    "Longitude": -71.0614689,
     "Region": "Eastern"
   },
   {
@@ -2869,7 +2869,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.359835,
-    "Longitude": -71.06115159999999,
+    "Longitude": -71.0611516,
     "Region": "Eastern"
   },
   {
@@ -2886,7 +2886,7 @@ listings = [
     "Phone": "617-292-6211",
     "Email": "lnewson@bshcinfo.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.351825299999994,
+    "Latitude": 42.3518253,
     "Longitude": -71.0574621,
     "Region": "Eastern"
   },
@@ -2907,7 +2907,7 @@ listings = [
     "Email": "info@bhchp.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3336641,
-    "Longitude": -71.07305600000001,
+    "Longitude": -71.073056,
     "Region": "Eastern"
   },
   {
@@ -2967,7 +2967,7 @@ listings = [
     "Email": "jwright@bhchp.org\u00a0",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3330467,
-    "Longitude": -71.07364040000002,
+    "Longitude": -71.0736404,
     "Region": "Eastern"
   },
   {
@@ -2986,7 +2986,7 @@ listings = [
     "Phone": "857-217-5935",
     "Email": "bostonprojectrebound@gmail.com",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.314496500000004,
+    "Latitude": 42.3144965,
     "Longitude": -71.0760676,
     "Region": "Eastern"
   },
@@ -3007,7 +3007,7 @@ listings = [
     "Email": "info@bphc.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3278093,
-    "Longitude": -71.06732640000001,
+    "Longitude": -71.0673264,
     "Region": "Eastern"
   },
   {
@@ -3068,7 +3068,7 @@ listings = [
     "Phone": "508-759-4898",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.742943700000005,
+    "Latitude": 41.7429437,
     "Longitude": -70.5964438,
     "Region": "Cape Cod"
   },
@@ -3154,7 +3154,7 @@ listings = [
     "Phone": "(508) 754-2686",
     "Email": "info@bgcworcester.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.249944799999994,
+    "Latitude": 42.2499448,
     "Longitude": -71.8146393,
     "Region": "Central"
   },
@@ -3175,7 +3175,7 @@ listings = [
     "Email": "continuinged@braintreeschools.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2040722,
-    "Longitude": -71.01987559999999,
+    "Longitude": -71.0198756,
     "Region": "Southeastern"
   },
   {
@@ -3196,7 +3196,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2201738,
-    "Longitude": -71.00459920000002,
+    "Longitude": -71.0045992,
     "Region": "Southeastern"
   },
   {
@@ -3215,7 +3215,7 @@ listings = [
     "Phone": "(781) 848-1484",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.169590899999996,
+    "Latitude": 42.1695909,
     "Longitude": -71.009614,
     "Region": "Southeastern"
   },
@@ -3235,7 +3235,7 @@ listings = [
     "Phone": "(413) 781-2276",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.146636799999996,
+    "Latitude": 42.1466368,
     "Longitude": -72.5264826,
     "Region": "Western"
   },
@@ -3284,7 +3284,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.753953,
-    "Longitude": -70.08904100000001,
+    "Longitude": -70.089041,
     "Region": "Cape Cod"
   },
   {
@@ -3303,7 +3303,7 @@ listings = [
     "Phone": "(508) 896-8744",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.76143870000001,
+    "Latitude": 41.7614387,
     "Longitude": -70.0820849,
     "Region": "Cape Cod"
   },
@@ -3323,8 +3323,8 @@ listings = [
     "Phone": "617-423-9575",
     "Email": "kbottieri@bridgeotw.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.35508970000001,
-    "Longitude": -71.06303199999999,
+    "Latitude": 42.3550897,
+    "Longitude": -71.063032,
     "Region": "Eastern"
   },
   {
@@ -3364,7 +3364,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9917009,
-    "Longitude": -70.97680770000001,
+    "Longitude": -70.9768077,
     "Region": "Southeastern"
   },
   {
@@ -3387,7 +3387,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9888005,
-    "Longitude": -70.96610390000001,
+    "Longitude": -70.9661039,
     "Region": "Southeastern"
   },
   {
@@ -3407,7 +3407,7 @@ listings = [
     "Email": "foodpantry@brightonucc.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3487592,
-    "Longitude": -71.15520749999999,
+    "Longitude": -71.1552075,
     "Region": "Eastern"
   },
   {
@@ -3427,7 +3427,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3487592,
-    "Longitude": -71.15520749999999,
+    "Longitude": -71.1552075,
     "Region": "Eastern"
   },
   {
@@ -3466,7 +3466,7 @@ listings = [
     "Phone": "774.357.2811",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.948604700000004,
+    "Latitude": 41.9486047,
     "Longitude": -71.2713349,
     "Region": "Southeastern"
   },
@@ -3486,8 +3486,8 @@ listings = [
     "Phone": "781-893-0108",
     "Email": "BL@MHSAinc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.377525299999995,
-    "Longitude": -71.23549770000001,
+    "Latitude": 42.3775253,
+    "Longitude": -71.2354977,
     "Region": "Eastern"
   },
   {
@@ -3612,7 +3612,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5036093,
-    "Longitude": -71.19094179999999,
+    "Longitude": -71.1909418,
     "Region": "Northeastern"
   },
   {
@@ -3631,8 +3631,8 @@ listings = [
     "Phone": "617-661-0600",
     "Email": "odeffendaugh@casparinc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.358280900000004,
-    "Longitude": -71.10079909999999,
+    "Latitude": 42.3582809,
+    "Longitude": -71.1007991,
     "Region": "Eastern"
   },
   {
@@ -3652,7 +3652,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1714021,
-    "Longitude": -70.88114759999999,
+    "Longitude": -70.8811476,
     "Region": "Southeastern"
   },
   {
@@ -3691,8 +3691,8 @@ listings = [
     "Phone": "617-603-1797",
     "Email": "pquirion@gbls.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.327571999999996,
-    "Longitude": -71.08399059999999,
+    "Latitude": 42.327572,
+    "Longitude": -71.0839906,
     "Region": "Eastern"
   },
   {
@@ -3750,7 +3750,7 @@ listings = [
     "Email": "languages@ccae.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3736258,
-    "Longitude": -71.12166529999999,
+    "Longitude": -71.1216653,
     "Region": "Eastern"
   },
   {
@@ -3769,8 +3769,8 @@ listings = [
     "Phone": "617-349-4697",
     "Email": "\u00a0ksansoucy@cambridgema.gov\u00a0",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.369657700000005,
-    "Longitude": -71.10349120000001,
+    "Latitude": 42.3696577,
+    "Longitude": -71.1034912,
     "Region": "Eastern"
   },
   {
@@ -3790,7 +3790,7 @@ listings = [
     "Email": "dhsp@cambridgema.gov",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3655093,
-    "Longitude": -71.10571949999999,
+    "Longitude": -71.1057195,
     "Region": "Eastern"
   },
   {
@@ -3830,7 +3830,7 @@ listings = [
     "Email": "sackert@cambridgema.gov",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3654193,
-    "Longitude": -71.10552750000001,
+    "Longitude": -71.1055275,
     "Region": "Eastern"
   },
   {
@@ -3889,7 +3889,7 @@ listings = [
     "Phone": "617-603-2700",
     "Email": "stavarez@gbls.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.371582200000006,
+    "Latitude": 42.3715822,
     "Longitude": -71.0803734,
     "Region": "Eastern"
   },
@@ -3913,8 +3913,8 @@ listings = [
     "Phone": "(781) 821-8062",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.163429799999996,
-    "Longitude": -71.14442530000001,
+    "Latitude": 42.1634298,
+    "Longitude": -71.1444253,
     "Region": "Southeastern"
   },
   {
@@ -3934,7 +3934,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.155683,
-    "Longitude": -71.14649509999998,
+    "Longitude": -71.1464951,
     "Region": "Southeastern"
   },
   {
@@ -3981,7 +3981,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6423507,
-    "Longitude": -70.62762790000001,
+    "Longitude": -70.6276279,
     "Region": "Cape Cod"
   },
   {
@@ -4026,7 +4026,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.529259700000004,
+    "Latitude": 42.5292597,
     "Longitude": -71.3495046,
     "Region": "Northeastern"
   },
@@ -4129,7 +4129,7 @@ listings = [
     "Phone": "(508) 866-3115",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.889657899999996,
+    "Latitude": 41.8896579,
     "Longitude": -70.7683423,
     "Region": "Southeastern"
   },
@@ -4151,7 +4151,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.8889469,
-    "Longitude": -70.76837259999999,
+    "Longitude": -70.7683726,
     "Region": "Southeastern"
   },
   {
@@ -4170,8 +4170,8 @@ listings = [
     "Phone": "617-445-1123",
     "Email": "rchorres@casaesperanza.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.325968700000004,
-    "Longitude": -71.07330759999999,
+    "Latitude": 42.3259687,
+    "Longitude": -71.0733076,
     "Region": "Eastern"
   },
   {
@@ -4238,7 +4238,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2533369,
-    "Longitude": -71.81458029999999,
+    "Longitude": -71.8145803,
     "Region": "Central"
   },
   {
@@ -4316,7 +4316,7 @@ listings = [
     "Phone": "617-464-8500",
     "Email": "suzanne_ouellette@ccab.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.338792100000006,
+    "Latitude": 42.3387921,
     "Longitude": -71.0514018,
     "Region": "Eastern"
   },
@@ -4357,8 +4357,8 @@ listings = [
     "Phone": "(978) 840-0696",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.523798799999994,
-    "Longitude": -71.75067390000001,
+    "Latitude": 42.5237988,
+    "Longitude": -71.7506739,
     "Region": "Central"
   },
   {
@@ -4384,7 +4384,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6805309,
-    "Longitude": -71.18707109999998,
+    "Longitude": -71.1870711,
     "Region": "Southeastern"
   },
   {
@@ -4409,7 +4409,7 @@ listings = [
     "Phone": "(508) 674-4681",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.622930100000005,
+    "Latitude": 41.6229301,
     "Longitude": -70.9259563,
     "Region": "Southeastern"
   },
@@ -4434,7 +4434,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2651748,
-    "Longitude": -71.80212399999999,
+    "Longitude": -71.802124,
     "Region": "Central"
   },
   {
@@ -4482,7 +4482,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2667013,
-    "Longitude": -71.81259770000001,
+    "Longitude": -71.8125977,
     "Region": "Central"
   },
   {
@@ -4538,7 +4538,7 @@ listings = [
     "Phone": "(508) 755-1782",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.261796000000004,
+    "Latitude": 42.261796,
     "Longitude": -71.8018624,
     "Region": "Central"
   },
@@ -4646,7 +4646,7 @@ listings = [
     "Phone": "(617) 340-9554",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.33498839999999,
+    "Latitude": 42.3349884,
     "Longitude": -71.194005,
     "Region": "Eastern"
   },
@@ -4667,7 +4667,7 @@ listings = [
     "Email": "contato@ibvnchurch.com",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.4122604,
-    "Longitude": -71.12226559999999,
+    "Longitude": -71.1222656,
     "Region": "Eastern"
   },
   {
@@ -4687,8 +4687,8 @@ listings = [
     "Phone": "(508) 798-1900 x 221",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.257667100000006,
-    "Longitude": -71.80595129999999,
+    "Latitude": 42.2576671,
+    "Longitude": -71.8059513,
     "Region": "Central"
   },
   {
@@ -4708,7 +4708,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3064615,
-    "Longitude": -71.77242070000001,
+    "Longitude": -71.7724207,
     "Region": "Central"
   },
   {
@@ -4851,7 +4851,7 @@ listings = [
     "Phone": "(978) 256-7425",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.598751299999996,
+    "Latitude": 42.5987513,
     "Longitude": -71.3479689,
     "Region": "Northeastern"
   },
@@ -4955,7 +4955,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6688579,
-    "Longitude": -70.08187790000001,
+    "Longitude": -70.0818779,
     "Region": "Cape Cod"
   },
   {
@@ -4976,7 +4976,7 @@ listings = [
     "Phone": "(508) 984-5566",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.636763200000004,
+    "Latitude": 41.6367632,
     "Longitude": -70.9536583,
     "Region": "Southeastern"
   },
@@ -5093,7 +5093,7 @@ listings = [
     "Phone": "(978) 276-0040",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.576540200000004,
+    "Latitude": 42.5765402,
     "Longitude": -71.0786906,
     "Region": "Northeastern"
   },
@@ -5113,7 +5113,7 @@ listings = [
     "Phone": "(978) 397-5768",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.684638799999995,
+    "Latitude": 42.6846388,
     "Longitude": -71.2315968,
     "Region": "Northeastern"
   },
@@ -5174,7 +5174,7 @@ listings = [
     "Phone": "(508) 799-1121",
     "Email": "clerk@worcesterma.gov",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.262762200000004,
+    "Latitude": 42.2627622,
     "Longitude": -71.8018178,
     "Region": "Central"
   },
@@ -5194,7 +5194,7 @@ listings = [
     "Phone": "617-742-6830 x212",
     "Email": "pmiranda@citymissionboston.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.30625429999999,
+    "Latitude": 42.3062543,
     "Longitude": -71.0767997,
     "Region": "Eastern"
   },
@@ -5214,8 +5214,8 @@ listings = [
     "Phone": "617-349-6252",
     "Email": "ccruz@cambridgema.gov",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.369657700000005,
-    "Longitude": -71.10349120000001,
+    "Latitude": 42.3696577,
+    "Longitude": -71.1034912,
     "Region": "Eastern"
   },
   {
@@ -5236,7 +5236,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.250988,
-    "Longitude": -71.82300450000001,
+    "Longitude": -71.8230045,
     "Region": "Central"
   },
   {
@@ -5256,7 +5256,7 @@ listings = [
     "Phone": "(508) 838-8566",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.069365000000005,
+    "Latitude": 42.069365,
     "Longitude": -71.4796439,
     "Region": "Eastern"
   },
@@ -5278,7 +5278,7 @@ listings = [
     "Phone": "(774) 255-1739",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.562492600000006,
+    "Latitude": 41.5624926,
     "Longitude": -70.6102236,
     "Region": "Cape Cod"
   },
@@ -5299,7 +5299,7 @@ listings = [
     "Phone": "(413) 736-1458",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.107237299999994,
+    "Latitude": 42.1072373,
     "Longitude": -72.5973525,
     "Region": "Western"
   },
@@ -5345,7 +5345,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2705664,
-    "Longitude": -71.77718229999999,
+    "Longitude": -71.7771823,
     "Region": "Central"
   },
   {
@@ -5470,7 +5470,7 @@ listings = [
     "Phone": "617-944-1083",
     "Email": "stefanie@uncornered.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.318268599999996,
+    "Latitude": 42.3182686,
     "Longitude": -71.0572597,
     "Region": "Eastern"
   },
@@ -5514,8 +5514,8 @@ listings = [
     "Phone": "617-247-4927",
     "Email": "amanda@commoncathedral.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.352622499999995,
-    "Longitude": -71.07238690000001,
+    "Latitude": 42.3526225,
+    "Longitude": -71.0723869,
     "Region": "Eastern"
   },
   {
@@ -5579,7 +5579,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2695825,
-    "Longitude": -71.79522359999999,
+    "Longitude": -71.7952236,
     "Region": "Central"
   },
   {
@@ -5622,7 +5622,7 @@ listings = [
     "Phone": "(978) 448-0398",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.651093700000004,
+    "Latitude": 42.6510937,
     "Longitude": -71.5404028,
     "Region": "Northeastern"
   },
@@ -5689,7 +5689,7 @@ listings = [
     "Phone": "(508) 477-7090",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.728365999999994,
+    "Latitude": 41.728366,
     "Longitude": -70.5851037,
     "Region": "Cape Cod"
   },
@@ -5714,7 +5714,7 @@ listings = [
     "Phone": "508-759-7920",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.728365999999994,
+    "Latitude": 41.728366,
     "Longitude": -70.5851037,
     "Region": "Cape Cod"
   },
@@ -5734,7 +5734,7 @@ listings = [
     "Phone": "(508) 477-7090",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.56150770000001,
+    "Latitude": 41.5615077,
     "Longitude": -70.6116928,
     "Region": "Cape Cod"
   },
@@ -5788,7 +5788,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5283484,
-    "Longitude": -71.76470400000001,
+    "Longitude": -71.764704,
     "Region": "Central"
   },
   {
@@ -5887,8 +5887,8 @@ listings = [
     "Phone": "617-522-7777",
     "Email": "allison@servings.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.317640399999995,
-    "Longitude": -71.10277009999999,
+    "Latitude": 42.3176404,
+    "Longitude": -71.1027701,
     "Region": "Eastern"
   },
   {
@@ -5948,7 +5948,7 @@ listings = [
     "Email": "tfigelman@cwsne.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3641862,
-    "Longitude": -71.06173940000001,
+    "Longitude": -71.0617394,
     "Region": "Eastern"
   },
   {
@@ -5972,8 +5972,8 @@ listings = [
     "Phone": "(508) 754-8780",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.266564200000005,
-    "Longitude": -71.80705329999999,
+    "Latitude": 42.2665642,
+    "Longitude": -71.8070533,
     "Region": "Central"
   },
   {
@@ -5992,7 +5992,7 @@ listings = [
     "Phone": "(978) 369-8435",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.45686729999999,
+    "Latitude": 42.4568673,
     "Longitude": -71.3478993,
     "Region": "Northeastern"
   },
@@ -6013,7 +6013,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4560601,
-    "Longitude": -71.39456779999999,
+    "Longitude": -71.3945678,
     "Region": "Northeastern"
   },
   {
@@ -6074,7 +6074,7 @@ listings = [
     "Phone": "(508) 829-9270",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.351095799999996,
+    "Latitude": 42.3510958,
     "Longitude": -71.8619971,
     "Region": "Central"
   },
@@ -6100,7 +6100,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1714021,
-    "Longitude": -70.88114759999999,
+    "Longitude": -70.8811476,
     "Region": "Southeastern"
   },
   {
@@ -6124,7 +6124,7 @@ listings = [
     "Phone": "(508) 756-5400",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.263082399999995,
+    "Latitude": 42.2630824,
     "Longitude": -71.8010193,
     "Region": "Central"
   },
@@ -6145,7 +6145,7 @@ listings = [
     "Phone": "(413) 256-0704",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.385172600000004,
+    "Latitude": 42.3851726,
     "Longitude": -72.5222772,
     "Region": "Western"
   },
@@ -6169,7 +6169,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2533369,
-    "Longitude": -71.81458029999999,
+    "Longitude": -71.8145803,
     "Region": "Central"
   },
   {
@@ -6189,7 +6189,7 @@ listings = [
     "Phone": "978-618-1144",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.430848700000006,
+    "Latitude": 42.4308487,
     "Longitude": -71.5821548,
     "Region": "Central"
   },
@@ -6231,7 +6231,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6266593,
-    "Longitude": -70.95855300000001,
+    "Longitude": -70.958553,
     "Region": "Southeastern"
   },
   {
@@ -6252,7 +6252,7 @@ listings = [
     "Phone": "(508) 895-7000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.084602399999994,
+    "Latitude": 42.0846024,
     "Longitude": -71.0196953,
     "Region": "Eastern"
   },
@@ -6292,7 +6292,7 @@ listings = [
     "Phone": "(508) 999-1830",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.59958029999999,
+    "Latitude": 41.5995803,
     "Longitude": -70.9380061,
     "Region": "Southeastern"
   },
@@ -6425,7 +6425,7 @@ listings = [
     "Phone": "(508) 394-3120",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.674361100000006,
+    "Latitude": 41.6743611,
     "Longitude": -70.1446037,
     "Region": "Cape Cod"
   },
@@ -6447,7 +6447,7 @@ listings = [
     "Phone": "(508) 910-1000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.652221999999995,
+    "Latitude": 41.652222,
     "Longitude": -70.9228217,
     "Region": "Southeastern"
   },
@@ -6492,8 +6492,8 @@ listings = [
     "Phone": "(508) 792-6200",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.260566600000004,
-    "Longitude": -71.80336199999999,
+    "Latitude": 42.2605666,
+    "Longitude": -71.803362,
     "Region": "Central"
   },
   {
@@ -6628,7 +6628,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2393959,
-    "Longitude": -71.74797590000001,
+    "Longitude": -71.7479759,
     "Region": "Central"
   },
   {
@@ -6671,7 +6671,7 @@ listings = [
     "Phone": "(508) 799-1041",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.262762200000004,
+    "Latitude": 42.2627622,
     "Longitude": -71.8018178,
     "Region": "Central"
   },
@@ -6776,7 +6776,7 @@ listings = [
     "Phone": "617-770-4065",
     "Email": "development@dovema.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.25287720000001,
+    "Latitude": 42.2528772,
     "Longitude": -71.0022705,
     "Region": "Eastern"
   },
@@ -6817,8 +6817,8 @@ listings = [
     "Phone": "617-825-4200",
     "Email": "lmello@dbedc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.31729179999999,
-    "Longitude": -71.06494649999999,
+    "Latitude": 42.3172918,
+    "Longitude": -71.0649465,
     "Region": "Eastern"
   },
   {
@@ -6838,7 +6838,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.219256,
-    "Longitude": -71.32425699999999,
+    "Longitude": -71.324257,
     "Region": "Northeastern"
   },
   {
@@ -6857,7 +6857,7 @@ listings = [
     "Phone": "508-654-7778",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.245874900000004,
+    "Latitude": 42.2458749,
     "Longitude": -71.2828719,
     "Region": "Northeastern"
   },
@@ -6879,8 +6879,8 @@ listings = [
     "Phone": "(978) 835-5000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.527297499999996,
-    "Longitude": -71.28366240000001,
+    "Latitude": 42.5272975,
+    "Longitude": -71.2836624,
     "Region": "Northeastern"
   },
   {
@@ -6922,7 +6922,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6827947,
-    "Longitude": -71.35019150000001,
+    "Longitude": -71.3501915,
     "Region": "Northeastern"
   },
   {
@@ -6966,7 +6966,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6731894,
-    "Longitude": -71.35103079999999,
+    "Longitude": -71.3510308,
     "Region": "Northeastern"
   },
   {
@@ -6990,7 +6990,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2623544,
-    "Longitude": -71.80307309999999,
+    "Longitude": -71.8030731,
     "Region": "Central"
   },
   {
@@ -7030,7 +7030,7 @@ listings = [
     "Email": "Worcester@dressforsuccess.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2623544,
-    "Longitude": -71.80307309999999,
+    "Longitude": -71.8030731,
     "Region": "Central"
   },
   {
@@ -7073,7 +7073,7 @@ listings = [
     "Phone": "(866) 532-9867",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.12251679999999,
+    "Latitude": 42.1225168,
     "Longitude": -70.948875,
     "Region": "Southeastern"
   },
@@ -7097,8 +7097,8 @@ listings = [
     "Phone": "(508) 693-6887",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.445832700000004,
-    "Longitude": -70.60794190000001,
+    "Latitude": 41.4458327,
+    "Longitude": -70.6079419,
     "Region": "Cape Cod"
   },
   {
@@ -7141,7 +7141,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0255961,
-    "Longitude": -70.68584770000001,
+    "Longitude": -70.6858477,
     "Region": "Southeastern"
   },
   {
@@ -7180,7 +7180,7 @@ listings = [
     "Phone": "(508) 410-7676",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.263611600000004,
+    "Latitude": 42.2636116,
     "Longitude": -71.8025041,
     "Region": "Central"
   },
@@ -7201,7 +7201,7 @@ listings = [
     "Phone": "(781) 483-0192",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.240792600000006,
+    "Latitude": 42.2407926,
     "Longitude": -70.8305069,
     "Region": "Southeastern"
   },
@@ -7221,7 +7221,7 @@ listings = [
     "Phone": "617-876-4444",
     "Email": "miscelaine@eastendhouse.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.36944570000001,
+    "Latitude": 42.3694457,
     "Longitude": -71.0830684,
     "Region": "Eastern"
   },
@@ -7242,7 +7242,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0586888,
-    "Longitude": -72.50814270000001,
+    "Longitude": -72.5081427,
     "Region": "Western"
   },
   {
@@ -7263,7 +7263,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2714223,
-    "Longitude": -71.77422609999999,
+    "Longitude": -71.7742261,
     "Region": "Central"
   },
   {
@@ -7320,7 +7320,7 @@ listings = [
     "Phone": "617-603-1700",
     "Email": "abarlow@vlpnet.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.354290899999995,
+    "Latitude": 42.3542909,
     "Longitude": -71.0582717,
     "Region": "Eastern"
   },
@@ -7384,7 +7384,7 @@ listings = [
     "Phone": "(413) 529-1415",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.265383299999996,
+    "Latitude": 42.2653833,
     "Longitude": -72.6695642,
     "Region": "Western"
   },
@@ -7475,7 +7475,7 @@ listings = [
     "Phone": "(508) 230-0690",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.06538870000001,
+    "Latitude": 42.0653887,
     "Longitude": -71.1050696,
     "Region": "Southeastern"
   },
@@ -7496,7 +7496,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1825661,
-    "Longitude": -71.21229079999999,
+    "Longitude": -71.2122908,
     "Region": "Southeastern"
   },
   {
@@ -7581,7 +7581,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2884109,
-    "Longitude": -71.79977459999999,
+    "Longitude": -71.7997746,
     "Region": "Central"
   },
   {
@@ -7660,7 +7660,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0266862,
-    "Longitude": -71.15770909999999,
+    "Longitude": -71.1577091,
     "Region": "Southeastern"
   },
   {
@@ -7680,7 +7680,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4614876,
-    "Longitude": -71.38623879999999,
+    "Longitude": -71.3862388,
     "Region": "Northeastern"
   },
   {
@@ -7826,7 +7826,7 @@ listings = [
     "Phone": "(508) 626-1510",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.298107200000004,
+    "Latitude": 42.2981072,
     "Longitude": -71.436075,
     "Region": "Eastern"
   },
@@ -7846,8 +7846,8 @@ listings = [
     "Phone": "(978) 768-6821",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.63330560000001,
-    "Longitude": -70.78299679999999,
+    "Latitude": 42.6333056,
+    "Longitude": -70.7829968,
     "Region": "Northeastern"
   },
   {
@@ -7909,7 +7909,7 @@ listings = [
     "Phone": "(617) 387-6389",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.416548999999996,
+    "Latitude": 42.416549,
     "Longitude": -71.0487213,
     "Region": "Eastern"
   },
@@ -7934,7 +7934,7 @@ listings = [
     "Phone": "(617) 394-2260",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.40566629999999,
+    "Latitude": 42.4056663,
     "Longitude": -71.0518837,
     "Region": "Eastern"
   },
@@ -7959,7 +7959,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.40395,
-    "Longitude": -71.04880179999999,
+    "Longitude": -71.0488018,
     "Region": "Eastern"
   },
   {
@@ -7978,7 +7978,7 @@ listings = [
     "Phone": "(617) 394-2320",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.40566629999999,
+    "Latitude": 42.4056663,
     "Longitude": -71.0518837,
     "Region": "Eastern"
   },
@@ -8022,8 +8022,8 @@ listings = [
     "Phone": "(617) 364-6767",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.257293700000005,
-    "Longitude": -71.12166529999999,
+    "Latitude": 42.2572937,
+    "Longitude": -71.1216653,
     "Region": "Eastern"
   },
   {
@@ -8062,8 +8062,8 @@ listings = [
     "Phone": "(857) 240-3747",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.360141600000006,
-    "Longitude": -71.20194980000001,
+    "Latitude": 42.3601416,
+    "Longitude": -71.2019498,
     "Region": "Eastern"
   },
   {
@@ -8104,7 +8104,7 @@ listings = [
     "Phone": "(508) 993-1144",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.652191200000004,
+    "Latitude": 41.6521912,
     "Longitude": -70.9070553,
     "Region": "Southeastern"
   },
@@ -8189,8 +8189,8 @@ listings = [
     "Phone": "(508) 679-2109",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.705417700000005,
-    "Longitude": -71.15418149999999,
+    "Latitude": 41.7054177,
+    "Longitude": -71.1541815,
     "Region": "Southeastern"
   },
   {
@@ -8209,8 +8209,8 @@ listings = [
     "Phone": "(508) 675-3595",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.696262700000005,
-    "Longitude": -71.15911729999999,
+    "Latitude": 41.6962627,
+    "Longitude": -71.1591173,
     "Region": "Southeastern"
   },
   {
@@ -8338,7 +8338,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2636552,
-    "Longitude": -71.80112290000001,
+    "Longitude": -71.8011229,
     "Region": "Central"
   },
   {
@@ -8366,7 +8366,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2592467,
-    "Longitude": -71.81497579999998,
+    "Longitude": -71.8149758,
     "Region": "Central"
   },
   {
@@ -8389,7 +8389,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2854515,
-    "Longitude": -71.34358470000001,
+    "Longitude": -71.3435847,
     "Region": "Northeastern"
   },
   {
@@ -8415,7 +8415,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2695644,
-    "Longitude": -71.80258429999999,
+    "Longitude": -71.8025843,
     "Region": "Central"
   },
   {
@@ -8437,8 +8437,8 @@ listings = [
     "Phone": "(781) 592-5052",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.46386210000001,
-    "Longitude": -70.95862729999999,
+    "Latitude": 42.4638621,
+    "Longitude": -70.9586273,
     "Region": "Northeastern"
   },
   {
@@ -8521,7 +8521,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1193561,
-    "Longitude": -71.32477159999999,
+    "Longitude": -71.3247716,
     "Region": "Central"
   },
   {
@@ -8544,8 +8544,8 @@ listings = [
     "Phone": "(508) 348-0263",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.691284700000004,
-    "Longitude": -69.96414109999999,
+    "Latitude": 41.6912847,
+    "Longitude": -69.9641411,
     "Region": "Cape Cod"
   },
   {
@@ -8567,7 +8567,7 @@ listings = [
     "Phone": "(508) 255-3841",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.825672499999996,
+    "Latitude": 41.8256725,
     "Longitude": -69.9718473,
     "Region": "Cape Cod"
   },
@@ -8587,7 +8587,7 @@ listings = [
     "Phone": "617-267-0900",
     "Email": "myfenway@fenwayhealth.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.344074600000006,
+    "Latitude": 42.3440746,
     "Longitude": -71.0989723,
     "Region": "Eastern"
   },
@@ -8611,7 +8611,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6643501,
-    "Longitude": -70.99837679999999,
+    "Longitude": -70.9983768,
     "Region": "Northeastern"
   },
   {
@@ -8630,8 +8630,8 @@ listings = [
     "Phone": "617-547-2724",
     "Email": "Jim: jstewart@firstchurchcambridge.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.376616399999996,
-    "Longitude": -71.12299449999999,
+    "Latitude": 42.3766164,
+    "Longitude": -71.1229945,
     "Region": "Eastern"
   },
   {
@@ -8722,7 +8722,7 @@ listings = [
     "Phone": "(978) 627-4182",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.564651500000004,
+    "Latitude": 42.5646515,
     "Longitude": -71.7739713,
     "Region": "Central"
   },
@@ -8742,7 +8742,7 @@ listings = [
     "Phone": "(978) 627-4182",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.564651500000004,
+    "Latitude": 42.5646515,
     "Longitude": -71.7739713,
     "Region": "Central"
   },
@@ -8762,8 +8762,8 @@ listings = [
     "Phone": "(978) 342-5222",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.583224799999996,
-    "Longitude": -71.79551090000001,
+    "Latitude": 42.5832248,
+    "Longitude": -71.7955109,
     "Region": "Central"
   },
   {
@@ -8782,8 +8782,8 @@ listings = [
     "Phone": "(978) 342-5222",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.583224799999996,
-    "Longitude": -71.79551090000001,
+    "Latitude": 42.5832248,
+    "Longitude": -71.7955109,
     "Region": "Central"
   },
   {
@@ -8803,7 +8803,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5949521,
-    "Longitude": -71.78954300000001,
+    "Longitude": -71.789543,
     "Region": "Central"
   },
   {
@@ -8823,7 +8823,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5949521,
-    "Longitude": -71.78954300000001,
+    "Longitude": -71.789543,
     "Region": "Central"
   },
   {
@@ -8842,7 +8842,7 @@ listings = [
     "Phone": "(413) 247-9738",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.397870399999995,
+    "Latitude": 42.3978704,
     "Longitude": -72.6148397,
     "Region": "Western"
   },
@@ -8882,7 +8882,7 @@ listings = [
     "Phone": "(503) 345-4985",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.126715999999995,
+    "Latitude": 42.126716,
     "Longitude": -71.0101944,
     "Region": "Southeastern"
   },
@@ -8925,8 +8925,8 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.628057299999995,
-    "Longitude": -72.86905420000001,
+    "Latitude": 42.6280573,
+    "Longitude": -72.8690542,
     "Region": "Western"
   },
   {
@@ -9116,7 +9116,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6794534,
-    "Longitude": -70.83829820000001,
+    "Longitude": -70.8382982,
     "Region": "Northeastern"
   },
   {
@@ -9180,7 +9180,7 @@ listings = [
     "Phone": "(508) 543-1204",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.06283679999999,
+    "Latitude": 42.0628368,
     "Longitude": -71.250345,
     "Region": "Southeastern"
   },
@@ -9200,7 +9200,7 @@ listings = [
     "Phone": "508-698-3858",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.055798100000004,
+    "Latitude": 42.0557981,
     "Longitude": -71.2520156,
     "Region": "Southeastern"
   },
@@ -9220,8 +9220,8 @@ listings = [
     "Phone": "(508) 626-4282",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.294121399999995,
-    "Longitude": -71.41824770000001,
+    "Latitude": 42.2941214,
+    "Longitude": -71.4182477,
     "Region": "Eastern"
   },
   {
@@ -9241,7 +9241,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2922234,
-    "Longitude": -71.41203859999999,
+    "Longitude": -71.4120386,
     "Region": "Eastern"
   },
   {
@@ -9260,7 +9260,7 @@ listings = [
     "Phone": "(508) 626-4603",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.298107200000004,
+    "Latitude": 42.2981072,
     "Longitude": -71.436075,
     "Region": "Eastern"
   },
@@ -9349,7 +9349,7 @@ listings = [
     "Phone": "(508) 520-4973",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.090624700000006,
+    "Latitude": 42.0906247,
     "Longitude": -71.4041003,
     "Region": "Central"
   },
@@ -9369,7 +9369,7 @@ listings = [
     "Phone": "(413) 774-3182",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.59204879999999,
+    "Latitude": 42.5920488,
     "Longitude": -72.6041819,
     "Region": "Western"
   },
@@ -9389,7 +9389,7 @@ listings = [
     "Phone": "781-321-2121",
     "Email": "pastoranders@freedomhillcommunitychurch.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.438898200000004,
+    "Latitude": 42.4388982,
     "Longitude": -71.0279547,
     "Region": "Eastern"
   },
@@ -9417,8 +9417,8 @@ listings = [
     "Phone": "(508) 755-4362",
     "Email": "jlonergan@friendlyhousema.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.258451799999996,
-    "Longitude": -71.78550870000001,
+    "Latitude": 42.2584518,
+    "Longitude": -71.7855087,
     "Region": "Central"
   },
   {
@@ -9463,7 +9463,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1603711,
-    "Longitude": -70.85888840000001,
+    "Longitude": -70.8588884,
     "Region": "Southeastern"
   },
   {
@@ -9488,7 +9488,7 @@ listings = [
     "Email": "Housing@FOHspringfield.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1104465,
-    "Longitude": -72.58439229999999,
+    "Longitude": -72.5843923,
     "Region": "Western"
   },
   {
@@ -9551,7 +9551,7 @@ listings = [
     "Phone": "(413) 781-5640",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.110076899999996,
+    "Latitude": 42.1100769,
     "Longitude": -72.5771408,
     "Region": "Western"
   },
@@ -9574,7 +9574,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0874065,
-    "Longitude": -71.46555649999999,
+    "Longitude": -71.4655565,
     "Region": "Southeastern"
   },
   {
@@ -9619,7 +9619,7 @@ listings = [
     "Phone": "(978) 632-4574",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.57960429999999,
+    "Latitude": 42.5796043,
     "Longitude": -71.9961887,
     "Region": "Central"
   },
@@ -9639,7 +9639,7 @@ listings = [
     "Phone": "(781) 769-1600",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.193523299999995,
+    "Latitude": 42.1935233,
     "Longitude": -71.2008739,
     "Region": "Southeastern"
   },
@@ -9679,8 +9679,8 @@ listings = [
     "Phone": "(978) 632-5050",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.575148299999995,
-    "Longitude": -71.99508459999998,
+    "Latitude": 42.5751483,
+    "Longitude": -71.9950846,
     "Region": "Central"
   },
   {
@@ -9730,7 +9730,7 @@ listings = [
     "Phone": "(978) 630-9259",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.593801899999995,
+    "Latitude": 42.5938019,
     "Longitude": -71.9851684,
     "Region": "Central"
   },
@@ -9770,8 +9770,8 @@ listings = [
     "Phone": "617-268-5000",
     "Email": "susanbradley@gavinfoundation.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.328728000000005,
-    "Longitude": -71.05335229999999,
+    "Latitude": 42.328728,
+    "Longitude": -71.0533523,
     "Region": "Eastern"
   },
   {
@@ -9812,7 +9812,7 @@ listings = [
     "Phone": "(978) 475-3590",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.655161299999996,
+    "Latitude": 42.6551613,
     "Longitude": -71.1467937,
     "Region": "Northeastern"
   },
@@ -9858,7 +9858,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2791204,
-    "Longitude": -71.41726700000001,
+    "Longitude": -71.417267,
     "Region": "Eastern"
   },
   {
@@ -9877,7 +9877,7 @@ listings = [
     "Phone": "(978) 352-6331",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.731840999999996,
+    "Latitude": 42.731841,
     "Longitude": -71.0022775,
     "Region": "Northeastern"
   },
@@ -9897,8 +9897,8 @@ listings = [
     "Phone": "(978) 352-5727",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.722624200000006,
-    "Longitude": -70.99280490000001,
+    "Latitude": 42.7226242,
+    "Longitude": -70.9928049,
     "Region": "Northeastern"
   },
   {
@@ -9920,7 +9920,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6777286,
-    "Longitude": -70.91509549999999,
+    "Longitude": -70.9150955,
     "Region": "Southeastern"
   },
   {
@@ -9964,7 +9964,7 @@ listings = [
     "Phone": "800-462-9100",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.289348499999996,
+    "Latitude": 42.2893485,
     "Longitude": -71.8045608,
     "Region": "Central"
   },
@@ -9990,7 +9990,7 @@ listings = [
     "Phone": "(978) 681-4900",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.707849200000005,
+    "Latitude": 42.7078492,
     "Longitude": -71.1620258,
     "Region": "Northeastern"
   },
@@ -10017,7 +10017,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.8459347,
-    "Longitude": -71.08282220000001,
+    "Longitude": -71.0828222,
     "Region": "Southeastern"
   },
   {
@@ -10036,7 +10036,7 @@ listings = [
     "Phone": "(978) 281-4770",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.623568799999994,
+    "Latitude": 42.6235688,
     "Longitude": -70.6766307,
     "Region": "Northeastern"
   },
@@ -10057,7 +10057,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5159484,
-    "Longitude": -71.00474890000001,
+    "Longitude": -71.0047489,
     "Region": "Northeastern"
   },
   {
@@ -10096,7 +10096,7 @@ listings = [
     "Phone": "774-253-1619",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.258210399999996,
+    "Latitude": 42.2582104,
     "Longitude": -71.8121728,
     "Region": "Central"
   },
@@ -10137,7 +10137,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3674485,
-    "Longitude": -72.53502399999999,
+    "Longitude": -72.535024,
     "Region": "Western"
   },
   {
@@ -10197,7 +10197,7 @@ listings = [
     "Phone": "(508) 539-1171",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.611383200000006,
+    "Latitude": 41.6113832,
     "Longitude": -70.491564,
     "Region": "Cape Cod"
   },
@@ -10218,8 +10218,8 @@ listings = [
     "Phone": "(508) 255-3584",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.784017999999996,
-    "Longitude": -70.00065179999999,
+    "Latitude": 41.784018,
+    "Longitude": -70.0006518,
     "Region": "Cape Cod"
   },
   {
@@ -10310,7 +10310,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1735444,
-    "Longitude": -71.10999029999999,
+    "Longitude": -71.1099903,
     "Region": "Southeastern"
   },
   {
@@ -10349,7 +10349,7 @@ listings = [
     "Phone": "(978) 410-6100",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.57306989999999,
+    "Latitude": 42.5730699,
     "Longitude": -71.9970809,
     "Region": "Central"
   },
@@ -10397,7 +10397,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.7087686,
-    "Longitude": -71.16244350000001,
+    "Longitude": -71.1624435,
     "Region": "Northeastern"
   },
   {
@@ -10461,7 +10461,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6362235,
-    "Longitude": -70.92574690000001,
+    "Longitude": -70.9257469,
     "Region": "Southeastern"
   },
   {
@@ -10481,7 +10481,7 @@ listings = [
     "Phone": "(508) 799-3252",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.30953970000001,
+    "Latitude": 42.3095397,
     "Longitude": -71.7959337,
     "Region": "Central"
   },
@@ -10519,8 +10519,8 @@ listings = [
     "Phone": "(508) 798-6818",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.297199400000004,
-    "Longitude": -71.75976379999999,
+    "Latitude": 42.2971994,
+    "Longitude": -71.7597638,
     "Region": "Central"
   },
   {
@@ -10560,7 +10560,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5942349,
-    "Longitude": -71.96085759999998,
+    "Longitude": -71.9608576,
     "Region": "Central"
   },
   {
@@ -10587,7 +10587,7 @@ listings = [
     "Phone": "(978) 343-6300 x127",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.564651500000004,
+    "Latitude": 42.5646515,
     "Longitude": -71.7739713,
     "Region": "Central"
   },
@@ -10648,7 +10648,7 @@ listings = [
     "Phone": "781-293-7313",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.990426899999996,
+    "Latitude": 41.9904269,
     "Longitude": -70.8612574,
     "Region": "Southeastern"
   },
@@ -10689,7 +10689,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9913564,
-    "Longitude": -70.86090899999999,
+    "Longitude": -70.860909,
     "Region": "Southeastern"
   },
   {
@@ -10729,7 +10729,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6122348,
-    "Longitude": -70.87704980000001,
+    "Longitude": -70.8770498,
     "Region": "Northeastern"
   },
   {
@@ -10749,7 +10749,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2046321,
-    "Longitude": -72.51050579999999,
+    "Longitude": -72.5105058,
     "Region": "Western"
   },
   {
@@ -10809,7 +10809,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.116032399999995,
+    "Latitude": 42.1160324,
     "Longitude": -70.8444192,
     "Region": "Southeastern"
   },
@@ -10897,7 +10897,7 @@ listings = [
     "Phone": "(508) 765-2725",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.074260200000005,
+    "Latitude": 42.0742602,
     "Longitude": -72.0309369,
     "Region": "Central"
   },
@@ -10923,7 +10923,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0802158,
-    "Longitude": -72.03752420000001,
+    "Longitude": -72.0375242,
     "Region": "Central"
   },
   {
@@ -10965,7 +10965,7 @@ listings = [
     "Email": "hscmpinc@gmail.com",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3754225,
-    "Longitude": -71.12048440000001,
+    "Longitude": -71.1204844,
     "Region": "Eastern"
   },
   {
@@ -11005,7 +11005,7 @@ listings = [
     "Email": "contact@harvardstreet.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3024994,
-    "Longitude": -71.08510749999999,
+    "Longitude": -71.0851075,
     "Region": "Eastern"
   },
   {
@@ -11067,7 +11067,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5293364,
-    "Longitude": -70.92323950000001,
+    "Longitude": -70.9232395,
     "Region": "Northeastern"
   },
   {
@@ -11134,7 +11134,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9451772,
-    "Longitude": -71.28477609999999,
+    "Longitude": -71.2847761,
     "Region": "Southeastern"
   },
   {
@@ -11153,8 +11153,8 @@ listings = [
     "Phone": "617-338-5241",
     "Email": "paralegal@hla-inc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.356007399999996,
-    "Longitude": -71.05679599999999,
+    "Latitude": 42.3560074,
+    "Longitude": -71.056796,
     "Region": "Eastern"
   },
   {
@@ -11174,7 +11174,7 @@ listings = [
     "Email": "larchie@hearth-home.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3375896,
-    "Longitude": -71.07480109999999,
+    "Longitude": -71.0748011,
     "Region": "Eastern"
   },
   {
@@ -11224,7 +11224,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.252933,
-    "Longitude": -71.79621170000001,
+    "Longitude": -71.7962117,
     "Region": "Central"
   },
   {
@@ -11246,7 +11246,7 @@ listings = [
     "Phone": "(413) 443-2530",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.440639700000006,
+    "Latitude": 42.4406397,
     "Longitude": -73.2572314,
     "Region": "Western"
   },
@@ -11267,7 +11267,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6669941,
-    "Longitude": -70.83849570000001,
+    "Longitude": -70.8384957,
     "Region": "Northeastern"
   },
   {
@@ -11286,7 +11286,7 @@ listings = [
     "Phone": "(508) 539-1010",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.566702899999996,
+    "Latitude": 41.5667029,
     "Longitude": -70.505664,
     "Region": "Cape Cod"
   },
@@ -11328,7 +11328,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5864159,
-    "Longitude": -71.98705859999998,
+    "Longitude": -71.9870586,
     "Region": "Central"
   },
   {
@@ -11348,7 +11348,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5632823,
-    "Longitude": -71.98109790000001,
+    "Longitude": -71.9810979,
     "Region": "Central"
   },
   {
@@ -11387,8 +11387,8 @@ listings = [
     "Phone": "(978) 342-9646",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.585108500000004,
-    "Longitude": -71.78815209999999,
+    "Latitude": 42.5851085,
+    "Longitude": -71.7881521,
     "Region": "Central"
   },
   {
@@ -11409,7 +11409,7 @@ listings = [
     "Phone": "(413) 296-4536",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.391149799999994,
+    "Latitude": 42.3911498,
     "Longitude": -72.8382085,
     "Region": "Western"
   },
@@ -11450,7 +11450,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2428915,
-    "Longitude": -70.90078390000001,
+    "Longitude": -70.9007839,
     "Region": "Southeastern"
   },
   {
@@ -11509,7 +11509,7 @@ listings = [
     "Phone": "(781) 767-0024",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.126149600000005,
+    "Latitude": 42.1261496,
     "Longitude": -71.0066911,
     "Region": "Southeastern"
   },
@@ -11550,7 +11550,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2004034,
-    "Longitude": -71.42609200000001,
+    "Longitude": -71.426092,
     "Region": "Central"
   },
   {
@@ -11573,7 +11573,7 @@ listings = [
     "Phone": "508-429-0620",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.178086799999996,
+    "Latitude": 42.1780868,
     "Longitude": -71.4579968,
     "Region": "Central"
   },
@@ -11633,8 +11633,8 @@ listings = [
     "Phone": "(413) 538-7000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.195539399999994,
-    "Longitude": -72.65116540000001,
+    "Latitude": 42.1955394,
+    "Longitude": -72.6511654,
     "Region": "Western"
   },
   {
@@ -11654,8 +11654,8 @@ listings = [
     "Phone": "(413) 534-3376",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.208031899999995,
-    "Longitude": -72.60704090000002,
+    "Latitude": 42.2080319,
+    "Longitude": -72.6070409,
     "Region": "Western"
   },
   {
@@ -11718,7 +11718,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.7832453,
-    "Longitude": -69.99865129999999,
+    "Longitude": -69.9986513,
     "Region": "Cape Cod"
   },
   {
@@ -11780,8 +11780,8 @@ listings = [
     "Phone": "(508) 892-1010",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.245655799999994,
-    "Longitude": -71.93751740000002,
+    "Latitude": 42.2456558,
+    "Longitude": -71.9375174,
     "Region": "Central"
   },
   {
@@ -11861,7 +11861,7 @@ listings = [
     "Phone": "978-458-2870",
     "Email": "info@houseofhopelowell.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.645298700000005,
+    "Latitude": 42.6452987,
     "Longitude": -71.3077893,
     "Region": "Eastern"
   },
@@ -11879,7 +11879,7 @@ listings = [
     "Phone": "978.635.1710",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.492495899999994,
+    "Latitude": 42.4924959,
     "Longitude": -71.4282568,
     "Region": "Central"
   },
@@ -11905,7 +11905,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.652333,
-    "Longitude": -70.28492740000002,
+    "Longitude": -70.2849274,
     "Region": "Cape Cod"
   },
   {
@@ -11986,7 +11986,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2661091,
-    "Longitude": -70.84690429999999,
+    "Longitude": -70.8469043,
     "Region": "Southeastern"
   },
   {
@@ -12007,7 +12007,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2652361,
-    "Longitude": -70.84604499999999,
+    "Longitude": -70.846045,
     "Region": "Southeastern"
   },
   {
@@ -12031,7 +12031,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2626857,
-    "Longitude": -71.11783559999999,
+    "Longitude": -71.1178356,
     "Region": "Eastern"
   },
   {
@@ -12076,7 +12076,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3372325,
-    "Longitude": -71.20669840000001,
+    "Longitude": -71.2066984,
     "Region": "Eastern"
   },
   {
@@ -12138,7 +12138,7 @@ listings = [
     "Phone": "(508) 842-3737",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.315808700000005,
+    "Latitude": 42.3158087,
     "Longitude": -71.6521162,
     "Region": "Central"
   },
@@ -12158,7 +12158,7 @@ listings = [
     "Phone": "(508) 753-3120",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.315808700000005,
+    "Latitude": 42.3158087,
     "Longitude": -71.6521162,
     "Region": "Central"
   },
@@ -12178,7 +12178,7 @@ listings = [
     "Phone": "617-714-4529",
     "Email": "felicianot@innercityweightlifting.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.347988799999996,
+    "Latitude": 42.3479888,
     "Longitude": -71.0732165,
     "Region": "Eastern"
   },
@@ -12198,7 +12198,7 @@ listings = [
     "Phone": "781-974-7787",
     "Email": "jenniferquintana@healthrecovery.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.271906099999995,
+    "Latitude": 42.2719061,
     "Longitude": -71.0826934,
     "Region": "Eastern"
   },
@@ -12267,7 +12267,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3838125,
-    "Longitude": -71.96940740000001,
+    "Longitude": -71.9694074,
     "Region": "Central"
   },
   {
@@ -12316,8 +12316,8 @@ listings = [
     "Phone": "(508) 755-2212",
     "Email": "jalley@ihnworcester.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.26580560000001,
-    "Longitude": -71.83172359999999,
+    "Latitude": 42.2658056,
+    "Longitude": -71.8317236,
     "Region": "Central"
   },
   {
@@ -12337,8 +12337,8 @@ listings = [
     "Phone": "(978) 356-1525",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.676323499999995,
-    "Longitude": -71.01411800000001,
+    "Latitude": 42.6763235,
+    "Longitude": -71.014118,
     "Region": "Northeastern"
   },
   {
@@ -12357,7 +12357,7 @@ listings = [
     "Phone": "(978) 356-2860",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.670950399999995,
+    "Latitude": 42.6709504,
     "Longitude": -70.8380554,
     "Region": "Northeastern"
   },
@@ -12384,7 +12384,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2765782,
-    "Longitude": -71.80129659999999,
+    "Longitude": -71.8012966,
     "Region": "Central"
   },
   {
@@ -12425,7 +12425,7 @@ listings = [
     "Phone": "978-263-3427 x2800",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.473595200000005,
+    "Latitude": 42.4735952,
     "Longitude": -71.446912,
     "Region": "Central"
   },
@@ -12444,7 +12444,7 @@ listings = [
     "Email": "jpccalp@gmail.com",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3062744,
-    "Longitude": -71.10943329999999,
+    "Longitude": -71.1094333,
     "Region": "Eastern"
   },
   {
@@ -12464,7 +12464,7 @@ listings = [
     "Phone": "(413) 736-2263",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.104592499999995,
+    "Latitude": 42.1045925,
     "Longitude": -72.5822032,
     "Region": "Western"
   },
@@ -12484,7 +12484,7 @@ listings = [
     "Phone": "617-245-6551",
     "Email": "amarlow@jeremiahprogram.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.326213200000005,
+    "Latitude": 42.3262132,
     "Longitude": -71.0829012,
     "Region": "Eastern"
   },
@@ -12514,7 +12514,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2451215,
-    "Longitude": -71.83135290000001,
+    "Longitude": -71.8313529,
     "Region": "Central"
   },
   {
@@ -12581,7 +12581,7 @@ listings = [
     "Phone": "(508) 366-7191",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.289472499999995,
+    "Latitude": 42.2894725,
     "Longitude": -71.4279123,
     "Region": "Eastern"
   },
@@ -12606,8 +12606,8 @@ listings = [
     "Phone": "(508) 890-1999",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.260431700000005,
-    "Longitude": -71.80340009999999,
+    "Latitude": 42.2604317,
+    "Longitude": -71.8034001,
     "Region": "Central"
   },
   {
@@ -12627,7 +12627,7 @@ listings = [
     "Email": "cgalvin@kennedycenter.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3778685,
-    "Longitude": -71.05678759999999,
+    "Longitude": -71.0567876,
     "Region": "Eastern"
   },
   {
@@ -12669,8 +12669,8 @@ listings = [
     "Phone": "(617) 308-3555",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.45608729999999,
-    "Longitude": -71.39629670000001,
+    "Latitude": 42.4560873,
+    "Longitude": -71.3962967,
     "Region": "Northeastern"
   },
   {
@@ -12709,7 +12709,7 @@ listings = [
     "Phone": "617-494-0444",
     "Email": "contact@justastart.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.373399299999996,
+    "Latitude": 42.3733993,
     "Longitude": -71.0971485,
     "Region": "Eastern"
   },
@@ -12730,7 +12730,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.304564,
-    "Longitude": -71.22881509999999,
+    "Longitude": -71.2288151,
     "Region": "Eastern"
   },
   {
@@ -12750,7 +12750,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2155949,
-    "Longitude": -71.82213370000001,
+    "Longitude": -71.8221337,
     "Region": "Central"
   },
   {
@@ -12789,7 +12789,7 @@ listings = [
     "Phone": "(508) 896-5073",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.754644299999995,
+    "Latitude": 41.7546443,
     "Longitude": -70.066068,
     "Region": "Cape Cod"
   },
@@ -12830,8 +12830,8 @@ listings = [
     "Phone": "(978) 685-2151",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.69343129999999,
-    "Longitude": -71.20138440000001,
+    "Latitude": 42.6934313,
+    "Longitude": -71.2013844,
     "Region": "Northeastern"
   },
   {
@@ -12851,7 +12851,7 @@ listings = [
     "Phone": "(413) 445-5918",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.399752899999996,
+    "Latitude": 42.3997529,
     "Longitude": -73.264121,
     "Region": "Western"
   },
@@ -12895,7 +12895,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2623544,
-    "Longitude": -71.80307309999999,
+    "Longitude": -71.8030731,
     "Region": "Central"
   },
   {
@@ -12916,7 +12916,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.032146999999995,
+    "Latitude": 42.032147,
     "Longitude": -70.73743,
     "Region": "Southeastern"
   },
@@ -12969,8 +12969,8 @@ listings = [
     "Phone": "617-427-7175",
     "Email": "mamaya@laalianza.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.328560100000004,
-    "Longitude": -71.06754129999999,
+    "Latitude": 42.3285601,
+    "Longitude": -71.0675413,
     "Region": "Eastern"
   },
   {
@@ -12989,8 +12989,8 @@ listings = [
     "Phone": "(617) 387-9996",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.39296829999999,
-    "Longitude": -71.03358709999999,
+    "Latitude": 42.3929683,
+    "Longitude": -71.0335871,
     "Region": "Eastern"
   },
   {
@@ -13013,7 +13013,7 @@ listings = [
     "Phone": "(781) 744-8013",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.48487539999999,
+    "Latitude": 42.4848754,
     "Longitude": -71.2051901,
     "Region": "Northeastern"
   },
@@ -13095,7 +13095,7 @@ listings = [
     "Email": "crystal@lathrophome.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3108693,
-    "Longitude": -72.63696829999999,
+    "Longitude": -72.6369683,
     "Region": "Western"
   },
   {
@@ -13121,7 +13121,7 @@ listings = [
     "Phone": "(617) 381-0015",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.410723299999994,
+    "Latitude": 42.4107233,
     "Longitude": -71.0458332,
     "Region": "Eastern"
   },
@@ -13163,8 +13163,8 @@ listings = [
     "Phone": "(978) 683-2751",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.711533700000004,
-    "Longitude": -71.16699229999999,
+    "Latitude": 42.7115337,
+    "Longitude": -71.1669923,
     "Region": "Northeastern"
   },
   {
@@ -13183,7 +13183,7 @@ listings = [
     "Phone": "617-544-3434 ext. 110",
     "Email": "sgedrick@lawyersclearinghouse.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.354290899999995,
+    "Latitude": 42.3542909,
     "Longitude": -71.0582717,
     "Region": "Eastern"
   },
@@ -13203,8 +13203,8 @@ listings = [
     "Phone": "(978) 269-5284",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.715921200000004,
-    "Longitude": -71.17154090000001,
+    "Latitude": 42.7159212,
+    "Longitude": -71.1715409,
     "Region": "Northeastern"
   },
   {
@@ -13225,7 +13225,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.279563700000004,
+    "Latitude": 42.2795637,
     "Longitude": -71.7696428,
     "Region": "Central"
   },
@@ -13306,7 +13306,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3009689,
-    "Longitude": -71.33563290000001,
+    "Longitude": -71.3356329,
     "Region": "Northeastern"
   },
   {
@@ -13325,7 +13325,7 @@ listings = [
     "Phone": "(413) 637-5585",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.356934499999994,
+    "Latitude": 42.3569345,
     "Longitude": -73.2847352,
     "Region": "Western"
   },
@@ -13346,7 +13346,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5478809,
-    "Longitude": -71.75709379999999,
+    "Longitude": -71.7570938,
     "Region": "Central"
   },
   {
@@ -13386,7 +13386,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5253138,
-    "Longitude": -71.75837340000001,
+    "Longitude": -71.7583734,
     "Region": "Central"
   },
   {
@@ -13450,7 +13450,7 @@ listings = [
     "Phone": "(781) 646-0500",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.591775299999995,
+    "Latitude": 42.5917753,
     "Longitude": -71.3189996,
     "Region": "Northeastern"
   },
@@ -13499,7 +13499,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5960213,
-    "Longitude": -71.55964499999999,
+    "Longitude": -71.559645,
     "Region": "Northeastern"
   },
   {
@@ -13518,8 +13518,8 @@ listings = [
     "Phone": "(978) 744-0500",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.518395299999995,
-    "Longitude": -70.89661540000002,
+    "Latitude": 42.5183953,
+    "Longitude": -70.8966154,
     "Region": "Northeastern"
   },
   {
@@ -13541,7 +13541,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5166924,
-    "Longitude": -70.89537299999999,
+    "Longitude": -70.895373,
     "Region": "Northeastern"
   },
   {
@@ -13560,8 +13560,8 @@ listings = [
     "Phone": "(508) 553-4814",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.08065870000001,
-    "Longitude": -71.38061540000001,
+    "Latitude": 42.0806587,
+    "Longitude": -71.3806154,
     "Region": "Central"
   },
   {
@@ -13581,7 +13581,7 @@ listings = [
     "Phone": "(617) 682-7442",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.50016779999999,
+    "Latitude": 42.5001678,
     "Longitude": -70.8591207,
     "Region": "Northeastern"
   },
@@ -13645,7 +13645,7 @@ listings = [
     "Phone": "(781) 659-7722",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.241944200000006,
+    "Latitude": 42.2419442,
     "Longitude": -70.8892574,
     "Region": "Southeastern"
   },
@@ -13707,7 +13707,7 @@ listings = [
     "Phone": "(508) 532-5574",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.282054200000005,
+    "Latitude": 42.2820542,
     "Longitude": -71.4168562,
     "Region": "Eastern"
   },
@@ -13747,7 +13747,7 @@ listings = [
     "Phone": "(978) 829-1783",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.58347020000001,
+    "Latitude": 42.5834702,
     "Longitude": -71.8019608,
     "Region": "Central"
   },
@@ -13828,7 +13828,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0831822,
-    "Longitude": -71.47450740000001,
+    "Longitude": -71.4745074,
     "Region": "Eastern"
   },
   {
@@ -13848,7 +13848,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3633235,
-    "Longitude": -71.10683359999999,
+    "Longitude": -71.1068336,
     "Region": "Eastern"
   },
   {
@@ -13868,7 +13868,7 @@ listings = [
     "Email": "elaina@ldbpeaceinstitute.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.2979979,
-    "Longitude": -71.05992109999998,
+    "Longitude": -71.0599211,
     "Region": "Eastern"
   },
   {
@@ -13891,7 +13891,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2623544,
-    "Longitude": -71.80307309999999,
+    "Longitude": -71.8030731,
     "Region": "Central"
   },
   {
@@ -13911,7 +13911,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6484656,
-    "Longitude": -71.31827609999999,
+    "Longitude": -71.3182761,
     "Region": "Northeastern"
   },
   {
@@ -13933,8 +13933,8 @@ listings = [
     "Phone": "(978) 458-9888",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.641003000000005,
-    "Longitude": -71.31203570000001,
+    "Latitude": 42.641003,
+    "Longitude": -71.3120357,
     "Region": "Northeastern"
   },
   {
@@ -14015,7 +14015,7 @@ listings = [
     "Phone": "(508) 754-1121",
     "Email": "mbond@lssne.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.269611499999996,
+    "Latitude": 42.2696115,
     "Longitude": -71.7978796,
     "Region": "Central"
   },
@@ -14060,7 +14060,7 @@ listings = [
     "Phone": "(781) 581-7220 Ext: 283",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.462900700000006,
+    "Latitude": 42.4629007,
     "Longitude": -70.9409802,
     "Region": "Northeastern"
   },
@@ -14147,7 +14147,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1071463,
-    "Longitude": -72.59439609999998,
+    "Longitude": -72.5943961,
     "Region": "Western"
   },
   {
@@ -14257,7 +14257,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2630447,
-    "Longitude": -70.86056059999999,
+    "Longitude": -70.8605606,
     "Region": "Southeastern"
   },
   {
@@ -14307,7 +14307,7 @@ listings = [
     "Phone": "508-261-7464",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.033896399999996,
+    "Latitude": 42.0338964,
     "Longitude": -71.2097383,
     "Region": "Southeastern"
   },
@@ -14328,7 +14328,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3816556,
-    "Longitude": -71.63537480000001,
+    "Longitude": -71.6353748,
     "Region": "Central"
   },
   {
@@ -14348,7 +14348,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9485544,
-    "Longitude": -70.71131770000001,
+    "Longitude": -70.7113177,
     "Region": "Eastern"
   },
   {
@@ -14368,7 +14368,7 @@ listings = [
     "Phone": "(781) 631-8273",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.48379979999999,
+    "Latitude": 42.4837998,
     "Longitude": -70.8793722,
     "Region": "Northeastern"
   },
@@ -14409,7 +14409,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.499195,
-    "Longitude": -70.85830779999999,
+    "Longitude": -70.8583078,
     "Region": "Northeastern"
   },
   {
@@ -14473,7 +14473,7 @@ listings = [
     "Phone": "(508) 481-4080",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.34725170000001,
+    "Latitude": 42.3472517,
     "Longitude": -71.5520564,
     "Region": "Central"
   },
@@ -14518,7 +14518,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.34725170000001,
+    "Latitude": 42.3472517,
     "Longitude": -71.5520564,
     "Region": "Central"
   },
@@ -14562,7 +14562,7 @@ listings = [
     "Phone": "(508) 481-7847",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.347534100000004,
+    "Latitude": 42.3475341,
     "Longitude": -71.5548782,
     "Region": "Central"
   },
@@ -14614,7 +14614,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0913258,
-    "Longitude": -70.70237709999999,
+    "Longitude": -70.7023771,
     "Region": "Southeastern"
   },
   {
@@ -14674,8 +14674,8 @@ listings = [
     "Phone": "(508) 696-6548",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.448808899999996,
-    "Longitude": -70.60692890000001,
+    "Latitude": 41.4488089,
+    "Longitude": -70.6069289,
     "Region": "Cape Cod"
   },
   {
@@ -14760,7 +14760,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3215671,
-    "Longitude": -71.32943440000001,
+    "Longitude": -71.3294344,
     "Region": "Northeastern"
   },
   {
@@ -14966,7 +14966,7 @@ listings = [
     "Phone": "(413) 781-5640 x 302",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.108593799999994,
+    "Latitude": 42.1085938,
     "Longitude": -72.5612425,
     "Region": "Western"
   },
@@ -14987,7 +14987,7 @@ listings = [
     "Email": "mcad@state.ma.us",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3593902,
-    "Longitude": -71.06234740000001,
+    "Longitude": -71.0623474,
     "Region": "Eastern"
   },
   {
@@ -15007,7 +15007,7 @@ listings = [
     "Email": "ben.stone@state.ma.us",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3605173,
-    "Longitude": -71.06208199999999,
+    "Longitude": -71.062082,
     "Region": "Eastern"
   },
   {
@@ -15026,8 +15026,8 @@ listings = [
     "Phone": "(978) 825-7300",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.514864700000004,
-    "Longitude": -70.88601340000001,
+    "Latitude": 42.5148647,
+    "Longitude": -70.8860134,
     "Region": "Northeastern"
   },
   {
@@ -15046,7 +15046,7 @@ listings = [
     "Phone": "1-877-382-2363",
     "Email": "alana.davidson@state.ma.us",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.393460499999996,
+    "Latitude": 42.3934605,
     "Longitude": -71.0396623,
     "Region": "Eastern"
   },
@@ -15066,7 +15066,7 @@ listings = [
     "Phone": "617-357-0700",
     "Email": "sarmour@mlri.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.358849600000006,
+    "Latitude": 42.3588496,
     "Longitude": -71.0592945,
     "Region": "Eastern"
   },
@@ -15094,7 +15094,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2618724,
-    "Longitude": -71.17670840000001,
+    "Longitude": -71.1767084,
     "Region": "Eastern"
   },
   {
@@ -15113,7 +15113,7 @@ listings = [
     "Phone": "617-740-2600",
     "Email": "vital.recordsrequest@state.ma.us",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.321025299999995,
+    "Latitude": 42.3210253,
     "Longitude": -71.0484127,
     "Region": "Eastern"
   },
@@ -15153,8 +15153,8 @@ listings = [
     "Phone": "781-861-0890",
     "Email": "jsheflin@mspcc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.462838500000004,
-    "Longitude": -71.26633299999999,
+    "Latitude": 42.4628385,
+    "Longitude": -71.266333,
     "Region": "Eastern"
   },
   {
@@ -15285,7 +15285,7 @@ listings = [
     "Phone": "(774) 419-1000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.902379499999995,
+    "Latitude": 41.9023795,
     "Longitude": -70.9156679,
     "Region": "Southeastern"
   },
@@ -15375,8 +15375,8 @@ listings = [
     "Phone": "(508) 533-3222",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.141895700000006,
-    "Longitude": -71.40730090000001,
+    "Latitude": 42.1418957,
+    "Longitude": -71.4073009,
     "Region": "Central"
   },
   {
@@ -15402,7 +15402,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1423826,
-    "Longitude": -71.40185059999999,
+    "Longitude": -71.4018506,
     "Region": "Central"
   },
   {
@@ -15422,7 +15422,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.153401,
-    "Longitude": -71.42098440000001,
+    "Longitude": -71.4209844,
     "Region": "Central"
   },
   {
@@ -15444,7 +15444,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.456322,
-    "Longitude": -71.06971740000002,
+    "Longitude": -71.0697174,
     "Region": "Northeastern"
   },
   {
@@ -15487,8 +15487,8 @@ listings = [
     "Phone": "(781) 979-3338",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.46041029999999,
-    "Longitude": -71.06101240000001,
+    "Latitude": 42.4604103,
+    "Longitude": -71.0610124,
     "Region": "Northeastern"
   },
   {
@@ -15508,7 +15508,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1039855,
-    "Longitude": -71.55147629999999,
+    "Longitude": -71.5514763,
     "Region": "Central"
   },
   {
@@ -15527,7 +15527,7 @@ listings = [
     "Phone": "617-338-2345",
     "Email": "mmauskapf@mhlac.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.357457000000004,
+    "Latitude": 42.357457,
     "Longitude": -71.059197,
     "Region": "Eastern"
   },
@@ -15550,8 +15550,8 @@ listings = [
     "Phone": "(978) 685-5930",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.641847600000006,
-    "Longitude": -71.31388790000001,
+    "Latitude": 42.6418476,
+    "Longitude": -71.3138879,
     "Region": "Northeastern"
   },
   {
@@ -15571,8 +15571,8 @@ listings = [
     "Phone": "(978) 685-5930",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.70427120000001,
-    "Longitude": -71.16333420000001,
+    "Latitude": 42.7042712,
+    "Longitude": -71.1633342,
     "Region": "Northeastern"
   },
   {
@@ -15592,7 +15592,7 @@ listings = [
     "Phone": "(978) 452-1421",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.640670899999996,
+    "Latitude": 42.6406709,
     "Longitude": -71.304148,
     "Region": "Northeastern"
   },
@@ -15613,7 +15613,7 @@ listings = [
     "Phone": "(978) 776-3206",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.560429600000006,
+    "Latitude": 42.5604296,
     "Longitude": -71.1239631,
     "Region": "Northeastern"
   },
@@ -15657,7 +15657,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.7231223,
-    "Longitude": -71.19743940000001,
+    "Longitude": -71.1974394,
     "Region": "Northeastern"
   },
   {
@@ -15676,8 +15676,8 @@ listings = [
     "Phone": "(978) 983-8585",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.729932299999994,
-    "Longitude": -71.18352229999999,
+    "Latitude": 42.7299323,
+    "Longitude": -71.1835223,
     "Region": "Northeastern"
   },
   {
@@ -15697,7 +15697,7 @@ listings = [
     "Phone": "(508) 656-0834",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.304207899999994,
+    "Latitude": 42.3042079,
     "Longitude": -71.4339484,
     "Region": "Eastern"
   },
@@ -15769,7 +15769,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2759737,
-    "Longitude": -71.41166109999999,
+    "Longitude": -71.4116611,
     "Region": "Eastern"
   },
   {
@@ -15789,7 +15789,7 @@ listings = [
     "Phone": "508-429-0629",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.178086799999996,
+    "Latitude": 42.1780868,
     "Longitude": -71.4579968,
     "Region": "Central"
   },
@@ -15810,7 +15810,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.8925361,
-    "Longitude": -70.90956290000001,
+    "Longitude": -70.9095629,
     "Region": "Southeastern"
   },
   {
@@ -15830,7 +15830,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.8907407,
-    "Longitude": -70.90697340000001,
+    "Longitude": -70.9069734,
     "Region": "Southeastern"
   },
   {
@@ -15852,7 +15852,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6240974,
-    "Longitude": -71.35905670000001,
+    "Longitude": -71.3590567,
     "Region": "Northeastern"
   },
   {
@@ -15892,8 +15892,8 @@ listings = [
     "Phone": "(508) 376-8181",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.176172799999996,
-    "Longitude": -71.36188659999999,
+    "Latitude": 42.1761728,
+    "Longitude": -71.3618866,
     "Region": "Central"
   },
   {
@@ -15913,7 +15913,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.7130933,
-    "Longitude": -73.21170450000001,
+    "Longitude": -73.2117045,
     "Region": "Western"
   },
   {
@@ -15954,7 +15954,7 @@ listings = [
     "Phone": "781-221-7054",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.491179100000004,
+    "Latitude": 42.4911791,
     "Longitude": -71.2825488,
     "Region": "Northeastern"
   },
@@ -16112,7 +16112,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.474968,
-    "Longitude": -71.46045490000002,
+    "Longitude": -71.4604549,
     "Region": "Central"
   },
   {
@@ -16131,7 +16131,7 @@ listings = [
     "Phone": "(508) 791-6139",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.263546500000004,
+    "Latitude": 42.2635465,
     "Longitude": -71.7929018,
     "Region": "Central"
   },
@@ -16151,7 +16151,7 @@ listings = [
     "Phone": "617-442-1622",
     "Email": "mkendricks@mac-boston.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.330424900000004,
+    "Latitude": 42.3304249,
     "Longitude": -71.0827944,
     "Region": "Eastern"
   },
@@ -16198,7 +16198,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9572958,
-    "Longitude": -71.28727190000001,
+    "Longitude": -71.2872719,
     "Region": "Southeastern"
   },
   {
@@ -16219,7 +16219,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6644416,
-    "Longitude": -71.03371209999999,
+    "Longitude": -71.0337121,
     "Region": "Southeastern"
   },
   {
@@ -16290,7 +16290,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0586949,
-    "Longitude": -71.24327070000001,
+    "Longitude": -71.2432707,
     "Region": "Southeastern"
   },
   {
@@ -16353,7 +16353,7 @@ listings = [
     "Phone": "(508) 901-1320",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.281208500000005,
+    "Latitude": 41.2812085,
     "Longitude": -70.1096014,
     "Region": "Cape Cod"
   },
@@ -16396,7 +16396,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.249834,
-    "Longitude": -70.10062380000001,
+    "Longitude": -70.1006238,
     "Region": "Cape Cod"
   },
   {
@@ -16415,7 +16415,7 @@ listings = [
     "Phone": "(508) 653-2971",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.282740000000004,
+    "Latitude": 42.28274,
     "Longitude": -71.3459821,
     "Region": "Northeastern"
   },
@@ -16455,8 +16455,8 @@ listings = [
     "Phone": "617-227-7335",
     "Email": "nlgmass-lrs@igc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.358658399999996,
-    "Longitude": -71.05481929999999,
+    "Latitude": 42.3586584,
+    "Longitude": -71.0548193,
     "Region": "Eastern"
   },
   {
@@ -16476,7 +16476,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.8916695,
-    "Longitude": -70.91216340000001,
+    "Longitude": -70.9121634,
     "Region": "Southeastern"
   },
   {
@@ -16521,7 +16521,7 @@ listings = [
     "Phone": "(508) 202-4532",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.254693700000004,
+    "Latitude": 42.2546937,
     "Longitude": -71.8087776,
     "Region": "Central"
   },
@@ -16584,8 +16584,8 @@ listings = [
     "Phone": "(508) 997-4800",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.630663500000004,
-    "Longitude": -70.92312690000001,
+    "Latitude": 41.6306635,
+    "Longitude": -70.9231269,
     "Region": "Southeastern"
   },
   {
@@ -16689,7 +16689,7 @@ listings = [
     "Phone": "617-442-3600",
     "Email": "ebrandwein@ne-cat.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.333169500000004,
+    "Latitude": 42.3331695,
     "Longitude": -71.0705531,
     "Region": "Eastern"
   },
@@ -16710,7 +16710,7 @@ listings = [
     "Phone": "(413) 272-2207",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.10392279999999,
+    "Latitude": 42.1039228,
     "Longitude": -72.5937717,
     "Region": "Western"
   },
@@ -16730,8 +16730,8 @@ listings = [
     "Phone": "781-643-0610",
     "Email": "lisanefa22@gmail.com",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.417626399999996,
-    "Longitude": -71.15789740000001,
+    "Latitude": 42.4176264,
+    "Longitude": -71.1578974,
     "Region": "Eastern"
   },
   {
@@ -16752,8 +16752,8 @@ listings = [
     "Phone": "(978) 458-1721",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.625660499999995,
-    "Longitude": -71.33263559999999,
+    "Latitude": 42.6256605,
+    "Longitude": -71.3326356,
     "Region": "Northeastern"
   },
   {
@@ -16797,7 +16797,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9359244,
-    "Longitude": -71.26408070000001,
+    "Longitude": -71.2640807,
     "Region": "Southeastern"
   },
   {
@@ -16828,7 +16828,7 @@ listings = [
     "Phone": "(508) 753-3146",
     "Email": "new-hope@new-hope.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.94343320000001,
+    "Latitude": 41.9434332,
     "Longitude": -71.2779037,
     "Region": "Southeastern"
   },
@@ -16890,7 +16890,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.7194025,
-    "Longitude": -70.97748100000001,
+    "Longitude": -70.977481,
     "Region": "Northeastern"
   },
   {
@@ -16932,7 +16932,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1167783,
-    "Longitude": -72.55058309999998,
+    "Longitude": -72.5505831,
     "Region": "Western"
   },
   {
@@ -16952,7 +16952,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3448112,
-    "Longitude": -71.20792850000001,
+    "Longitude": -71.2079285,
     "Region": "Eastern"
   },
   {
@@ -17058,8 +17058,8 @@ listings = [
     "Phone": "(617) 243-6062",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.331081899999994,
-    "Longitude": -71.24621490000001,
+    "Latitude": 42.3310819,
+    "Longitude": -71.2462149,
     "Region": "Eastern"
   },
   {
@@ -17090,8 +17090,8 @@ listings = [
     "Phone": "(508) 674-2788",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.708969399999994,
-    "Longitude": -71.15473850000001,
+    "Latitude": 41.7089694,
+    "Longitude": -71.1547385,
     "Region": "Southeastern"
   },
   {
@@ -17176,7 +17176,7 @@ listings = [
     "Phone": "(508) 528-4800",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.121359000000005,
+    "Latitude": 42.121359,
     "Longitude": -71.3292488,
     "Region": "Central"
   },
@@ -17258,7 +17258,7 @@ listings = [
     "Phone": "(978) 632-6600",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.57449879999999,
+    "Latitude": 42.5744988,
     "Longitude": -71.9958932,
     "Region": "Central"
   },
@@ -17299,7 +17299,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.508174,
-    "Longitude": -72.49159590000001,
+    "Longitude": -72.4915959,
     "Region": "Western"
   },
   {
@@ -17338,8 +17338,8 @@ listings = [
     "Phone": "(978) 531-0767",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.523053000000004,
-    "Longitude": -70.92989109999999,
+    "Latitude": 42.523053,
+    "Longitude": -70.9298911,
     "Region": "Northeastern"
   },
   {
@@ -17428,8 +17428,8 @@ listings = [
     "Phone": "(413) 582-4230",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.322071799999996,
-    "Longitude": -72.64990279999999,
+    "Latitude": 42.3220718,
+    "Longitude": -72.6499028,
     "Region": "Western"
   },
   {
@@ -17492,7 +17492,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.441306,
-    "Longitude": -72.79936040000001,
+    "Longitude": -72.7993604,
     "Region": "Western"
   },
   {
@@ -17555,7 +17555,7 @@ listings = [
     "Phone": "(781) 690-5050",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.158026799999995,
+    "Latitude": 42.1580268,
     "Longitude": -70.8176627,
     "Region": "Southeastern"
   },
@@ -17575,7 +17575,7 @@ listings = [
     "Phone": "(781) 659-7690",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.16155139999999,
+    "Latitude": 42.1615514,
     "Longitude": -70.8586098,
     "Region": "Southeastern"
   },
@@ -17604,7 +17604,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1713425,
-    "Longitude": -71.20036329999999,
+    "Longitude": -71.2003633,
     "Region": "Southeastern"
   },
   {
@@ -17623,7 +17623,7 @@ listings = [
     "Phone": "(781) 762-8115",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.197788200000005,
+    "Latitude": 42.1977882,
     "Longitude": -71.204895,
     "Region": "Southeastern"
   },
@@ -17672,7 +17672,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6397504,
-    "Longitude": -70.98361059999999,
+    "Longitude": -70.9836106,
     "Region": "Southeastern"
   },
   {
@@ -17696,7 +17696,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.286552,
-    "Longitude": -71.80857590000001,
+    "Longitude": -71.8085759,
     "Region": "Central"
   },
   {
@@ -17715,7 +17715,7 @@ listings = [
     "Phone": "774-247-4939",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.747916499999995,
+    "Latitude": 41.7479165,
     "Longitude": -70.624886,
     "Region": "Cape Cod"
   },
@@ -17735,8 +17735,8 @@ listings = [
     "Phone": "(781) 878-3555",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.174039799999996,
-    "Longitude": -70.88221829999999,
+    "Latitude": 42.1740398,
+    "Longitude": -70.8822183,
     "Region": "Southeastern"
   },
   {
@@ -17779,7 +17779,7 @@ listings = [
     "Phone": "(978) 456-4100 ext. 325",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.502579600000004,
+    "Latitude": 42.5025796,
     "Longitude": -71.5846747,
     "Region": "Central"
   },
@@ -17862,7 +17862,7 @@ listings = [
     "Phone": "(413) 737-7062",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.104592499999995,
+    "Latitude": 42.1045925,
     "Longitude": -72.5822032,
     "Region": "Western"
   },
@@ -17923,7 +17923,7 @@ listings = [
     "Phone": "(508) 339-1343",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.024763799999995,
+    "Latitude": 42.0247638,
     "Longitude": -71.2170478,
     "Region": "Southeastern"
   },
@@ -17965,7 +17965,7 @@ listings = [
     "Email": "outforgoodcc@yahoo.com",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.2789536,
-    "Longitude": -71.06992240000001,
+    "Longitude": -71.0699224,
     "Region": "Eastern"
   },
   {
@@ -17986,7 +17986,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1201412,
-    "Longitude": -71.86570290000002,
+    "Longitude": -71.8657029,
     "Region": "Central"
   },
   {
@@ -18025,7 +18025,7 @@ listings = [
     "Phone": "(508) 987-6034",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.11758270000001,
+    "Latitude": 42.1175827,
     "Longitude": -71.865147,
     "Region": "Central"
   },
@@ -18070,7 +18070,7 @@ listings = [
     "Phone": "(508) 767-9725",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.269611499999996,
+    "Latitude": 42.2696115,
     "Longitude": -71.7978796,
     "Region": "Central"
   },
@@ -18130,8 +18130,8 @@ listings = [
     "Phone": "(413) 717-6260",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.171870899999995,
-    "Longitude": -73.36370440000002,
+    "Latitude": 42.1718709,
+    "Longitude": -73.3637044,
     "Region": "Western"
   },
   {
@@ -18192,8 +18192,8 @@ listings = [
     "Phone": "617-926-5008",
     "Email": "sarah@parentshelpingparents.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.36122879999999,
-    "Longitude": -71.18444179999999,
+    "Latitude": 42.3612288,
+    "Longitude": -71.1844418,
     "Region": "Eastern"
   },
   {
@@ -18233,7 +18233,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2697206,
-    "Longitude": -72.67269820000001,
+    "Longitude": -72.6726982,
     "Region": "Western"
   },
   {
@@ -18252,7 +18252,7 @@ listings = [
     "Phone": "(508) 538-1225",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.715267600000004,
+    "Latitude": 41.7152676,
     "Longitude": -70.7718337,
     "Region": "Southeastern"
   },
@@ -18365,7 +18365,7 @@ listings = [
     "Phone": "(508) 755-0436",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.349982000000004,
+    "Latitude": 42.349982,
     "Longitude": -71.8611925,
     "Region": "Central"
   },
@@ -18392,7 +18392,7 @@ listings = [
     "Phone": "(508) 852-7600",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.260625700000006,
+    "Latitude": 42.2606257,
     "Longitude": -71.8042144,
     "Region": "Central"
   },
@@ -18419,7 +18419,7 @@ listings = [
     "Phone": "(508) 852-7600",
     "Email": "bworthington@centralmasspfc.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.58329620000001,
+    "Latitude": 42.5832962,
     "Longitude": -71.8013007,
     "Region": "Central"
   },
@@ -18444,7 +18444,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.764285,
-    "Longitude": -70.06533990000001,
+    "Longitude": -70.0653399,
     "Region": "Cape Cod"
   },
   {
@@ -18483,7 +18483,7 @@ listings = [
     "Phone": "(508) 879-2063",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.27793079999999,
+    "Latitude": 42.2779308,
     "Longitude": -71.419129,
     "Region": "Eastern"
   },
@@ -18503,7 +18503,7 @@ listings = [
     "Phone": "(781) 293-4107",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.069399100000005,
+    "Latitude": 42.0693991,
     "Longitude": -70.8083718,
     "Region": "Southeastern"
   },
@@ -18563,7 +18563,7 @@ listings = [
     "Phone": "(781) 270-6625",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.502560100000004,
+    "Latitude": 42.5025601,
     "Longitude": -71.206808,
     "Region": "Northeastern"
   },
@@ -18584,7 +18584,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.664293,
-    "Longitude": -71.57911800000001,
+    "Longitude": -71.579118,
     "Region": "Northeastern"
   },
   {
@@ -18624,7 +18624,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5827915,
-    "Longitude": -71.80832740000001,
+    "Longitude": -71.8083274,
     "Region": "Central"
   },
   {
@@ -18698,7 +18698,7 @@ listings = [
     "Email": "anherrick@phoenixhouse.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0999152,
-    "Longitude": -72.57481640000002,
+    "Longitude": -72.5748164,
     "Region": "Western"
   },
   {
@@ -18761,7 +18761,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0364051,
-    "Longitude": -70.67324609999999,
+    "Longitude": -70.6732461,
     "Region": "Southeastern"
   },
   {
@@ -18843,7 +18843,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4509843,
-    "Longitude": -73.25301809999999,
+    "Longitude": -73.2530181,
     "Region": "Western"
   },
   {
@@ -18904,7 +18904,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1257989,
-    "Longitude": -72.61245459999999,
+    "Longitude": -72.6124546,
     "Region": "Western"
   },
   {
@@ -18923,7 +18923,7 @@ listings = [
     "Phone": "800-258-4448",
     "Email": "amcgovern@pplm.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.352722799999995,
+    "Latitude": 42.3527228,
     "Longitude": -71.1228486,
     "Region": "Eastern"
   },
@@ -19011,7 +19011,7 @@ listings = [
     "Email": "info@prisonbookprogram.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.2512047,
-    "Longitude": -71.00292759999999,
+    "Longitude": -71.0029276,
     "Region": "Eastern"
   },
   {
@@ -19032,7 +19032,7 @@ listings = [
     "Phone": "508 507-8378",
     "Email": "problempregnancy@gmail.com",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.263656299999994,
+    "Latitude": 42.2636563,
     "Longitude": -71.818798,
     "Region": "Central"
   },
@@ -19053,7 +19053,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.618362,
-    "Longitude": -71.17326990000001,
+    "Longitude": -71.1732699,
     "Region": "Northeastern"
   },
   {
@@ -19115,7 +19115,7 @@ listings = [
     "Phone": "617-542-3740 x 434",
     "Email": "jcarey@projectplace.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.343847499999995,
+    "Latitude": 42.3438475,
     "Longitude": -71.0663283,
     "Region": "Eastern"
   },
@@ -19136,7 +19136,7 @@ listings = [
     "Phone": "(413) 737-5518",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.117237200000005,
+    "Latitude": 42.1172372,
     "Longitude": -72.5967568,
     "Region": "Western"
   },
@@ -19180,7 +19180,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0591372,
-    "Longitude": -70.18506909999999,
+    "Longitude": -70.1850691,
     "Region": "Cape Cod"
   },
   {
@@ -19244,8 +19244,8 @@ listings = [
     "Phone": "(508) 240-7964",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.774865399999996,
-    "Longitude": -70.00923540000001,
+    "Latitude": 41.7748654,
+    "Longitude": -70.0092354,
     "Region": "Cape Cod"
   },
   {
@@ -19265,7 +19265,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0656429,
-    "Longitude": -71.10174190000001,
+    "Longitude": -71.1017419,
     "Region": "Southeastern"
   },
   {
@@ -19384,7 +19384,7 @@ listings = [
     "Phone": "(978) 630-6600",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.262857000000004,
+    "Latitude": 42.262857,
     "Longitude": -71.790213,
     "Region": "Central"
   },
@@ -19407,8 +19407,8 @@ listings = [
     "Phone": "(508) 792-5230",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.258266799999994,
-    "Longitude": -71.80192029999999,
+    "Latitude": 42.2582668,
+    "Longitude": -71.8019203,
     "Region": "Central"
   },
   {
@@ -19447,7 +19447,7 @@ listings = [
     "Phone": "617-625-5996",
     "Email": "jennifer@respondinc.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.380875700000004,
+    "Latitude": 42.3808757,
     "Longitude": -71.1002881,
     "Region": "Eastern"
   },
@@ -19509,7 +19509,7 @@ listings = [
     "Phone": "(781) 829-9044",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.10689910000001,
+    "Latitude": 42.1068991,
     "Longitude": -70.8075309,
     "Region": "Southeastern"
   },
@@ -19596,7 +19596,7 @@ listings = [
     "Phone": "(508) 831-7455",
     "Email": "mailbox@urbanmissionaries.com",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.243906700000004,
+    "Latitude": 42.2439067,
     "Longitude": -71.822319,
     "Region": "Central"
   },
@@ -19619,7 +19619,7 @@ listings = [
     "Phone": "(508) 756-7557",
     "Email": "riac@riacboston.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.265232700000006,
+    "Latitude": 42.2652327,
     "Longitude": -71.8018622,
     "Region": "Central"
   },
@@ -19640,7 +19640,7 @@ listings = [
     "Phone": "(978) 632-6600",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.593801899999995,
+    "Latitude": 42.5938019,
     "Longitude": -71.9851684,
     "Region": "Central"
   },
@@ -19701,7 +19701,7 @@ listings = [
     "Phone": "(617) 489-1000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.40393579999999,
+    "Latitude": 42.4039358,
     "Longitude": -71.1658063,
     "Region": "Eastern"
   },
@@ -19722,7 +19722,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2562648,
-    "Longitude": -71.79149059999999,
+    "Longitude": -71.7914906,
     "Region": "Central"
   },
   {
@@ -19762,7 +19762,7 @@ listings = [
     "Email": "cynthia.wachs@right-turn.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.363652,
-    "Longitude": -71.16244350000001,
+    "Longitude": -71.1624435,
     "Region": "Eastern"
   },
   {
@@ -19794,7 +19794,7 @@ listings = [
     "Phone": "(617) 969-4925",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.353504799999996,
+    "Latitude": 42.3535048,
     "Longitude": -71.1834925,
     "Region": "Eastern"
   },
@@ -19814,7 +19814,7 @@ listings = [
     "Phone": "617-889-5210",
     "Email": "Scott_Scharffenberg@rocainc.com",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.389556299999995,
+    "Latitude": 42.3895563,
     "Longitude": -71.0379373,
     "Region": "Eastern"
   },
@@ -19834,7 +19834,7 @@ listings = [
     "Phone": "(781) 878-1349",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.130354499999996,
+    "Latitude": 42.1303545,
     "Longitude": -70.9125707,
     "Region": "Southeastern"
   },
@@ -19854,8 +19854,8 @@ listings = [
     "Phone": "(781) 878-4156",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.118652399999995,
-    "Longitude": -70.91350959999998,
+    "Latitude": 42.1186524,
+    "Longitude": -70.9135096,
     "Region": "Southeastern"
   },
   {
@@ -19917,7 +19917,7 @@ listings = [
     "Phone": "781-871-8410",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.128598100000005,
+    "Latitude": 42.1285981,
     "Longitude": -70.9172944,
     "Region": "Southeastern"
   },
@@ -20018,7 +20018,7 @@ listings = [
     "Phone": "(978) 948-2371",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.721730900000004,
+    "Latitude": 42.7217309,
     "Longitude": -70.8818339,
     "Region": "Northeastern"
   },
@@ -20038,7 +20038,7 @@ listings = [
     "Phone": "617-541-6859",
     "Email": "cmontgomery@roxmulti.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.31344620000001,
+    "Latitude": 42.3134462,
     "Longitude": -71.0798277,
     "Region": "Eastern"
   },
@@ -20058,7 +20058,7 @@ listings = [
     "Phone": "617-427-8095",
     "Email": "malvarado@roxburyyouthworks.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.327582299999996,
+    "Latitude": 42.3275823,
     "Longitude": -71.0999835,
     "Region": "Eastern"
   },
@@ -20079,7 +20079,7 @@ listings = [
     "Phone": "(413) 748-9064",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.092774600000006,
+    "Latitude": 42.0927746,
     "Longitude": -72.5798872,
     "Region": "Western"
   },
@@ -20130,7 +20130,7 @@ listings = [
     "Phone": "(508) 480-0092",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.33946029999999,
+    "Latitude": 42.3394603,
     "Longitude": -71.5418181,
     "Region": "Central"
   },
@@ -20150,7 +20150,7 @@ listings = [
     "Phone": "508.230.1297",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.010079499999996,
+    "Latitude": 42.0100795,
     "Longitude": -71.0818113,
     "Region": "Southeastern"
   },
@@ -20193,7 +20193,7 @@ listings = [
     "Phone": "617-825-1800",
     "Email": "epowell@jri.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.288903399999995,
+    "Latitude": 42.2889034,
     "Longitude": -71.071528,
     "Region": "Eastern"
   },
@@ -20239,7 +20239,7 @@ listings = [
     "Email": "info@casamyrna.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3377967,
-    "Longitude": -71.07057629999998,
+    "Longitude": -71.0705763,
     "Region": "Eastern"
   },
   {
@@ -20299,7 +20299,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5203135,
-    "Longitude": -70.90709040000002,
+    "Longitude": -70.9070904,
     "Region": "Northeastern"
   },
   {
@@ -20319,7 +20319,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.841577,
-    "Longitude": -70.85594449999999,
+    "Longitude": -70.8559445,
     "Region": "Northeastern"
   },
   {
@@ -20367,7 +20367,7 @@ listings = [
     "Phone": "(978) 465-0883",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.811341999999996,
+    "Latitude": 42.811342,
     "Longitude": -70.8671099,
     "Region": "Northeastern"
   },
@@ -20387,7 +20387,7 @@ listings = [
     "Phone": "617-318-6900",
     "Email": "Stephanie.Gomez@use.SalvationArmy.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.33971079999999,
+    "Latitude": 42.3397108,
     "Longitude": -71.0717834,
     "Region": "Eastern"
   },
@@ -20408,7 +20408,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2774946,
-    "Longitude": -71.41629959999999,
+    "Longitude": -71.4162996,
     "Region": "Eastern"
   },
   {
@@ -20430,7 +20430,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3550183,
-    "Longitude": -71.06261409999999,
+    "Longitude": -71.0626141,
     "Region": "Eastern"
   },
   {
@@ -20451,7 +20451,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2614037,
-    "Longitude": -71.82744090000001,
+    "Longitude": -71.8274409,
     "Region": "Central"
   },
   {
@@ -20517,7 +20517,7 @@ listings = [
     "Phone": "(781) 255-0740",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.192257299999994,
+    "Latitude": 42.1922573,
     "Longitude": -71.1826339,
     "Region": "Southeastern"
   },
@@ -20557,7 +20557,7 @@ listings = [
     "Phone": "(508) 363-2777",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.246877000000005,
+    "Latitude": 42.246877,
     "Longitude": -71.8323953,
     "Region": "Central"
   },
@@ -20577,8 +20577,8 @@ listings = [
     "Phone": "(508) 875-0225",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.306362299999996,
-    "Longitude": -71.39403440000001,
+    "Latitude": 42.3063623,
+    "Longitude": -71.3940344,
     "Region": "Eastern"
   },
   {
@@ -20641,7 +20641,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1147365,
-    "Longitude": -71.03440859999999,
+    "Longitude": -71.0344086,
     "Region": "Southeastern"
   },
   {
@@ -20680,7 +20680,7 @@ listings = [
     "Phone": "617-349-6220",
     "Email": "spacheco@cambridgema.gov",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.366670500000005,
+    "Latitude": 42.3666705,
     "Longitude": -71.1063814,
     "Region": "Eastern"
   },
@@ -20792,7 +20792,7 @@ listings = [
     "Phone": "(508) 755-2340",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.621469899999994,
+    "Latitude": 41.6214699,
     "Longitude": -70.9212721,
     "Region": "Southeastern"
   },
@@ -20835,7 +20835,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.6184987,
-    "Longitude": -70.92193909999999,
+    "Longitude": -70.9219391,
     "Region": "Southeastern"
   },
   {
@@ -20919,7 +20919,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9354317,
-    "Longitude": -71.29704890000001,
+    "Longitude": -71.2970489,
     "Region": "Southeastern"
   },
   {
@@ -20940,7 +20940,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5822025,
-    "Longitude": -70.78561640000001,
+    "Longitude": -70.7856164,
     "Region": "Northeastern"
   },
   {
@@ -20964,7 +20964,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2586016,
-    "Longitude": -71.80220759999999,
+    "Longitude": -71.8022076,
     "Region": "Central"
   },
   {
@@ -20983,7 +20983,7 @@ listings = [
     "Phone": "(508) 999-3101",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.636250399999994,
+    "Latitude": 41.6362504,
     "Longitude": -70.9285339,
     "Region": "Southeastern"
   },
@@ -21025,7 +21025,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.6569833,
-    "Longitude": -71.14386359999999,
+    "Longitude": -71.1438636,
     "Region": "Northeastern"
   },
   {
@@ -21045,7 +21045,7 @@ listings = [
     "Phone": "(508) 947-1717",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.894228399999996,
+    "Latitude": 41.8942284,
     "Longitude": -70.9135017,
     "Region": "Southeastern"
   },
@@ -21147,8 +21147,8 @@ listings = [
     "Phone": "(508) 223-4691",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.953121100000004,
-    "Longitude": -71.26619720000001,
+    "Latitude": 41.9531211,
+    "Longitude": -71.2661972,
     "Region": "Southeastern"
   },
   {
@@ -21173,8 +21173,8 @@ listings = [
     "Phone": "(508) 752-3969",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.265215399999995,
-    "Longitude": -71.80164920000001,
+    "Latitude": 42.2652154,
+    "Longitude": -71.8016492,
     "Region": "Central"
   },
   {
@@ -21200,7 +21200,7 @@ listings = [
     "Phone": "(508) 752-3969",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.251041799999996,
+    "Latitude": 42.2510418,
     "Longitude": -71.8303598,
     "Region": "Central"
   },
@@ -21227,8 +21227,8 @@ listings = [
     "Phone": "(508) 791-4976",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.265215399999995,
-    "Longitude": -71.80164920000001,
+    "Latitude": 42.2652154,
+    "Longitude": -71.8016492,
     "Region": "Central"
   },
   {
@@ -21247,7 +21247,7 @@ listings = [
     "Phone": "(413) 528-6263",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.19323120000001,
+    "Latitude": 42.1932312,
     "Longitude": -73.3595868,
     "Region": "Western"
   },
@@ -21287,7 +21287,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2576885,
-    "Longitude": -71.46125129999999,
+    "Longitude": -71.4612513,
     "Region": "Northeastern"
   },
   {
@@ -21317,7 +21317,7 @@ listings = [
     "Phone": "(508) 581-7821",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.182268799999996,
+    "Latitude": 42.1822688,
     "Longitude": -71.7688816,
     "Region": "Central"
   },
@@ -21337,7 +21337,7 @@ listings = [
     "Phone": "(781) 878-8822",
     "Email": "srossi@ssvotech.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.147048100000006,
+    "Latitude": 42.1470481,
     "Longitude": -70.8635566,
     "Region": "Southeastern"
   },
@@ -21465,7 +21465,7 @@ listings = [
     "Phone": "(508) 295-0880",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.75618060000001,
+    "Latitude": 41.7561806,
     "Longitude": -70.7142449,
     "Region": "Southeastern"
   },
@@ -21525,8 +21525,8 @@ listings = [
     "Phone": "508-792-5400",
     "Email": "",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.264070399999994,
-    "Longitude": -71.80125490000002,
+    "Latitude": 42.2640704,
+    "Longitude": -71.8012549,
     "Region": "Eastern"
   },
   {
@@ -21553,7 +21553,7 @@ listings = [
     "Phone": "(508) 765-5940 x5201",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.074260200000005,
+    "Latitude": 42.0742602,
     "Longitude": -72.0309369,
     "Region": "Central"
   },
@@ -21643,8 +21643,8 @@ listings = [
     "Phone": "(413) 263-6839",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.126298299999995,
-    "Longitude": -72.53351550000001,
+    "Latitude": 42.1262983,
+    "Longitude": -72.5335155,
     "Region": "Western"
   },
   {
@@ -21668,7 +21668,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1007801,
-    "Longitude": -72.58572559999999,
+    "Longitude": -72.5857256,
     "Region": "Western"
   },
   {
@@ -21688,7 +21688,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1167783,
-    "Longitude": -72.55058309999998,
+    "Longitude": -72.5505831,
     "Region": "Western"
   },
   {
@@ -21728,7 +21728,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1007801,
-    "Longitude": -72.58572559999999,
+    "Longitude": -72.5857256,
     "Region": "Western"
   },
   {
@@ -21750,7 +21750,7 @@ listings = [
     "Phone": "(413) 755-4300",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.108872399999996,
+    "Latitude": 42.1088724,
     "Longitude": -72.5785599,
     "Region": "Western"
   },
@@ -21816,7 +21816,7 @@ listings = [
     "Phone": "(413) 846-4340",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.121173299999995,
+    "Latitude": 42.1211733,
     "Longitude": -72.6060875,
     "Region": "Western"
   },
@@ -21879,7 +21879,7 @@ listings = [
     "Phone": "(413) 420-2111",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.108872399999996,
+    "Latitude": 42.1088724,
     "Longitude": -72.5785599,
     "Region": "Western"
   },
@@ -21920,8 +21920,8 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.27399570000001,
-    "Longitude": -71.74867090000001,
+    "Latitude": 42.2739957,
+    "Longitude": -71.7486709,
     "Region": "Central"
   },
   {
@@ -21941,7 +21941,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2835365,
-    "Longitude": -71.79231970000001,
+    "Longitude": -71.7923197,
     "Region": "Central"
   },
   {
@@ -21961,7 +21961,7 @@ listings = [
     "Phone": "(508) 476-2002",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.076474600000005,
+    "Latitude": 42.0764746,
     "Longitude": -71.7187112,
     "Region": "Central"
   },
@@ -22027,7 +22027,7 @@ listings = [
     "Email": "pmerullo@stfrancishouse.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3524148,
-    "Longitude": -71.06353659999999,
+    "Longitude": -71.0635366,
     "Region": "Eastern"
   },
   {
@@ -22048,7 +22048,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2780005,
-    "Longitude": -72.40073199999999,
+    "Longitude": -72.400732,
     "Region": "Western"
   },
   {
@@ -22108,7 +22108,7 @@ listings = [
     "Phone": "(508) 997-1515",
     "Email": "saintvincentstore@gmail.com",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.626753799999996,
+    "Latitude": 41.6267538,
     "Longitude": -70.9387046,
     "Region": "Southeastern"
   },
@@ -22171,7 +22171,7 @@ listings = [
     "Phone": "(508) 752-4674",
     "Email": "mentoring@assumptionsisters.org.",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.250478799999996,
+    "Latitude": 42.2504788,
     "Longitude": -71.8209082,
     "Region": "Central"
   },
@@ -22235,7 +22235,7 @@ listings = [
     "Phone": "(508) 697-6084",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.99764129999999,
+    "Latitude": 41.9976413,
     "Longitude": -70.9882542,
     "Region": "Southeastern"
   },
@@ -22256,7 +22256,7 @@ listings = [
     "Email": "sue.bennett@steppingstoneinc.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 41.7043667,
-    "Longitude": -71.15603459999998,
+    "Longitude": -71.1560346,
     "Region": "Eastern"
   },
   {
@@ -22383,7 +22383,7 @@ listings = [
     "Phone": "781-275-7727",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.491179100000004,
+    "Latitude": 42.4911791,
     "Longitude": -71.2825488,
     "Region": "Northeastern"
   },
@@ -22404,7 +22404,7 @@ listings = [
     "Email": "eleanor@cambridgeclc.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3655093,
-    "Longitude": -71.10571949999999,
+    "Longitude": -71.1057195,
     "Region": "Eastern"
   },
   {
@@ -22428,7 +22428,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2614037,
-    "Longitude": -71.82744090000001,
+    "Longitude": -71.8274409,
     "Region": "Central"
   },
   {
@@ -22450,8 +22450,8 @@ listings = [
     "Phone": "(413) 532-2900 x 127",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.206109000000005,
-    "Longitude": -72.61775420000001,
+    "Latitude": 42.206109,
+    "Longitude": -72.6177542,
     "Region": "Western"
   },
   {
@@ -22470,8 +22470,8 @@ listings = [
     "Phone": "1.508.947.1256",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.891431299999994,
-    "Longitude": -70.90979940000001,
+    "Latitude": 41.8914313,
+    "Longitude": -70.9097994,
     "Region": "Southeastern"
   },
   {
@@ -22493,7 +22493,7 @@ listings = [
     "Phone": "(978) 369-3297",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.455248600000004,
+    "Latitude": 42.4552486,
     "Longitude": -71.375247,
     "Region": "Northeastern"
   },
@@ -22514,7 +22514,7 @@ listings = [
     "Email": "stohallo@dimock.org",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3197954,
-    "Longitude": -71.09764320000001,
+    "Longitude": -71.0976432,
     "Region": "Eastern"
   },
   {
@@ -22557,7 +22557,7 @@ listings = [
     "Phone": "617-534-2730",
     "Email": "311@boston.gov",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.333011299999995,
+    "Latitude": 42.3330113,
     "Longitude": -71.0681469,
     "Region": "Eastern"
   },
@@ -22638,7 +22638,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.199833700000006,
+    "Latitude": 42.1998337,
     "Longitude": -71.4294725,
     "Region": "Central"
   },
@@ -22659,7 +22659,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3576766,
-    "Longitude": -71.14696590000001,
+    "Longitude": -71.1469659,
     "Region": "Eastern"
   },
   {
@@ -22719,7 +22719,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3766888,
-    "Longitude": -72.50156590000002,
+    "Longitude": -72.5015659,
     "Region": "Western"
   },
   {
@@ -22738,7 +22738,7 @@ listings = [
     "Phone": "(413) 584-6755",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.320302000000005,
+    "Latitude": 42.320302,
     "Longitude": -72.632649,
     "Region": "Western"
   },
@@ -22759,7 +22759,7 @@ listings = [
     "Phone": "(508) 831-7455",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.243906700000004,
+    "Latitude": 42.2439067,
     "Longitude": -71.822319,
     "Region": "Central"
   },
@@ -22781,8 +22781,8 @@ listings = [
     "Phone": "(781) 848-2124",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.216778999999995,
-    "Longitude": -70.97568199999999,
+    "Latitude": 42.216779,
+    "Longitude": -70.975682,
     "Region": "Southeastern"
   },
   {
@@ -22824,7 +22824,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.3901054,
-    "Longitude": -70.51397800000001,
+    "Longitude": -70.513978,
     "Region": "Cape Cod"
   },
   {
@@ -22864,7 +22864,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2617167,
-    "Longitude": -71.81263609999999,
+    "Longitude": -71.8126361,
     "Region": "Central"
   },
   {
@@ -22919,8 +22919,8 @@ listings = [
     "Phone": "(978) 620-5880",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.57447620000001,
-    "Longitude": -70.99614820000001,
+    "Latitude": 42.5744762,
+    "Longitude": -70.9961482,
     "Region": "Northeastern"
   },
   {
@@ -22961,7 +22961,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1302814,
-    "Longitude": -70.91515840000001,
+    "Longitude": -70.9151584,
     "Region": "Southeastern"
   },
   {
@@ -23000,8 +23000,8 @@ listings = [
     "Phone": "(508) 697-9013",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.992628700000004,
-    "Longitude": -70.97905990000001,
+    "Latitude": 41.9926287,
+    "Longitude": -70.9790599,
     "Region": "Southeastern"
   },
   {
@@ -23040,7 +23040,7 @@ listings = [
     "Phone": "(978) 744-5181",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.525866799999996,
+    "Latitude": 42.5258668,
     "Longitude": -70.9006445,
     "Region": "Northeastern"
   },
@@ -23104,7 +23104,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1092825,
-    "Longitude": -72.58005770000001,
+    "Longitude": -72.5800577,
     "Region": "Western"
   },
   {
@@ -23130,8 +23130,8 @@ listings = [
     "Phone": "866-947-4360",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.636340399999995,
-    "Longitude": -71.36650350000001,
+    "Latitude": 42.6363404,
+    "Longitude": -71.3665035,
     "Region": "Northeastern"
   },
   {
@@ -23177,7 +23177,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2623544,
-    "Longitude": -71.80307309999999,
+    "Longitude": -71.8030731,
     "Region": "Central"
   },
   {
@@ -23205,7 +23205,7 @@ listings = [
     "Phone": "617-661-3991",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.370442600000004,
+    "Latitude": 42.3704426,
     "Longitude": -71.1033055,
     "Region": "Eastern"
   },
@@ -23293,8 +23293,8 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.856221500000004,
-    "Longitude": -69.99116090000001,
+    "Latitude": 41.8562215,
+    "Longitude": -69.9911609,
     "Region": "Cape Cod"
   },
   {
@@ -23314,7 +23314,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4574822,
-    "Longitude": -71.34780649999999,
+    "Longitude": -71.3478065,
     "Region": "Northeastern"
   },
   {
@@ -23354,7 +23354,7 @@ listings = [
     "Phone": "(978) 475-0002",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.675416999999996,
+    "Latitude": 42.675417,
     "Longitude": -71.1361432,
     "Region": "Northeastern"
   },
@@ -23394,8 +23394,8 @@ listings = [
     "Phone": "(781) 631-0990",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.49480429999999,
-    "Longitude": -70.87232970000001,
+    "Latitude": 42.4948043,
+    "Longitude": -70.8723297,
     "Region": "Northeastern"
   },
   {
@@ -23417,7 +23417,7 @@ listings = [
     "Phone": "(508) 765-9947",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.075217200000004,
+    "Latitude": 42.0752172,
     "Longitude": -72.034548,
     "Region": "Central"
   },
@@ -23441,7 +23441,7 @@ listings = [
     "Phone": "(508) 753-2991",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.264942299999994,
+    "Latitude": 42.2649423,
     "Longitude": -71.8011055,
     "Region": "Central"
   },
@@ -23466,7 +23466,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.523583,
-    "Longitude": -70.89394200000001,
+    "Longitude": -70.893942,
     "Region": "Northeastern"
   },
   {
@@ -23485,8 +23485,8 @@ listings = [
     "Phone": "(774) 226-9927",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.68030039999999,
-    "Longitude": -70.91177840000002,
+    "Latitude": 41.6803004,
+    "Longitude": -70.9117784,
     "Region": "Southeastern"
   },
   {
@@ -23554,8 +23554,8 @@ listings = [
     "Phone": "(508) 862-6600",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.652102899999996,
-    "Longitude": -70.28813840000001,
+    "Latitude": 41.6521029,
+    "Longitude": -70.2881384,
     "Region": "Cape Cod"
   },
   {
@@ -23617,7 +23617,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.0944133,
-    "Longitude": -71.41956540000001,
+    "Longitude": -71.4195654,
     "Region": "Central"
   },
   {
@@ -23634,8 +23634,8 @@ listings = [
     "Phone": "(508) 949-6640",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.050886600000005,
-    "Longitude": -71.88941899999999,
+    "Latitude": 42.0508866,
+    "Longitude": -71.889419,
     "Region": "Central"
   },
   {
@@ -23677,7 +23677,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4594435,
-    "Longitude": -71.06858000000001,
+    "Longitude": -71.06858,
     "Region": "Northeastern"
   },
   {
@@ -23720,7 +23720,7 @@ listings = [
     "Phone": "(508) 875-6429",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.26217020000001,
+    "Latitude": 42.2621702,
     "Longitude": -71.3988122,
     "Region": "Eastern"
   },
@@ -23766,7 +23766,7 @@ listings = [
     "Email": "shriver.center@umassmed.edu",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2751122,
-    "Longitude": -71.76206280000001,
+    "Longitude": -71.7620628,
     "Region": "Central"
   },
   {
@@ -23790,7 +23790,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2970697,
-    "Longitude": -71.76734520000001,
+    "Longitude": -71.7673452,
     "Region": "Central"
   },
   {
@@ -23896,7 +23896,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5865747,
-    "Longitude": -71.78064350000001,
+    "Longitude": -71.7806435,
     "Region": "Central"
   },
   {
@@ -23975,8 +23975,8 @@ listings = [
     "Phone": "617-442-4519",
     "Email": "WWatkins@ulem.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.327800399999994,
-    "Longitude": -71.08269859999999,
+    "Latitude": 42.3278004,
+    "Longitude": -71.0826986,
     "Region": "Eastern"
   },
   {
@@ -23995,7 +23995,7 @@ listings = [
     "Phone": "617-522-7383",
     "Email": "",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.284546500000005,
+    "Latitude": 42.2845465,
     "Longitude": -71.110176,
     "Region": "Eastern"
   },
@@ -24016,7 +24016,7 @@ listings = [
     "Email": "Carolyn.MasonWholley@va.gov",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3260271,
-    "Longitude": -71.11110450000001,
+    "Longitude": -71.1111045,
     "Region": "Eastern"
   },
   {
@@ -24040,7 +24040,7 @@ listings = [
     "Phone": "(508) 753-2900",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.270551899999994,
+    "Latitude": 42.2705519,
     "Longitude": -71.8160681,
     "Region": "Central"
   },
@@ -24079,7 +24079,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5831592,
-    "Longitude": -71.79945359999999,
+    "Longitude": -71.7994536,
     "Region": "Central"
   },
   {
@@ -24118,7 +24118,7 @@ listings = [
     "Phone": "(978) 540-2485",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.542536299999995,
+    "Latitude": 42.5425363,
     "Longitude": -71.4804309,
     "Region": "Central"
   },
@@ -24139,7 +24139,7 @@ listings = [
     "Phone": "508-325-5332",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.260874799999996,
+    "Latitude": 41.2608748,
     "Longitude": -70.0477554,
     "Region": "Cape Cod"
   },
@@ -24161,7 +24161,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.9971265,
-    "Longitude": -70.73666870000001,
+    "Longitude": -70.7366687,
     "Region": "Southeastern"
   },
   {
@@ -24180,7 +24180,7 @@ listings = [
     "Phone": "978-897-1361",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.430551200000004,
+    "Latitude": 42.4305512,
     "Longitude": -71.4613361,
     "Region": "Central"
   },
@@ -24200,7 +24200,7 @@ listings = [
     "Phone": "(978) 582-4176",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.594525700000005,
+    "Latitude": 42.5945257,
     "Longitude": -71.7247358,
     "Region": "Central"
   },
@@ -24263,8 +24263,8 @@ listings = [
     "Phone": "508-223-2222",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.943845200000005,
-    "Longitude": -71.28064640000001,
+    "Latitude": 41.9438452,
+    "Longitude": -71.2806464,
     "Region": "Southeastern"
   },
   {
@@ -24283,8 +24283,8 @@ listings = [
     "Phone": "(781) 934-5774 ext. 5740",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.029553799999995,
-    "Longitude": -70.69551949999999,
+    "Latitude": 42.0295538,
+    "Longitude": -70.6955195,
     "Region": "Southeastern"
   },
   {
@@ -24324,8 +24324,8 @@ listings = [
     "Phone": "(413) 668-5374",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.142320399999996,
-    "Longitude": -72.21269050000001,
+    "Latitude": 42.1423204,
+    "Longitude": -72.2126905,
     "Region": "Western"
   },
   {
@@ -24347,7 +24347,7 @@ listings = [
     "Phone": "978-772-8220 ext. 113",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.56035870000001,
+    "Latitude": 42.5603587,
     "Longitude": -71.560526,
     "Region": "Central"
   },
@@ -24367,7 +24367,7 @@ listings = [
     "Phone": "508-647-6545",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.245874900000004,
+    "Latitude": 42.2458749,
     "Longitude": -71.2828719,
     "Region": "Northeastern"
   },
@@ -24411,8 +24411,8 @@ listings = [
     "Phone": "(508) 791-1213 x1187",
     "Email": "jasonbryant@veteransinc.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.329600299999996,
-    "Longitude": -71.75529250000001,
+    "Latitude": 42.3296003,
+    "Longitude": -71.7552925,
     "Region": "Central"
   },
   {
@@ -24474,7 +24474,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3563989,
-    "Longitude": -73.28478270000001,
+    "Longitude": -73.2847827,
     "Region": "Western"
   },
   {
@@ -24493,7 +24493,7 @@ listings = [
     "Phone": "508-876-5126",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.015625799999995,
+    "Latitude": 42.0156258,
     "Longitude": -71.5365582,
     "Region": "Central"
   },
@@ -24536,7 +24536,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5254592,
-    "Longitude": -71.10347469999999,
+    "Longitude": -71.1034747,
     "Region": "Northeastern"
   },
   {
@@ -24684,7 +24684,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5625733,
-    "Longitude": -71.27123040000001,
+    "Longitude": -71.2712304,
     "Region": "Northeastern"
   },
   {
@@ -24703,8 +24703,8 @@ listings = [
     "Phone": "(781) 334-9440",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.538252500000006,
-    "Longitude": -71.04713029999999,
+    "Latitude": 42.5382525,
+    "Longitude": -71.0471303,
     "Region": "Northeastern"
   },
   {
@@ -24724,7 +24724,7 @@ listings = [
     "Phone": "(781) 751-9267",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.245760100000005,
+    "Latitude": 42.2457601,
     "Longitude": -71.1740937,
     "Region": "Eastern"
   },
@@ -24745,7 +24745,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2149152,
-    "Longitude": -70.99475509999999,
+    "Longitude": -70.9947551,
     "Region": "Southeastern"
   },
   {
@@ -24785,7 +24785,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.4861656,
-    "Longitude": -71.43360059999999,
+    "Longitude": -71.4336006,
     "Region": "Central"
   },
   {
@@ -24829,8 +24829,8 @@ listings = [
     "Phone": "978-807-7286",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.676323499999995,
-    "Longitude": -71.01411800000001,
+    "Latitude": 42.6763235,
+    "Longitude": -71.014118,
     "Region": "Northeastern"
   },
   {
@@ -24850,7 +24850,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 41.8459347,
-    "Longitude": -71.08282220000001,
+    "Longitude": -71.0828222,
     "Region": "Southeastern"
   },
   {
@@ -24869,8 +24869,8 @@ listings = [
     "Phone": "(978) 838-2560",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.435298700000004,
-    "Longitude": -71.60800090000001,
+    "Latitude": 42.4352987,
+    "Longitude": -71.6080009,
     "Region": "Central"
   },
   {
@@ -24889,8 +24889,8 @@ listings = [
     "Phone": "508-234-9808",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.068780600000004,
-    "Longitude": -71.71187059999998,
+    "Latitude": 42.0687806,
+    "Longitude": -71.7118706,
     "Region": "Central"
   },
   {
@@ -24956,7 +24956,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.105496,
-    "Longitude": -71.55127590000001,
+    "Longitude": -71.5512759,
     "Region": "Central"
   },
   {
@@ -25002,8 +25002,8 @@ listings = [
     "Phone": "",
     "Email": "dkurtz@franklinma.gov",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.126077200000005,
-    "Longitude": -71.04383390000001,
+    "Latitude": 42.1260772,
+    "Longitude": -71.0438339,
     "Region": "Southeastern"
   },
   {
@@ -25072,7 +25072,7 @@ listings = [
     "Phone": "(508) 799-1041",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.262762200000004,
+    "Latitude": 42.2627622,
     "Longitude": -71.8018178,
     "Region": "Central"
   },
@@ -25093,7 +25093,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1837035,
-    "Longitude": -72.96967790000001,
+    "Longitude": -72.9696779,
     "Region": "Western"
   },
   {
@@ -25112,7 +25112,7 @@ listings = [
     "Phone": "(508) 832-4696",
     "Email": "pastormurielvic@aol.com",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.26382529999999,
+    "Latitude": 42.2638253,
     "Longitude": -71.8148715,
     "Region": "Central"
   },
@@ -25154,7 +25154,7 @@ listings = [
     "Phone": "(781) 585-6897",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 41.99926370000001,
+    "Latitude": 41.9992637,
     "Longitude": -70.7348327,
     "Region": "Southeastern"
   },
@@ -25180,7 +25180,7 @@ listings = [
     "Phone": "(508) 965-7391",
     "Email": "evelindquist@visitationhouse.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.25083920000001,
+    "Latitude": 42.2508392,
     "Longitude": -71.7969761,
     "Region": "Central"
   },
@@ -25200,7 +25200,7 @@ listings = [
     "Phone": "617-423-0648",
     "Email": "abarlow@vlpnet.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.354290899999995,
+    "Latitude": 42.3542909,
     "Longitude": -71.0582717,
     "Region": "Eastern"
   },
@@ -25223,7 +25223,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.263627299999996,
+    "Latitude": 42.2636273,
     "Longitude": -71.8018642,
     "Region": "Central"
   },
@@ -25244,7 +25244,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2611594,
-    "Longitude": -71.79646650000001,
+    "Longitude": -71.7964665,
     "Region": "Central"
   },
   {
@@ -25304,7 +25304,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1148517,
-    "Longitude": -72.59449649999999,
+    "Longitude": -72.5944965,
     "Region": "Western"
   },
   {
@@ -25324,7 +25324,7 @@ listings = [
     "Phone": "(781) 925-0951",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.302301899999996,
+    "Latitude": 42.3023019,
     "Longitude": -70.8834427,
     "Region": "Southeastern"
   },
@@ -25345,7 +25345,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.3024385,
-    "Longitude": -70.88338990000001,
+    "Longitude": -70.8833899,
     "Region": "Southeastern"
   },
   {
@@ -25426,7 +25426,7 @@ listings = [
     "Email": "contact@wshc.org\u00a0",
     "Valid As Of": "2023-03-24",
     "Latitude": 42.3327661,
-    "Longitude": -71.09198549999999,
+    "Longitude": -71.0919855,
     "Region": "Eastern"
   },
   {
@@ -25445,8 +25445,8 @@ listings = [
     "Phone": "(413) 737-5142",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.10049620000001,
-    "Longitude": -72.58605809999999,
+    "Latitude": 42.1004962,
+    "Longitude": -72.5860581,
     "Region": "Western"
   },
   {
@@ -25512,7 +25512,7 @@ listings = [
     "Phone": "617-267-1722",
     "Email": "info@womenslunchplace.org\u00a0",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.352149600000004,
+    "Latitude": 42.3521496,
     "Longitude": -71.0739654,
     "Region": "Eastern"
   },
@@ -25532,7 +25532,7 @@ listings = [
     "Phone": "617-973-6666",
     "Email": "mruttenberg@publiccounsel.net\u00a0",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.352937299999994,
+    "Latitude": 42.3529373,
     "Longitude": -71.0610586,
     "Region": "Eastern"
   },
@@ -25580,7 +25580,7 @@ listings = [
     "Email": "lbaeumler@mspcc.org",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2627058,
-    "Longitude": -71.82655799999999,
+    "Longitude": -71.826558,
     "Region": "Central"
   },
   {
@@ -25622,7 +25622,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.2623544,
-    "Longitude": -71.80307309999999,
+    "Longitude": -71.8030731,
     "Region": "Central"
   },
   {
@@ -25643,7 +25643,7 @@ listings = [
     "Phone": "(508) 796-1417",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.251041799999996,
+    "Latitude": 42.2510418,
     "Longitude": -71.8303598,
     "Region": "Central"
   },
@@ -25663,7 +25663,7 @@ listings = [
     "Phone": "(508) 799-0322",
     "Email": "jhenderson@wchr.org",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.263740500000004,
+    "Latitude": 42.2637405,
     "Longitude": -71.8030548,
     "Region": "Central"
   },
@@ -25685,7 +25685,7 @@ listings = [
     "Phone": "(508) 799-1400",
     "Email": "development@worcesterma.gov",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.262762200000004,
+    "Latitude": 42.2627622,
     "Longitude": -71.8018178,
     "Region": "Central"
   },
@@ -25708,7 +25708,7 @@ listings = [
     "Phone": "(508) 799-3136",
     "Email": "vietze@worc.k12.ma.us",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.30953970000001,
+    "Latitude": 42.3095397,
     "Longitude": -71.7959337,
     "Region": "Central"
   },
@@ -25734,7 +25734,7 @@ listings = [
     "Phone": "(508) 635-3000",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.303775200000004,
+    "Latitude": 42.3037752,
     "Longitude": -71.7649588,
     "Region": "Central"
   },
@@ -25763,7 +25763,7 @@ listings = [
     "Phone": "(508) 757-0376",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.248330200000005,
+    "Latitude": 42.2483302,
     "Longitude": -71.7931537,
     "Region": "Central"
   },
@@ -25791,7 +25791,7 @@ listings = [
     "Phone": "(508) 757-0376",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.248330200000005,
+    "Latitude": 42.2483302,
     "Longitude": -71.7931537,
     "Region": "Central"
   },
@@ -25815,8 +25815,8 @@ listings = [
     "Phone": "(508) 799-8696",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.298111799999994,
-    "Longitude": -71.76647659999999,
+    "Latitude": 42.2981118,
+    "Longitude": -71.7664766,
     "Region": "Central"
   },
   {
@@ -25865,7 +25865,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.26255,
-    "Longitude": -71.80468499999999,
+    "Longitude": -71.804685,
     "Region": "Central"
   },
   {
@@ -25984,7 +25984,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.5820096,
-    "Longitude": -71.79733320000001,
+    "Longitude": -71.7973332,
     "Region": "Central"
   },
   {
@@ -26077,7 +26077,7 @@ listings = [
     "Phone": "",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.253328100000004,
+    "Latitude": 42.2533281,
     "Longitude": -71.8350128,
     "Region": "Central"
   },
@@ -26097,7 +26097,7 @@ listings = [
     "Phone": "617-542-1800",
     "Email": "KPena@ymcaboston.org",
     "Valid As Of": "2023-03-24",
-    "Latitude": 42.355653000000004,
+    "Latitude": 42.355653,
     "Longitude": -71.0575303,
     "Region": "Eastern"
   },
@@ -26345,7 +26345,7 @@ listings = [
     "Email": "",
     "Valid As Of": "2023-02-16",
     "Latitude": 42.1093355,
-    "Longitude": -72.57247109999999,
+    "Longitude": -72.5724711,
     "Region": "Western"
   },
   {
@@ -26364,8 +26364,8 @@ listings = [
     "Phone": "(413) 733-9172",
     "Email": "",
     "Valid As Of": "2023-02-16",
-    "Latitude": 42.085458100000004,
-    "Longitude": -72.53495140000001,
+    "Latitude": 42.0854581,
+    "Longitude": -72.5349514,
     "Region": "Western"
   },
   {
